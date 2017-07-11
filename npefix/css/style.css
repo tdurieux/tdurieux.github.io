@@ -1,0 +1,94 @@
+md-sidenav {
+  max-width: 475px;
+  width: 475px;}
+.executionSelector {
+    height: 100%;
+}
+.executionSelector h2 {
+    padding-left: 4px;
+}
+.executionSelector > div {
+    border-left: 1px solid #ddd;
+}
+.executionSelector button {
+    margin: 0;
+    text-align: left;
+    border-radius: 0;
+}
+#content {
+    position: relative;
+    overflow: auto;
+}
+.summaryTable, .executionsTable {
+    border: 1px solid #ddd;
+}
+table {
+    width: 99%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin: auto 0;
+    padding: 0;
+}
+table tr {
+    border-top: 1px solid #ddd;
+}
+.strategyTable > tbody > tr {
+    border-top: 2px solid #ddd;
+}
+.strategyTable > tbody > tr:hover {
+    background: #EEEEEE;
+}
+table table tr:first-child {
+    border-top: 0;
+}
+table table tr:last-child {
+    border-bottom: 0;
+}
+table td {
+    vertical-align: middle;
+}
+td.content {
+    border-left: 1px solid #ddd;
+    padding: 7px;
+}
+table td.strategy {
+    width: 100px;
+}
+table td.value {
+    width: 100px;
+    overflow: hidden;
+    text-align: right;
+}
+td.testName {
+    width: 350px;
+}
+.executionCount {
+    width: 35px;
+    text-align: right;
+}
+td.success, td.fail {
+    width: 70px;
+}
+td.success {
+    color: blue;
+}
+tr.total {
+    font-weight: bold;
+    border-top: 2px solid #DDD;
+}
+td.fail {
+    color: red;
+}
+button.selected {
+    background: #DDD;
+}
+td.locations {
+    padding: 0;
+    border: 0;
+}
+td.locations table {
+    table-layout: fixed;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}

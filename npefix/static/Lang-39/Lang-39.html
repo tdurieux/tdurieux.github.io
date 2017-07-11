@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lang-39</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <style>
+      .execution {
+        background: #ff8f81;
+      }
+      .execution.success {
+        background: #b5ffbd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lang-39</h1>
+    <table class="summary pure-table">
+      <tr class="pure-table-odd">
+        <td class="label">Nb decision seq.</td> <td>11</td>
+      </tr>
+      <tr>
+        <td class="label">Nb valid correct patches</td> <td>4</td>
+      </tr>
+    </table>
+    <ul class="executions">
+      	<li class="execution success">
+      		<h2>Execution 1</h2>
+        	<span class="decision">Strat1A </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,3 +3675,8 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
+-            int greater = replacementList[i].length() - searchList[i].length();
++            int greater;
++            if (replacementList[i] == null) {
++                greater = org.apache.commons.lang3.StringUtils.EMPTY.length() - searchList[i].length();
++            } else {
++                greater = replacementList[i].length() - searchList[i].length();
++            }
+             if (greater &gt; 0) {
+</code></pre>
+      	</li>
+      	<li class="execution success">
+      		<h2>Execution 2</h2>
+        	<span class="decision">Strat1A </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,3 +3675,8 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
+-            int greater = replacementList[i].length() - searchList[i].length();
++            int greater;
++            if (replacementList[i] == null) {
++                greater = text.length() - searchList[i].length();
++            } else {
++                greater = replacementList[i].length() - searchList[i].length();
++            }
+             if (greater &gt; 0) {
+</code></pre>
+      	</li>
+      	<li class="execution success">
+      		<h2>Execution 3</h2>
+        	<span class="decision">Strat2A </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,3 +3675,8 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
+-            int greater = replacementList[i].length() - searchList[i].length();
++            int greater;
++            if (replacementList[i] == null) {
++                greater = new String().length() - searchList[i].length();
++            } else {
++                greater = replacementList[i].length() - searchList[i].length();
++            }
+             if (greater &gt; 0) {
+</code></pre>
+      	</li>
+      	<li class="execution success">
+      		<h2>Execution 4</h2>
+        	<span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,3 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
+-            int greater = replacementList[i].length() - searchList[i].length();
++            if (replacementList[i] != null) {
++                int greater = replacementList[i].length() - searchList[i].length();
++            }
+             if (greater &gt; 0) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 5</h2>
+        	<span class="decision">Strat1B </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,2 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
++            if (replacementList[i] == null) {
++                replacementList[i] = org.apache.commons.lang3.StringUtils.EMPTY;
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 6</h2>
+        	<span class="decision">Strat1B </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,2 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
++            if (replacementList[i] == null) {
++                replacementList[i] = text;
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 7</h2>
+        	<span class="decision">Strat2B </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,2 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
++            if (replacementList[i] == null) {
++                replacementList[i] = new String();
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 8</h2>
+        	<span class="decision">Strat4 NULL </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,2 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
++            if (replacementList[i] == null) {
++                return null;
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 9</h2>
+        	<span class="decision">Strat4 VAR </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,2 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
++            if (replacementList[i] == null) {
++                return org.apache.commons.lang3.StringUtils.EMPTY;
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 10</h2>
+        	<span class="decision">Strat4 VAR </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,2 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
++            if (replacementList[i] == null) {
++                return text;
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 11</h2>
+        	<span class="decision">Strat4 NEW </span><br>
+        <pre class="diff"><code>--- /StringUtils.java
++++ /StringUtils.java
+@@ -3675,2 +3675,5 @@
+         for (int i = 0; i &lt; searchList.length; i++) {
++            if (replacementList[i] == null) {
++                return new String();
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+</code></pre>
+      	</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,430 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FasterxmlJacksonDatabind-19543380420170126065819</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <style>
+      .execution {
+        background: #ff8f81;
+      }
+      .execution.success {
+        background: #b5ffbd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FasterxmlJacksonDatabind-19543380420170126065819</h1>
+    <table class="summary pure-table">
+      <tr class="pure-table-odd">
+        <td class="label">Nb decision seq.</td> <td>12</td>
+      </tr>
+      <tr>
+        <td class="label">Nb valid correct patches</td> <td>0</td>
+      </tr>
+    </table>
+    <ul class="executions">
+      	<li class="execution ">
+      		<h2>Execution 1</h2>
+        	<span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -1832,10 +1832,12 @@
+ 
+-        if (type.isMapLikeType()) {
+-            JavaType keyType = type.getKeyType();
+-            if (keyType != null) {
+-                Object kdDef = intr.findKeyDeserializer(member);
+-                KeyDeserializer kd = ctxt.keyDeserializerInstance(member, kdDef);
+-                if (kd != null) {
+-                    type = ((MapLikeType) type).withKeyValueHandler(kd);
+-                    keyType = type.getKeyType(); // just in case it&#39;s used below
++        if (type != null) {
++            if (type.isMapLikeType()) {
++                JavaType keyType = type.getKeyType();
++                if (keyType != null) {
++                    Object kdDef = intr.findKeyDeserializer(member);
++                    KeyDeserializer kd = ctxt.keyDeserializerInstance(member, kdDef);
++                    if (kd != null) {
++                        type = ((MapLikeType) type).withKeyValueHandler(kd);
++                        keyType = type.getKeyType(); // just in case it&#39;s used below
++                    }
+                 }
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 2</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat3 </span><span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -1347,4 +1349,8 @@
+     {
+-        BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
+-        AnnotatedClass ac = bean.getClassInfo();
++        if (baseType != null) {
++            BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        }
++        if (bean != null) {
++            AnnotatedClass ac = bean.getClassInfo();
++        }
+         AnnotationIntrospector ai = config.getAnnotationIntrospector();
+@@ -1832,2 +1838,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 3</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,7 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type != null) {
++                    deser = type.getValueHandler();
++                }
++            }
+         }
+@@ -1347,3 +1353,8 @@
+     {
+-        BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        if (baseType != null) {
++            BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        }
++        if (bean == null) {
++            return null;
++        }
+         AnnotatedClass ac = bean.getClassInfo();
+@@ -1832,2 +1843,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 4</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat4 NULL </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,8 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type == null) {
++                    return null;
++                }
++                deser = type.getValueHandler();
++            }
+         }
+@@ -1347,3 +1354,8 @@
+     {
+-        BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        if (baseType != null) {
++            BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        }
++        if (bean == null) {
++            return null;
++        }
+         AnnotatedClass ac = bean.getClassInfo();
+@@ -1832,2 +1844,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 5</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat4 VAR </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,8 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type == null) {
++                    return prop;
++                }
++                deser = type.getValueHandler();
++            }
+         }
+@@ -1347,3 +1354,8 @@
+     {
+-        BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        if (baseType != null) {
++            BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        }
++        if (bean == null) {
++            return null;
++        }
+         AnnotatedClass ac = bean.getClassInfo();
+@@ -1832,2 +1844,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 6</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat4 NEW </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,8 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type == null) {
++                    return new CreatorProperty(null, null, null, null, null, null, 0, null, null);
++                }
++                deser = type.getValueHandler();
++            }
+         }
+@@ -1347,3 +1354,8 @@
+     {
+-        BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        if (baseType != null) {
++            BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
++        }
++        if (bean == null) {
++            return null;
++        }
+         AnnotatedClass ac = bean.getClassInfo();
+@@ -1832,2 +1844,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 7</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,7 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type != null) {
++                    deser = type.getValueHandler();
++                }
++            }
+         }
+@@ -1347,2 +1353,5 @@
+     {
++        if (baseType == null) {
++            return null;
++        }
+         BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
+@@ -1832,2 +1841,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 8</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat4 NULL </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,8 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type == null) {
++                    return null;
++                }
++                deser = type.getValueHandler();
++            }
+         }
+@@ -1347,2 +1354,5 @@
+     {
++        if (baseType == null) {
++            return null;
++        }
+         BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
+@@ -1832,2 +1842,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 9</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat4 VAR </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,8 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type == null) {
++                    return prop;
++                }
++                deser = type.getValueHandler();
++            }
+         }
+@@ -1347,2 +1354,5 @@
+     {
++        if (baseType == null) {
++            return null;
++        }
+         BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
+@@ -1832,2 +1842,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 10</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><span class="decision">Strat4 NULL </span><span class="decision">Strat4 NEW </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,3 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
+-        TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        if (type != null) {
++            TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
++        }
+         // or if not, based on type being referenced:
+@@ -870,3 +872,8 @@
+         if (deser == null) {
+-            deser = type.getValueHandler();
++            } else {
++                if (type == null) {
++                    return new CreatorProperty(null, null, null, null, null, null, 0, null, null);
++                }
++                deser = type.getValueHandler();
++            }
+         }
+@@ -1347,2 +1354,5 @@
+     {
++        if (baseType == null) {
++            return null;
++        }
+         BeanDescription bean = config.introspectClassAnnotations(baseType.getRawClass());
+@@ -1832,2 +1842,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 11</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat4 NULL </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,2 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
++        if (type == null) {
++            return null;
++        }
+         TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
+@@ -1832,2 +1835,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+      	<li class="execution ">
+      		<h2>Execution 12</h2>
+        	<span class="decision">Strat4 NULL </span><span class="decision">Strat4 NEW </span><br>
+        <pre class="diff"><code>--- /BasicDeserializerFactory.java
++++ /BasicDeserializerFactory.java
+@@ -858,2 +858,5 @@
+         // Type deserializer: either comes from property (and already resolved)
++        if (type == null) {
++            return new CreatorProperty(null, null, null, null, null, null, 0, null, null);
++        }
+         TypeDeserializer typeDeser = (TypeDeserializer) type.getTypeHandler();
+@@ -1832,2 +1835,5 @@
+ 
++        if (type == null) {
++            return null;
++        }
+         if (type.isMapLikeType()) {
+</code></pre>
+      	</li>
+    </ul>
+  </body>
+</html>

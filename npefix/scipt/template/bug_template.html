@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <style>
+      .execution {
+        background: #ff8f81;
+      }
+      .execution.success {
+        background: #b5ffbd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <table class="summary pure-table">
+      <tr class="pure-table-odd">
+        <td class="label">Nb decision seq.</td> <td>{{ data.totalSize.0 }}</td>
+      </tr>
+      <tr>
+        <td class="label">Nb valid correct patches</td> <td>{{ data.nbPassedSeqLaps.0 }}</td>
+      </tr>
+    </table>
+    <ul class="executions">{% for execution in executions %}
+      	<li class="execution {% if execution.result.success %}success{% endif %}">
+      		<h2>Execution {{ forloop.counter }}</h2>
+        	{% for decision in execution.decisions %}<span class="decision">{{ decision.strategy}} </span>{% endfor %}<br>
+        <pre class="diff"><code>{{ execution.diff }}</code></pre>
+      	</li>{% endfor %}
+    </ul>
+  </body>
+</html>
