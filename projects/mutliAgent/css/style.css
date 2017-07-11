@@ -1,0 +1,139 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+    background: #F1F1F1;
+    padding: 0;
+    margin: 0;
+}
+input {
+  padding: 7px;
+  font-size: 15px;
+}
+input[type="number"] {
+    width: 45px;
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 4px;
+    outline: none;
+}
+input[type="number"]:hover, input[type="number"]:focus {
+  border: 1px solid #DDD;
+  background: #FFF;
+}
+#page {
+    width: 800px;
+    margin: auto;
+    background: #FFF;
+    padding: 7px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    min-height: 100%;
+}
+
+#current_state_canvas {
+    width: 100%;
+    background: #F1F1F1;
+    text-align: center;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.6);
+}
+#current_state { 
+    display: none;
+}
+.labelvalue {
+    display: inline-block;
+    line-height: 30px;
+}
+.labelvalue .label {
+    display: inline-block;   
+    line-height: 30px;
+    min-width: 100px;
+    padding: 10px;
+    background: #F0F0F0;
+}
+
+.labelvalue .value {
+    display: inline-block;   
+    line-height: 30px;
+    min-width: 100px;
+    padding: 10px;
+    background: #A0A0A0;
+    text-align: right;
+    margin-left: -4px;
+}
+
+.btn, button {
+    border: 0;
+    line-height: 30px;
+    min-width: 150px;
+    padding: 10px;
+    background: #325180;
+    color: #FFF;
+    outline: none;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover, button:hover {
+    background: #071133;
+}
+#settings {
+}
+.col {
+    margin: 3px;
+    float: left;
+    width: 256px;
+    height: 200px;
+    padding: 7px;
+    background: #F1F1F1;
+}
+.col h2 {
+    margin-top: 5px;
+}
+.clear {
+    clear: both;
+}
+div#age {
+    width: 100%;
+}
+div#age .ageFish {
+    line-height: 23px;
+    width: 380px;
+    display: inline-block;
+    text-align: right;
+}
+.ageFish span {
+    background: green;
+}
+div#age .ageShark {
+    line-height: 23px;
+    width: 380px;
+    display: inline-block;
+}
+.ageShark span {
+    background: red;
+}
+span.block {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    content: "";
+    margin-right: 5px;
+}
+
+div#age .age {
+    width: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 23px;
+}
+div#age span {
+    line-height: 23px;
+    height: 23px;
+    overflow: hidden;
+    display: inline-block;
+}

@@ -1,0 +1,200 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<script>
+		var $bibtex, $convert_button, $references, $inline;
+
+		window.onload = function () {
+			$bibtex = document.getElementById("bibtex");
+			$convert_button = document.getElementById("convert");
+			$inline = document.getElementById("inline");
+			$references = document.getElementById("references");
+			$result = document.getElementById("result");
+			function convertBibtex (bibtex) {
+				var results = {
+					inline: [],
+					references: []
+				}
+				for (var entryKey in bibtex) {
+					if(!bibtex.hasOwnProperty(entryKey)) continue;
+					var entry = bibtex[entryKey];
+					if(entry.entryType == null) continue;
+					var ref= "<ref name=\"" + entryKey + "\">{{Harvsp|";
+					//ref += entry.title + '|';
+					var splittedAuthors = entry.author.split(" and ");
+					for (var j = 0; j < splittedAuthors.length; j++) {
+						if(j >= 4) {
+							break;
+						}
+						var author = splittedAuthors[j];
+						var names = author.split(', ');
+						if(names.length == 1) {
+							ref += names[0] + '|';
+						} else {
+							ref += names[1] + ' ' + names[0] + '|';
+						}
+					}
+					ref += entry.year + '|';
+					if(entry.location)
+						ref += "loc=" + entry.location + '|';
+					else if(entry.address)
+						ref += "loc=" + entry.address + '|';
+					if(entry.pages)
+						ref += "p="+entry.pages + '|';
+					ref += "id="+entryKey + '';
+					ref += "}}</ref>";
+					results.inline.push(ref);
+				}
+				for (var entryKey in bibtex) {
+					if(!bibtex.hasOwnProperty(entryKey)) continue;
+					var entry = bibtex[entryKey];
+					if(entry.entryType == null) continue;
+					var ref= "* {{";
+					if(entry.entryType == 'article') {
+						ref += 'article';
+					} else if(entry.entryType == 'phdthesis') {
+						ref += 'ouvrage';
+					} else {
+						if (entry.journal || entry.booktitle) {
+							ref += 'article';
+						} else {
+							ref += 'ouvrage';
+						}
+					}
+					ref += '|\n';
+					ref += '\tid='+entryKey+'|\n';
+					for(var i in entry) {
+						if(!entry.hasOwnProperty(i)) continue;
+						var v = entry[i];
+						if(i == 'abstract' ||
+						   i == 'keywords' ||
+						   i == 'entryType' ||
+						   i == 'description') {
+							continue;
+						} else if(i == 'author') {
+							var splittedAuthors = v.split(" and ");
+							for (var j = 0; j < splittedAuthors.length; j++) {
+								var author = splittedAuthors[j];
+								var names = author.split(', ');
+								if(names.length == 1) {
+									names = author.split(' ');
+									if(names.length == 1) {
+										ref += '\tlast' + (j+1) +' = '+names+'|\n';
+										continue;
+									} 
+								}
+								ref += '\tlast' + (j+1) +' = '+names[0]+'|\n';
+								ref += '\tfirst'+ (j+1) +' = '+names[1]+'|\n';
+							}
+						} else if (i == 'booktitle') {
+							ref += '\tjournal = ' + v + '|\n';
+						} else if (i == 'address') {
+							ref += '\tlocation = ' + v + '|\n';
+						} else {
+							ref += '\t' + i + ' = ' + v + '|\n';
+						}
+					}
+					ref+="}}";
+					results.references.push(ref);
+				}
+				return results;
+			}
+
+			function convert () {
+				var start = new Date().getTime();
+				$result.innerText = '';
+				var value = $bibtex.value;
+				var b = new BibtexParser()
+				b.setInput(value)
+				b.bibtex()
+				var entries = b.getEntries();
+				var wiki = convertBibtex(entries);
+				var content = '';
+				$inline.value = $references.value = content;
+				for (var i = 0; i < wiki.inline.length; i++) {
+					$inline.value += wiki.inline[i] + "\n";
+				}
+				for (var i = 0; i < wiki.references.length; i++) {
+					$references.value += wiki.references[i] + "\n";
+				}
+				var end = new Date().getTime();
+				var time = end - start;
+				$result.innerText = wiki.references.length + " parsed entries in " + time + "ms";
+			}
+			$convert_button.onclick = convert;
+			if($bibtex.value != null) {
+				convert();
+			}
+		};	
+	</script>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<style type="text/css">
+	textarea {
+		width: 100%;
+		height: 250px;
+		margin: 15px 0;
+		outline: none;
+	}
+	</style>
+	<script type="text/javascript" src="parse-bibtex.js"></script>
+	</head>
+	<body>
+	<div class="page">
+        <div class="center">
+            <h1>BibTeX to Wikipedia</h1>
+            <label for="bibtex">BibTeX file</label><br>
+			<textarea id="bibtex" autofocus>@article{Abreu:2009:PES:1630165.1630274,
+ author = {Abreu, Rui and Zoeteweij, Peter and Golsteijn, Rob and van Gemund, Arjan J. C.},
+ title = {A Practical Evaluation of Spectrum-based Fault Localization},
+ journal = {J. Syst. Softw.},
+ issue_date = {November, 2009},
+ volume = {82},
+ number = {11},
+ month = nov,
+ year = {2009},
+ issn = {0164-1212},
+ pages = {1780--1792},
+ numpages = {13},
+ url = {http://dx.doi.org/10.1016/j.jss.2009.06.035},
+ doi = {10.1016/j.jss.2009.06.035},
+ acmid = {1630274},
+ publisher = {Elsevier Science Inc.},
+ address = {New York, NY, USA},
+ keywords = {Consumer electronics, Program spectra, Real-time and embedded systems, Software fault diagnosis, Test data analysis},
+ lang = {en}
+}
+@article{Naish:2011:MSS:2000791.2000795,
+ author = {Naish, Lee and Lee, Hua Jie and Ramamohanarao, Kotagiri},
+ title = {A Model for Spectra-based Software Diagnosis},
+ journal = {ACM Trans. Softw. Eng. Methodol.},
+ issue_date = {August 2011},
+ volume = {20},
+ number = {3},
+ month = aug,
+ year = {2011},
+ issn = {1049-331X},
+ pages = {11:1--11:32},
+ articleno = {11},
+ numpages = {32},
+ url = {http://doi.acm.org/10.1145/2000791.2000795},
+ doi = {10.1145/2000791.2000795},
+ acmid = {2000795},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Fault localization, program spectra, statistical debugging},
+ lang = {en}
+}
+</textarea><br>
+			<button class="btn" id="convert">Convert</button><br>
+			<label for="inline">In-line references</label><br>
+			<textarea id="inline" readonly="true"></textarea>
+			<label for="references">References</label><br>
+			<textarea id="references" readonly="true"></textarea>
+        </div>
+        <div class="right">
+        	<span id="result"></span>
+        </div>
+    </div>
+</body>
+</html>

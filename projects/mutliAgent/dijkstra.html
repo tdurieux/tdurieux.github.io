@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Dijkstra: Thomas Durieux</title>
+        
+        <script type="text/javascript" src="assets/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/canvasjs.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script type="text/javascript" src="js/core/Util.js"></script>
+        <script type="text/javascript" src="js/core/Agent.js"></script>
+        <script type="text/javascript" src="js/dijkstra/Wall.js"></script>
+        <script type="text/javascript" src="js/dijkstra/Follower.js"></script>
+        <script type="text/javascript" src="js/dijkstra/Prey.js"></script>
+        <script type="text/javascript" src="js/core/Environment.js"></script>
+        <script type="text/javascript" src="js/dijkstra/Environment.js"></script>
+        <script type="text/javascript" src="js/core/Motor.js"></script>
+        <script type="text/javascript" src="js/dijkstra/Motor.js"></script>
+        <script type="text/javascript" src="js/core/Rendering.js"></script>
+        <script type="text/javascript" src="js/dijkstra/Rendering.js"></script>
+    </head>
+    <body>
+        <canvas id="current_state_canvas" height="0" width="0"></canvas>
+        <div id="page">
+            <div id="settings">
+                <div class="labelvalue chrono">
+                    <div class="label">
+                        Chrono
+                    </div>
+                    <div id="chrono" class="value">
+                        0
+                    </div>
+                </div>
+                <button id="start">Start</button>
+                <button id="next">Next frame</button>
+                <div class="grid">
+                    <div class="col">
+                        <h2><span class="block" style="background:#812418"></span>Prey</h2>
+                        <label>
+                            Initial <input type="number" id="prey_initial" style="width: 75px;">
+                        </label><br>
+                    </div>
+                    <div class="col">
+                        <h2><span class="block" style="background:#7d8110"></span>Followers</h2>
+                        <label>
+                            Initial <input type="number" id="follower_initial" style="width: 75px;">
+                        </label><br>
+                    </div>
+                    <div class="col">
+                        <h2>Settings</h2>
+                        <label>
+                            Size
+                             <input type="number" id="width" style="width: 50px">x<input type="number" id="height" style="width: 50px">
+                        </label><br>
+                        <label>
+                            Refresh interval <input type="number" id="refresh_ratio">
+                        </label><br>
+                        <label>
+                            Wall density: <input type="number" id="density_value" onchange="density.value=value"  max="100" min="1">%
+                            <input type="range" id="density" oninput="density_value.value=value;"> 
+                        </label>
+                        <label>
+                            Display distance: <label>On <input type="radio" id="distance" name="distance" value="on"></label> <label>Off <input type="radio" name="distance" value="off" checked="checked"></label>
+                        </label>
+                    </div>
+                    <button id="save">Save</button>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+            <div id="chartContainer" style="width: 100%; height: 350px;display:inline-block;"></div>
+        </div>
+    </body>
+</html>

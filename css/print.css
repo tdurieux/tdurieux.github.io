@@ -1,0 +1,27 @@
+html, body {
+    font-size: 12px;
+}
+.page {
+    background: #fff;
+}
+.page > .center {
+    width: 100%;
+    padding-right: 50px;
+}
+.page > .right {
+    display: none;
+}
+
+.div.pagebreak {
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+
+.bull > li > h3:before {
+    background: #FFF;
+}
+
+.teaching {
+    padding-bottom: 150px;
+}

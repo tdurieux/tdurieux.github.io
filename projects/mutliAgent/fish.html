@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Wator: Thomas Durieux</title>
+        
+		<script type="text/javascript" src="assets/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/canvasjs.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script type="text/javascript" src="js/core/Util.js"></script>
+        <script type="text/javascript" src="js/core/Agent.js"></script>
+        <script type="text/javascript" src="js/fish/Shark.js"></script>
+        <script type="text/javascript" src="js/fish/Fish.js"></script>
+        <script type="text/javascript" src="js/core/Environment.js"></script>
+        <script type="text/javascript" src="js/fish/Environment.js"></script>
+		<script type="text/javascript" src="js/core/Motor.js"></script>
+        <script type="text/javascript" src="js/fish/Motor.js"></script>
+        <script type="text/javascript" src="js/core/Rendering.js"></script>
+        <script type="text/javascript" src="js/fish/Rendering.js"></script>
+	</head>
+	<body>
+        <canvas id="current_state_canvas"></canvas>
+		<div id="page">
+			<div id="settings">
+                <div class="labelvalue chrono">
+                    <div class="label">
+                        Chrono
+                    </div>
+                    <div id="chrono" class="value">
+                        0
+                    </div>
+                </div>
+                <button id="start">Start</button>
+                <button id="next">Next frame</button>
+                <div class="grid">
+                    <div class="col">
+    					<h2><span class="block" style="background:#203ca0"></span> Fish</h2>
+    					Population: <span id="fish_population">0</span><br/>
+    					<label>
+    						Initial <input type="number" id="fish_initial" style="width: 75px;">
+    					</label><br>
+    					<label>
+    						Breeding age <input type="number" id="fish_breeding">
+    					</label>
+                    </div>
+                    <div class="col">
+    				   <h2><span class="block" style="background:#ff2620"></span> Sharks</h2>
+    					Population: <span id="sharks_population">0</span><br/>
+    					<label>
+    						Initial <input type="number" id="shark_initial" style="width: 75px;">
+    					</label><br>
+    					<label>
+    						Breeding age <input type="number" id="shark_breeding">
+    					</label><br>
+    					<label>
+    						Starvation time <input type="number" id="shark_starvation">
+    					</label>
+                    </div>
+                    <div class="col">
+                        <h2>Settings</h2>
+                        <label>
+                            Size
+                             <input type="number" id="width" style="width: 50px">x<input type="number" id="height" style="width: 50px">
+                        </label><br>
+                        <label>
+                            Refresh interval <input type="number" id="refresh_ratio">
+                        </label>
+                    </div>
+                </div>
+                <button id="save">Save</button>
+			</div>
+            <div style="clear:both"></div>
+            <div id="chartContainer" style="width: 100%; height: 350px;display:inline-block;"></div>
+            <div id="chartContainer2" style="width: 100%; height: 350px;display:inline-block;"></div>
+            <div id="age">
+            </div>
+		</div>
+
+	</body>
+</html>
