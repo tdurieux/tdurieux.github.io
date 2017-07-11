@@ -26,11 +26,11 @@
       </tr>
     </table>
     <ul class="executions">{% for execution in executions %}
-      	<li class="execution {% if execution.result.success %}success{% endif %}">
-      		<h2>Execution {{ forloop.counter }}</h2>
-        	{% for decision in execution.decisions %}<span class="decision">{{ decision.strategy}} </span>{% endfor %}<br>
+        <li class="execution {% if execution.result.success %}success{% endif %}">
+          <h2>Execution {{ forloop.counter }}</h2>
+          {% for decision in execution.decisions %}<span class="decision">{{ decision.strategy}} </span>{% endfor %}<br>
         <pre class="diff"><code>{{ execution.diff }}</code></pre>
-      	</li>{% endfor %}
+        </li>{% endfor %}
     </ul>
   </body>
 </html>

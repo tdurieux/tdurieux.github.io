@@ -20,6 +20,16 @@
     ]
   }, 
   {
+    "name": "DataflowJavaSDK_c06125d", 
+    "versions": [
+      {
+        "date": 1499765834739, 
+        "epsilon": 0, 
+        "seed": 10
+      }
+    ]
+  }, 
+  {
     "name": "FasterXML-jackson-databind-195433804-20170126-065819", 
     "versions": [
       {
@@ -40,6 +50,26 @@
     ]
   }, 
   {
+    "name": "webmagic_ff2f588", 
+    "versions": [
+      {
+        "date": 1499765762296, 
+        "epsilon": 0, 
+        "seed": 10
+      }
+    ]
+  }, 
+  {
+    "name": "javapoet_70b38e5", 
+    "versions": [
+      {
+        "date": 1499765323032, 
+        "epsilon": 0, 
+        "seed": 10
+      }
+    ]
+  }, 
+  {
     "name": "math_70", 
     "versions": [
       {
@@ -54,6 +84,16 @@
     "versions": [
       {
         "date": 1499759848713, 
+        "epsilon": 0, 
+        "seed": 10
+      }
+    ]
+  }, 
+  {
+    "name": "jongo_f46f658", 
+    "versions": [
+      {
+        "date": 1499767679521, 
         "epsilon": 0, 
         "seed": 10
       }

@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DataflowjavasdkC-06125D</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <style>
+      .execution {
+        background: #ff8f81;
+      }
+      .execution.success {
+        background: #b5ffbd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DataflowjavasdkC-06125D</h1>
+    <table class="summary pure-table">
+      <tr class="pure-table-odd">
+        <td class="label">Nb decision seq.</td> <td>3</td>
+      </tr>
+      <tr>
+        <td class="label">Nb valid correct patches</td> <td>2</td>
+      </tr>
+    </table>
+    <ul class="executions">
+        <li class="execution success">
+          <h2>Execution 1</h2>
+          <span class="decision">Strat2A </span><br>
+        <pre class="diff"><code>--- /CoGbkResult.java
++++ /CoGbkResult.java
+@@ -319,9 +319,20 @@
+     List&lt;RawUnionValue&gt; unions = valueMap.get(index);
+-    if (unions.isEmpty()) {
+-      if (useDefault) {
+-        return defaultValue;
+-      } else {
+-        throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
+-            + &quot; corresponds to an empty result, and no default was provided&quot;);
++    if (unions == null) {
++      if ( new ArrayList().isEmpty()) {
++        if (useDefault) {
++          return defaultValue;
++        } else {
++          throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
++          + &quot; corresponds to an empty result, and no default was provided&quot;);
++        }
+       }
++    } else {
++      if (unions.isEmpty()) {
++        if (useDefault) {
++          return defaultValue;
++        } else {
++          throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
++          + &quot; corresponds to an empty result, and no default was provided&quot;);
++        }
++      }
+     }
+</code></pre>
+        </li>
+        <li class="execution success">
+          <h2>Execution 2</h2>
+          <span class="decision">Strat2B </span><br>
+        <pre class="diff"><code>--- /CoGbkResult.java
++++ /CoGbkResult.java
+@@ -319,2 +319,5 @@
+     List&lt;RawUnionValue&gt; unions = valueMap.get(index);
++    if (unions == null) {
++      unions = new ArrayList();
++    }
+     if (unions.isEmpty()) {
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 3</h2>
+          <span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /CoGbkResult.java
++++ /CoGbkResult.java
+@@ -319,8 +319,10 @@
+     List&lt;RawUnionValue&gt; unions = valueMap.get(index);
+-    if (unions.isEmpty()) {
+-      if (useDefault) {
+-        return defaultValue;
+-      } else {
+-        throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
+-            + &quot; corresponds to an empty result, and no default was provided&quot;);
++    if (unions != null) {
++      if (unions.isEmpty()) {
++        if (useDefault) {
++          return defaultValue;
++        } else {
++          throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
++          + &quot; corresponds to an empty result, and no default was provided&quot;);
++        }
+       }
+</code></pre>
+        </li>
+    </ul>
+  </body>
+</html>
