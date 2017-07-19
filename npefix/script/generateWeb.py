@@ -125,7 +125,8 @@ with open(resultsPath) as data_file:
             index += 1
 
         average_bugs[bugTitle]['nbPassedSeqLaps'] += [countPassedLaps]
-        average_bugs[bugTitle]['nbDetectedDecision'] += [len(executionData['searchSpace'])]
+	if "searchSpace" in executionData:
+	        average_bugs[bugTitle]['nbDetectedDecision'] += [len(executionData['searchSpace'])]
         average_bugs[bugTitle]['nbExploredDecision'] += [len(exploredDecisions)]
         average_bugs[bugTitle]['nbExploredLocation'] += [len(exploredLocations)]
         average_bugs[bugTitle]['totalSize'] += [len(executionData['executions'])]
