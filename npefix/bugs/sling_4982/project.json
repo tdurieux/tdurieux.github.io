@@ -1,0 +1,6 @@
+{
+   "name": "Sling 4982",
+   "benchmark": "NPEFix",
+   "oracle": "Test based",
+   "type": "NPE"
+}

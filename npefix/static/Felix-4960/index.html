@@ -1,0 +1,339 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Felix 4960</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <style>
+      .execution {
+        background: #ff8f81;
+      }
+      .execution.success {
+        background: #b5ffbd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Felix 4960</h1>
+    <table class="summary pure-table">
+      <tr class="pure-table-odd">
+        <td class="label">Nb decision seq.</td> <td>10</td>
+      </tr>
+      <tr>
+        <td class="label">Nb valid correct patches</td> <td>4</td>
+      </tr>
+    </table>
+    <ul class="executions">
+        <li class="execution success">
+          <h2>Execution 1</h2>
+          <span class="decision">Strat1A </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,11 +536,27 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
+-            {
+-                if (contentPath.get(i).hasEntry(name))
+-                {
+-                    // Use the class path index + 1 for creating the path so
+-                    // that we can differentiate between module content URLs
+-                    // (where the path will start with 0) and module class
+-                    // path URLs.
+-                    l.add(createURL(i + 1, name));
++            } else {
++                if (contentPath == null) {
++                    for (int i = 0; i &lt; m_declaredCaps.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
++                } else {
++                    for (int i = 0; i &lt; contentPath.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
+                 }
+</code></pre>
+        </li>
+        <li class="execution success">
+          <h2>Execution 2</h2>
+          <span class="decision">Strat1A </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,11 +536,27 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
+-            {
+-                if (contentPath.get(i).hasEntry(name))
+-                {
+-                    // Use the class path index + 1 for creating the path so
+-                    // that we can differentiate between module content URLs
+-                    // (where the path will start with 0) and module class
+-                    // path URLs.
+-                    l.add(createURL(i + 1, name));
++            } else {
++                if (contentPath == null) {
++                    for (int i = 0; i &lt; l.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
++                } else {
++                    for (int i = 0; i &lt; contentPath.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
+                 }
+</code></pre>
+        </li>
+        <li class="execution success">
+          <h2>Execution 3</h2>
+          <span class="decision">Strat1A </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,11 +536,27 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
+-            {
+-                if (contentPath.get(i).hasEntry(name))
+-                {
+-                    // Use the class path index + 1 for creating the path so
+-                    // that we can differentiate between module content URLs
+-                    // (where the path will start with 0) and module class
+-                    // path URLs.
+-                    l.add(createURL(i + 1, name));
++            } else {
++                if (contentPath == null) {
++                    for (int i = 0; i &lt; m_declaredReqs.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
++                } else {
++                    for (int i = 0; i &lt; contentPath.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
+                 }
+</code></pre>
+        </li>
+        <li class="execution success">
+          <h2>Execution 4</h2>
+          <span class="decision">Strat2A </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,11 +536,27 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
+-            {
+-                if (contentPath.get(i).hasEntry(name))
+-                {
+-                    // Use the class path index + 1 for creating the path so
+-                    // that we can differentiate between module content URLs
+-                    // (where the path will start with 0) and module class
+-                    // path URLs.
+-                    l.add(createURL(i + 1, name));
++            } else {
++                if (contentPath == null) {
++                    for (int i = 0; i &lt; new ArrayList().size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
++                } else {
++                    for (int i = 0; i &lt; contentPath.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
+                 }
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 5</h2>
+          <span class="decision">Strat1B </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,3 +536,7 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
++            } else {
++                if (contentPath == null) {
++                    contentPath = m_declaredCaps;
++                }
++                for (int i = 0; i &lt; contentPath.size(); i++)
+             {
+@@ -547,2 +551,3 @@
+             }
++            }
+         }
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 6</h2>
+          <span class="decision">Strat1B </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,3 +536,7 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
++            } else {
++                if (contentPath == null) {
++                    contentPath = l;
++                }
++                for (int i = 0; i &lt; contentPath.size(); i++)
+             {
+@@ -547,2 +551,3 @@
+             }
++            }
+         }
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 7</h2>
+          <span class="decision">Strat1B </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,3 +536,7 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
++            } else {
++                if (contentPath == null) {
++                    contentPath = m_declaredReqs;
++                }
++                for (int i = 0; i &lt; contentPath.size(); i++)
+             {
+@@ -547,2 +551,3 @@
+             }
++            }
+         }
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 8</h2>
+          <span class="decision">Strat2B </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,3 +536,7 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
++            } else {
++                if (contentPath == null) {
++                    contentPath = new ArrayList();
++                }
++                for (int i = 0; i &lt; contentPath.size(); i++)
+             {
+@@ -547,2 +551,3 @@
+             }
++            }
+         }
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 9</h2>
+          <span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,11 +536,15 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
+-            {
+-                if (contentPath.get(i).hasEntry(name))
+-                {
+-                    // Use the class path index + 1 for creating the path so
+-                    // that we can differentiate between module content URLs
+-                    // (where the path will start with 0) and module class
+-                    // path URLs.
+-                    l.add(createURL(i + 1, name));
++            } else {
++                if (contentPath != null) {
++                    for (int i = 0; i &lt; contentPath.size(); i++)
++                    {
++                        if (contentPath.get(i).hasEntry(name))
++                        {
++                            // Use the class path index + 1 for creating the path so
++                            // that we can differentiate between module content URLs
++                            // (where the path will start with 0) and module class
++                            // path URLs.
++                            l.add(createURL(i + 1, name));
++                        }
++                    }
+                 }
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 10</h2>
+          <span class="decision">Strat4 NULL </span><br>
+        <pre class="diff"><code>--- /BundleRevisionImpl.java
++++ /BundleRevisionImpl.java
+@@ -536,3 +536,7 @@
+             // Check the module class path.
+-            for (int i = 0; i &lt; contentPath.size(); i++)
++            } else {
++                if (contentPath == null) {
++                    return null;
++                }
++                for (int i = 0; i &lt; contentPath.size(); i++)
+             {
+@@ -547,2 +551,3 @@
+             }
++            }
+         }
+</code></pre>
+        </li>
+    </ul>
+  </body>
+</html>

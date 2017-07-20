@@ -50,19 +50,24 @@ with open(resultsPath) as data_file:
         if max_version is None:
             continue
         executionPath = join(currentDir, "..", "bugs", project['name'], str(max_version['date']) + ".json")
+        projectPath = join(currentDir, "..", "bugs", project['name'], "project.json")
         print executionPath
         executionData = json.load(open(executionPath))
+        projectData = json.load(open(projectPath))
 
-        bugTitle = project['name'].title().replace("-", "").replace("_", "")
-        titleSplit = re.compile("([0-9]+)").split(bugTitle)
-        bugTitle = "-".join(titleSplit[0:2]) + "".join(titleSplit[2::])
+        bugTitle = projectData['name']
 
-        outputDir = join(os.path.dirname(os.path.realpath(__file__)), "..", "static", bugTitle)
+        bugTitlePath = project['name'].title().replace("-", "").replace("_", "")
+        titleSplit = re.compile("([0-9]+)").split(bugTitlePath)
+        bugTitlePath = "-".join(titleSplit[0:2]) + "".join(titleSplit[2::])
+
+        outputDir = join(os.path.dirname(os.path.realpath(__file__)), "..", "static", bugTitlePath)
         if not os.path.exists(outputDir):
             os.makedirs(outputDir)
-        htmlPath = join(outputDir, bugTitle + ".html")
+        htmlPath = join(outputDir, "index.html")
         average_bugs[bugTitle] = {
             "bugTitle": bugTitle,
+            "bugTitlePath": bugTitlePath,
             "nbPassedSeqLaps": [],
             "nbExploredDecision": [],
             "nbExploredSeqDecision": [],
@@ -74,7 +79,8 @@ with open(resultsPath) as data_file:
             "medSizeCorrectSeqDecision": [],
             "minSizeFailureSeqDecision": [],
             "maxSizeFailureSeqDecision": [],
-            "medSizeFailureSeqDecision": []
+            "medSizeFailureSeqDecision": [],
+            "projectData": projectData
         }
 
         countPassedLaps = 0

@@ -1,0 +1,6 @@
+{
+   "name": "Collection 360",
+   "benchmark": "NPEFix",
+   "oracle": "Test based",
+   "type": "NPE"
+}

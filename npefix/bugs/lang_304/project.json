@@ -1,0 +1,6 @@
+{
+   "name": "Lang 304",
+   "benchmark": "NPEFix",
+   "oracle": "Test based",
+   "type": "NPE"
+}

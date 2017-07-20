@@ -1,0 +1,6 @@
+{
+   "name": "Lang 703",
+   "benchmark": "NPEFix",
+   "oracle": "Test based",
+   "type": "NPE"
+}

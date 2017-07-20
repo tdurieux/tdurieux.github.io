@@ -1,0 +1,6 @@
+{
+   "name": "Lang 33",
+   "benchmark": "Defects4j",
+   "oracle": "Test based",
+   "type": "NPE"
+}

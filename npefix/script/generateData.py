@@ -15,12 +15,13 @@ for directory in dirs:
 	}
 	versions = [f for f in listdir(join(path, directory)) if isfile(join(join(path, directory), f))]
 	for version in versions:
+		if version == "project.json":
+			continue
 		versionDict = {
 			"date": int(version.replace(".json", ""))
 		}
 		executionPath = join(path, directory, version)
 		with open(executionPath) as data_file:
-			print executionPath
 			resultsData = (json.load(data_file))
 			if "executions"  in resultsData:
 				if "metadata" in resultsData["executions"][0] and "seed" in resultsData["executions"][0]["metadata"]:

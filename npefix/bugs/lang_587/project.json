@@ -1,0 +1,6 @@
+{
+   "name": "Lang 587",
+   "benchmark": "NPEFix",
+   "oracle": "Test based",
+   "type": "NPE"
+}

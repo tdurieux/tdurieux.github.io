@@ -14,6 +14,9 @@
     <thead>
       <tr>
         <th rowspan="2">Bug id</th>
+        <th rowspan="2">Benchmark</th>
+        <th rowspan="2">Oracle</th>
+        <th rowspan="2">Bug Type</th>
         <th rowspan="2">Nb encountered decision points</th>
         <th rowspan="2">Nb decision seq.</th>
         <th rowspan="2">Nb valid runtime patches</th>
@@ -27,7 +30,10 @@
     </thead>
     <body>
       {% for bug_id, values in data %}<tr class="pure-table-{% cycle 'odd' 'even' %}">
-        <td><a href="{{ bug_id }}/{{ bug_id }}.html">{{ bug_id }}</a></td>
+        <td><a href="{{ values.bugTitlePath }}/index.html">{{ bug_id }}</a></td>
+        <td>{{ values.projectData.benchmark }}</td>
+        <td>{{ values.projectData.oracle }}</td>
+        <td>{{ values.projectData.type }}</td>
         <td>{{ values.nbExploredLocation.0 }}</td>
         <td>{{ values.totalSize.0 }}</td>
         <td>{{ values.nbPassedSeqLaps.0 }}</td>

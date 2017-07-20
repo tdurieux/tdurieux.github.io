@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>oVirt-ovirt-engine-206553844-20170301-160826</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <style>
+      .execution {
+        background: #ff8f81;
+      }
+      .execution.success {
+        background: #b5ffbd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>oVirt-ovirt-engine-206553844-20170301-160826</h1>
+    <table class="summary pure-table">
+      <tr class="pure-table-odd">
+        <td class="label">Nb decision seq.</td> <td>14</td>
+      </tr>
+      <tr>
+        <td class="label">Nb valid correct patches</td> <td>0</td>
+      </tr>
+    </table>
+    <ul class="executions">
+        <li class="execution success">
+          <h2>Execution 1</h2>
+          <span class="decision">Strat4 NULL </span><span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /GlusterDBUtils.java
++++ /GlusterDBUtils.java
+@@ -32,2 +32,5 @@
+     private GlusterBrickDao getGlusterBrickDao() {
++        if (getDbFacade() == null) {
++            return null;
++        }
+         return getDbFacade().getGlusterBrickDao();
+@@ -132,3 +135,5 @@
+             int volumeReplicaCount) {
+-        getGlusterBrickDao().removeAllInBatch(brickList);
++        if (getGlusterBrickDao() != null) {
++            getGlusterBrickDao().removeAllInBatch(brickList);
++        }
+ 
+</code></pre>
+        </li>
+        <li class="execution success">
+          <h2>Execution 2</h2>
+          <span class="decision">Strat4 NULL </span><span class="decision">Strat4 VOID </span><br>
+        <pre class="diff"><code>--- /GlusterDBUtils.java
++++ /GlusterDBUtils.java
+@@ -32,2 +32,5 @@
+     private GlusterBrickDao getGlusterBrickDao() {
++        if (getDbFacade() == null) {
++            return null;
++        }
+         return getDbFacade().getGlusterBrickDao();
+@@ -132,2 +135,5 @@
+             int volumeReplicaCount) {
++        if (getGlusterBrickDao() == null) {
++            return null;
++        }
+         getGlusterBrickDao().removeAllInBatch(brickList);
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 3</h2>
+          <span class="decision">Strat3 </span><br>
+        <pre class="diff"><code>--- /GlusterDBUtils.java
++++ /GlusterDBUtils.java
+@@ -32,3 +32,5 @@
+     private GlusterBrickDao getGlusterBrickDao() {
+-        return getDbFacade().getGlusterBrickDao();
++        if (getDbFacade() != null) {
++            return getDbFacade().getGlusterBrickDao();
++        }
+     }
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 4</h2>
+          <span class="decision">Strat4 NULL </span><span class="decision">Strat2A </span><br>
+        <pre class="diff"><code>--- /GlusterDBUtils.java
++++ /GlusterDBUtils.java
+@@ -32,2 +32,5 @@
+     private GlusterBrickDao getGlusterBrickDao() {
++        if (getDbFacade() == null) {
++            return null;
++        }
+         return getDbFacade().getGlusterBrickDao();
+@@ -132,3 +135,7 @@
+             int volumeReplicaCount) {
+-        getGlusterBrickDao().removeAllInBatch(brickList);
++        if (getGlusterBrickDao() == null) {
++             new GlusterBrickDaoImpl().removeAllInBatch(brickList);
++        } else {
++            getGlusterBrickDao().removeAllInBatch(brickList);
++        }
+ 
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 5</h2>
+          <span class="decision">Strat4 NULL </span><span class="decision">Strat2B </span><br>
+        <pre class="diff"><code>--- /GlusterDBUtils.java
++++ /GlusterDBUtils.java
+@@ -32,2 +32,5 @@
+     private GlusterBrickDao getGlusterBrickDao() {
++        if (getDbFacade() == null) {
++            return null;
++        }
+         return getDbFacade().getGlusterBrickDao();
+@@ -132,3 +135,7 @@
+             int volumeReplicaCount) {
+-        getGlusterBrickDao().removeAllInBatch(brickList);
++        org.ovirt.engine.core.dao.gluster.GlusterBrickDao glusterBrickDao = getGlusterBrickDao();
++        if (glusterBrickDao == null) {
++            glusterBrickDao = new GlusterBrickDaoImpl();
++        }
++        glusterBrickDao.removeAllInBatch(brickList);
+ 
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 6</h2>
+          <span class="decision">Strat4 NULL </span><br>
+        <pre class="diff"><code>--- /GlusterDBUtils.java
++++ /GlusterDBUtils.java
+@@ -32,2 +32,5 @@
+     private GlusterBrickDao getGlusterBrickDao() {
++        if (getDbFacade() == null) {
++            return null;
++        }
+         return getDbFacade().getGlusterBrickDao();
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 7</h2>
+          <span class="decision">Strat4 NEW </span><br>
+        <pre class="diff"><code>--- /GlusterDBUtils.java
++++ /GlusterDBUtils.java
+@@ -32,2 +32,5 @@
+     private GlusterBrickDao getGlusterBrickDao() {
++        if (getDbFacade() == null) {
++            return new GlusterBrickDaoImpl();
++        }
+         return getDbFacade().getGlusterBrickDao();
+</code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 8</h2>
+          <br>
+        <pre class="diff"><code></code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 9</h2>
+          <br>
+        <pre class="diff"><code></code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 10</h2>
+          <br>
+        <pre class="diff"><code></code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 11</h2>
+          <br>
+        <pre class="diff"><code></code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 12</h2>
+          <br>
+        <pre class="diff"><code></code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 13</h2>
+          <br>
+        <pre class="diff"><code></code></pre>
+        </li>
+        <li class="execution ">
+          <h2>Execution 14</h2>
+          <br>
+        <pre class="diff"><code></code></pre>
+        </li>
+    </ul>
+  </body>
+</html>
