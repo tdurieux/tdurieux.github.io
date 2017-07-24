@@ -2,5 +2,6 @@
    "name": "Mayocat 231",
    "benchmark": "Itzal",
    "oracle": "Production",
-   "type": "NPE"
+   "type": "NPE",
+   "application": "website"
 }

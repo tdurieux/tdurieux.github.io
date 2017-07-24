@@ -2,5 +2,6 @@
    "name": "Javapoet 70b38e5",
    "benchmark": "Genesis",
    "oracle": "Test based",
-   "type": "NPE"
+   "type": "NPE",
+   "application": "library"
 }

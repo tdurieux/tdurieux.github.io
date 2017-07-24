@@ -2,5 +2,6 @@
    "name": "Tomcat 54703",
    "benchmark": "Ares",
    "oracle": "Production",
-   "type": "NPE"
+   "type": "NPE",
+   "application": "server"
 }

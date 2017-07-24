@@ -6,14 +6,6 @@
     <title>DataflowJavaSDK_c06125d</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <style>
-      .execution {
-        background: #ff8f81;
-      }
-      .execution.success {
-        background: #b5ffbd;
-      }
-    </style>
   </head>
   <body>
     <h1>DataflowJavaSDK_c06125d</h1>
@@ -29,73 +21,73 @@
         <li class="execution success">
           <h2>Execution 1</h2>
           <span class="decision">Strat2A </span><br>
-        <pre class="diff"><code>--- /CoGbkResult.java
-+++ /CoGbkResult.java
-@@ -319,9 +319,20 @@
-     List&lt;RawUnionValue&gt; unions = valueMap.get(index);
--    if (unions.isEmpty()) {
--      if (useDefault) {
--        return defaultValue;
--      } else {
--        throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
--            + &quot; corresponds to an empty result, and no default was provided&quot;);
-+    if (unions == null) {
-+      if ( new ArrayList().isEmpty()) {
-+        if (useDefault) {
-+          return defaultValue;
-+        } else {
-+          throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
-+          + &quot; corresponds to an empty result, and no default was provided&quot;);
-+        }
-       }
-+    } else {
-+      if (unions.isEmpty()) {
-+        if (useDefault) {
-+          return defaultValue;
-+        } else {
-+          throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
-+          + &quot; corresponds to an empty result, and no default was provided&quot;);
-+        }
-+      }
-     }
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/CoGbkResult.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="319"></td><td class="line" data-line-number="319"></td><td class="code"><span>    List<RawUnionValue> unions = valueMap.get(index);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="320"></td><td class="line" data-line-number=""></td><td class="code"><span>    if (unions.isEmpty()) {</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="321"></td><td class="line" data-line-number=""></td><td class="code"><span>      if (useDefault) {</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="322"></td><td class="line" data-line-number=""></td><td class="code"><span>        return defaultValue;</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="323"></td><td class="line" data-line-number=""></td><td class="code"><span>      } else {</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="324"></td><td class="line" data-line-number=""></td><td class="code"><span>        throw new IllegalArgumentException("TupleTag " + tag</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="325"></td><td class="line" data-line-number=""></td><td class="code"><span>            + " corresponds to an empty result, and no default was provided");</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="320"></td><td class="code"><span>    if (unions == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="321"></td><td class="code"><span>      if ( new ArrayList().isEmpty()) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="322"></td><td class="code"><span>        if (useDefault) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="323"></td><td class="code"><span>          return defaultValue;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="324"></td><td class="code"><span>        } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="325"></td><td class="code"><span>          throw new IllegalArgumentException("TupleTag " + tag</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="326"></td><td class="code"><span>          + " corresponds to an empty result, and no default was provided");</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="327"></td><td class="code"><span>        }</span></td></tr>
+<tr class=""><td class="line" data-line-number="326"></td><td class="line" data-line-number="328"></td><td class="code"><span>      }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="329"></td><td class="code"><span>    } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="330"></td><td class="code"><span>      if (unions.isEmpty()) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="331"></td><td class="code"><span>        if (useDefault) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="332"></td><td class="code"><span>          return defaultValue;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="333"></td><td class="code"><span>        } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="334"></td><td class="code"><span>          throw new IllegalArgumentException("TupleTag " + tag</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="335"></td><td class="code"><span>          + " corresponds to an empty result, and no default was provided");</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="336"></td><td class="code"><span>        }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="337"></td><td class="code"><span>      }</span></td></tr>
+<tr class=""><td class="line" data-line-number="327"></td><td class="line" data-line-number="338"></td><td class="code"><span>    }</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution success">
           <h2>Execution 2</h2>
           <span class="decision">Strat2B </span><br>
-        <pre class="diff"><code>--- /CoGbkResult.java
-+++ /CoGbkResult.java
-@@ -319,2 +319,5 @@
-     List&lt;RawUnionValue&gt; unions = valueMap.get(index);
-+    if (unions == null) {
-+      unions = new ArrayList();
-+    }
-     if (unions.isEmpty()) {
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/CoGbkResult.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="319"></td><td class="line" data-line-number="319"></td><td class="code"><span>    List<RawUnionValue> unions = valueMap.get(index);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="320"></td><td class="code"><span>    if (unions == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="321"></td><td class="code"><span>      unions = new ArrayList();</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="322"></td><td class="code"><span>    }</span></td></tr>
+<tr class=""><td class="line" data-line-number="320"></td><td class="line" data-line-number="323"></td><td class="code"><span>    if (unions.isEmpty()) {</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 3</h2>
           <span class="decision">Strat3 </span><br>
-        <pre class="diff"><code>--- /CoGbkResult.java
-+++ /CoGbkResult.java
-@@ -319,8 +319,10 @@
-     List&lt;RawUnionValue&gt; unions = valueMap.get(index);
--    if (unions.isEmpty()) {
--      if (useDefault) {
--        return defaultValue;
--      } else {
--        throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
--            + &quot; corresponds to an empty result, and no default was provided&quot;);
-+    if (unions != null) {
-+      if (unions.isEmpty()) {
-+        if (useDefault) {
-+          return defaultValue;
-+        } else {
-+          throw new IllegalArgumentException(&quot;TupleTag &quot; + tag
-+          + &quot; corresponds to an empty result, and no default was provided&quot;);
-+        }
-       }
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/CoGbkResult.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="319"></td><td class="line" data-line-number="319"></td><td class="code"><span>    List<RawUnionValue> unions = valueMap.get(index);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="320"></td><td class="line" data-line-number=""></td><td class="code"><span>    if (unions.isEmpty()) {</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="321"></td><td class="line" data-line-number=""></td><td class="code"><span>      if (useDefault) {</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="322"></td><td class="line" data-line-number=""></td><td class="code"><span>        return defaultValue;</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="323"></td><td class="line" data-line-number=""></td><td class="code"><span>      } else {</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="324"></td><td class="line" data-line-number=""></td><td class="code"><span>        throw new IllegalArgumentException("TupleTag " + tag</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="325"></td><td class="line" data-line-number=""></td><td class="code"><span>            + " corresponds to an empty result, and no default was provided");</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="320"></td><td class="code"><span>    if (unions != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="321"></td><td class="code"><span>      if (unions.isEmpty()) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="322"></td><td class="code"><span>        if (useDefault) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="323"></td><td class="code"><span>          return defaultValue;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="324"></td><td class="code"><span>        } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="325"></td><td class="code"><span>          throw new IllegalArgumentException("TupleTag " + tag</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="326"></td><td class="code"><span>          + " corresponds to an empty result, and no default was provided");</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="327"></td><td class="code"><span>        }</span></td></tr>
+<tr class=""><td class="line" data-line-number="326"></td><td class="line" data-line-number="328"></td><td class="code"><span>      }</span></td></tr>
+</tbody></table>
+
         </li>
     </ul>
   </body>

@@ -2,5 +2,6 @@
    "name": "Jongo f46f658",
    "benchmark": "Genesis",
    "oracle": "Test based",
-   "type": "NPE"
+   "type": "NPE",
+   "application": "library"
 }

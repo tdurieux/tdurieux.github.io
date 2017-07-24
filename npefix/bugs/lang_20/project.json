@@ -2,5 +2,6 @@
    "name": "Lang 20",
    "benchmark": "Defects4j",
    "oracle": "Test based",
-   "type": "NPE"
+   "type": "NPE",
+   "application": "library"
 }

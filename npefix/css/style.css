@@ -1,6 +1,11 @@
+html {
+    color: #24292e;
+}
+
 md-sidenav {
   max-width: 475px;
-  width: 475px;}
+  width: 475px;
+}
 .executionSelector {
     height: 100%;
 }
@@ -91,4 +96,139 @@ td.locations table {
     padding: 0;
     margin: 0;
     border: 0;
+}
+
+.executions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.executions .execution {
+    background: none;
+    margin: 0;
+    margin-top: 10px;
+    padding-left: 10px; 
+    padding-right: 10px; 
+    border-left: 5px solid #cc2b17;
+}
+.executions .execution.success {
+    background: none;
+    border-left-color: #008c0f;
+}
+.execution h2 {
+    margin: 0;
+    padding: 0;
+}
+table.diff {
+    border-collapse: separate;
+    white-space:pre-wrap;
+    border: 1px solid #DDD;
+    width: 100%;
+}
+
+table.diff tbody th {
+    font-family:verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;
+    background:#EED;
+    font-size:11px;
+    font-weight:normal;
+    border:1px solid #BBC;
+    color:#886;
+    padding:.3em .5em .1em 2em;
+    text-align:right;
+    vertical-align:top
+}
+table.diff thead {
+    border-bottom:1px solid #BBC;
+    background:#EFEFEF;
+    font-family:Verdana
+}
+table.diff thead th.texttitle {
+    text-align:left
+}
+table.diff tbody td {
+    padding:0px .4em;
+    padding-top:.4em;
+    vertical-align:top;
+}
+table.diff tr {
+    border: 0px;
+}
+table.diff tr.addition .line {
+    background-color: #cdffd8;
+    border-color: #bef5cb;
+}
+table.diff tr.addition .code {
+    background-color: #e6ffed;
+}
+table.diff tr.addition .code::before {
+    position: absolute;
+    content: "+"
+}
+table.diff tr.deletation .line {
+    background-color: #ffdce0;
+    border-color: #fdaeb7;
+}
+table.diff tr.deletation .code {
+    background-color: #ffeef0;
+}
+table.diff tr.deletation .code::before {
+    position: absolute;
+    content: "-"
+}
+
+table.diff .line::before {
+    content: attr(data-line-number);
+}
+
+table.diff .line {
+    width: 1%;
+    min-width: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(27,31,35,0.3);
+    font-size: 12px;
+    line-height: 20px;
+    text-align: right;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+table.diff .code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+    color: #24292e;
+    width: 100%;
+}
+table.diff .code > span {
+    word-wrap: normal;
+    white-space: pre;
+}
+table.diff .chuck {
+    height: 3px;
+    background: #DDD;
+    font-size: 3px;
+    line-height: 3px;
+}
+table.diff .empty {
+        background-color:#DDD;
+}
+table.diff .replace {
+        background-color:#FD8
+}
+table.diff .delete {
+        background-color:#E99;
+}
+table.diff .skip {
+        background-color:#EFEFEF;
+        border:1px solid #AAA;
+        border-right:1px solid #BBC;
+}
+table.diff .insert {
+        background-color:#9E9
+}
+table.diff th.author {
+        text-align:right;
+        border-top:1px solid #BBC;
+        background:#EFEFEF
 }

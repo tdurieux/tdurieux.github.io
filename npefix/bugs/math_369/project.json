@@ -2,5 +2,6 @@
    "name": "Math 369",
    "benchmark": "NPEFix",
    "oracle": "Test based",
-   "type": "NPE"
+   "type": "NPE",
+   "application": "library"
 }

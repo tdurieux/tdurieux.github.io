@@ -6,14 +6,6 @@
     <title>Math 70</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <style>
-      .execution {
-        background: #ff8f81;
-      }
-      .execution.success {
-        background: #b5ffbd;
-      }
-    </style>
   </head>
   <body>
     <h1>Math 70</h1>
@@ -29,444 +21,444 @@
         <li class="execution success">
           <h2>Execution 1</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat2A </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,4 +87,12 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
--           fm = f.value(m);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               fm = new SinFunction().value(m);
-+           } else {
-+               fm = f.value(m);
-+           }
- 
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="89"></td><td class="line" data-line-number=""></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               fm = new SinFunction().value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="96"></td><td class="code"><span>               fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="97"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="90"></td><td class="line" data-line-number="98"></td><td class="code"><span></span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 2</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat2B </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               f = new SinFunction();
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               f = new SinFunction();</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 3</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat3 </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,4 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
--           fm = f.value(m);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f != null) {
-+               fm = f.value(m);
-+           }
- 
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="89"></td><td class="line" data-line-number=""></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="90"></td><td class="line" data-line-number="96"></td><td class="code"><span></span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 4</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return min;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               return min;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 5</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return max;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               return max;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 6</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return fmin;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               return fmin;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 7</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return m;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               return m;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 8</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return 0.0;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               return 0.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 9</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return -1.0;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               return -1.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 10</h2>
           <span class="decision">Strat2A </span><span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f == null) {
-+               fmin = new SinFunction().value(min);
-+           } else {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return 1.0;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = new SinFunction().value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               return 1.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="96"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 11</h2>
           <span class="decision">Strat2B </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,2 +87,5 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
-+           if (f == null) {
-+               f = new SinFunction();
-+           }
-            fmin = f.value(min);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               f = new SinFunction();</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="88"></td><td class="line" data-line-number="91"></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 12</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat2A </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,4 +87,10 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
--           fm = f.value(m);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               fm = new SinFunction().value(m);
-+           } else {
-+               fm = f.value(m);
-+           }
- 
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="89"></td><td class="line" data-line-number=""></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               fm = new SinFunction().value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           } else {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="94"></td><td class="code"><span>               fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="95"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="90"></td><td class="line" data-line-number="96"></td><td class="code"><span></span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 13</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat2B </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               f = new SinFunction();
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               f = new SinFunction();</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="94"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 14</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat3 </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,4 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
--           fm = f.value(m);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f != null) {
-+               fm = f.value(m);
-+           }
- 
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="89"></td><td class="line" data-line-number=""></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               fm = f.value(m);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="90"></td><td class="line" data-line-number="94"></td><td class="code"><span></span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 15</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return min;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               return min;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="94"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 16</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return max;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               return max;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="94"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 17</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return m;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               return m;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="94"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 18</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return 0.0;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               return 0.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="94"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 19</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return -1.0;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               return -1.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="94"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 20</h2>
           <span class="decision">Strat3 </span><span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,3 +87,8 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
--           fmin = f.value(min);
-+           if (f != null) {
-+               fmin = f.value(min);
-+           }
-+           if (f == null) {
-+               return 1.0;
-+           }
-            fm = f.value(m);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="deletation"><td class="line" data-line-number="88"></td><td class="line" data-line-number=""></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f != null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               fmin = f.value(min);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="91"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="92"></td><td class="code"><span>               return 1.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="93"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="89"></td><td class="line" data-line-number="94"></td><td class="code"><span>           fm = f.value(m);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 21</h2>
           <span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,2 +87,5 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
-+           if (f == null) {
-+               return min;
-+           }
-            fmin = f.value(min);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               return min;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="88"></td><td class="line" data-line-number="91"></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 22</h2>
           <span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,2 +87,5 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
-+           if (f == null) {
-+               return max;
-+           }
-            fmin = f.value(min);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               return max;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="88"></td><td class="line" data-line-number="91"></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 23</h2>
           <span class="decision">Strat4 VAR </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,2 +87,5 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
-+           if (f == null) {
-+               return m;
-+           }
-            fmin = f.value(min);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               return m;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="88"></td><td class="line" data-line-number="91"></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 24</h2>
           <span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,2 +87,5 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
-+           if (f == null) {
-+               return 0.0;
-+           }
-            fmin = f.value(min);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               return 0.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="88"></td><td class="line" data-line-number="91"></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 25</h2>
           <span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,2 +87,5 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
-+           if (f == null) {
-+               return -1.0;
-+           }
-            fmin = f.value(min);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               return -1.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="88"></td><td class="line" data-line-number="91"></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+</tbody></table>
+
         </li>
         <li class="execution ">
           <h2>Execution 26</h2>
           <span class="decision">Strat4 NEW </span><br>
-        <pre class="diff"><code>--- /BisectionSolver.java
-+++ /BisectionSolver.java
-@@ -87,2 +87,5 @@
-             m = UnivariateRealSolverUtils.midpoint(min, max);
-+           if (f == null) {
-+               return 1.0;
-+           }
-            fmin = f.value(min);
-</code></pre>
+        <table class="diff" cellpadding="0" cellspacing="0">
+<thead><th><td colspan="4">/BisectionSolver.java</td></th></thead><tbody>
+<tr class=""><td class="line" data-line-number="87"></td><td class="line" data-line-number="87"></td><td class="code"><span>            m = UnivariateRealSolverUtils.midpoint(min, max);</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="88"></td><td class="code"><span>           if (f == null) {</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="89"></td><td class="code"><span>               return 1.0;</span></td></tr>
+<tr class="addition"><td class="line" data-line-number=""></td><td class="line" data-line-number="90"></td><td class="code"><span>           }</span></td></tr>
+<tr class=""><td class="line" data-line-number="88"></td><td class="line" data-line-number="91"></td><td class="code"><span>           fmin = f.value(min);</span></td></tr>
+</tbody></table>
+
         </li>
     </ul>
   </body>

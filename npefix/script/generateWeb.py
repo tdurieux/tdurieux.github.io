@@ -9,18 +9,19 @@ import json
 import re
 from unidiff import PatchSet
 
-from django.template.loader import render_to_string
-import django
-from django.conf import settings
+import jinja2 
 
-settings.configure()
-settings.TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [join(os.path.dirname(os.path.realpath(__file__)), 'template')]
-    },
-]
-django.setup()
+from templatetags.poll_extras import diff2html
+
+def render(tpl_path, context):
+    path, filename = os.path.split(tpl_path)
+    env = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(path or './template')
+    )
+    env.filters['diff2html'] = diff2html
+    return env.get_template(filename).render(context)
+
+
 
 currentDir = os.path.dirname(os.path.realpath(__file__))
 resultsPath = join(currentDir, "../data/data.json")
@@ -30,6 +31,8 @@ with open(resultsPath) as data_file:
 
     collectObjects = {}
     for project in resultsData:
+        if False and project['name'] != "jongo_f46f658":
+            continue
         collectObject = {
             "patch": [],
             "valid": [],
@@ -95,11 +98,8 @@ with open(resultsPath) as data_file:
         sizeCorrectSeqDecisions = []
         sizeFailureSeqDecisions = []
 
-        executions = executionData['executions']
+        executions = [execution for execution in executionData['executions'] if 'decisions' in execution and len(execution['decisions']) > 0 and execution['decisions'][0]['used']]
         for execution in executions:
-            if 'decisions' not in execution or not execution['decisions'][0]['used']:
-                executions.remove(execution)
-                continue
             if 'score' not in execution:
                 execution['score'] = 1
             if execution['result']['success']:
@@ -129,13 +129,13 @@ with open(resultsPath) as data_file:
                 sizeFailureSeqDecisions += [len(execution['decisions'])]
 
             index += 1
-
+        
         average_bugs[bugTitle]['nbPassedSeqLaps'] += [countPassedLaps]
-	if "searchSpace" in executionData:
-	        average_bugs[bugTitle]['nbDetectedDecision'] += [len(executionData['searchSpace'])]
+        if "searchSpace" in executionData:
+            average_bugs[bugTitle]['nbDetectedDecision'] += [len(executionData['searchSpace'])]
         average_bugs[bugTitle]['nbExploredDecision'] += [len(exploredDecisions)]
         average_bugs[bugTitle]['nbExploredLocation'] += [len(exploredLocations)]
-        average_bugs[bugTitle]['totalSize'] += [len(executionData['executions'])]
+        average_bugs[bugTitle]['totalSize'] += [len(executions)]
 
         if len(sizeCorrectSeqDecisions) > 0:
             average_bugs[bugTitle]['minSizeCorrectSeqDecision'] += [min(sizeCorrectSeqDecisions)]
@@ -147,13 +147,12 @@ with open(resultsPath) as data_file:
             average_bugs[bugTitle]['maxSizeFailureSeqDecision'] += [max(sizeFailureSeqDecisions)]
             average_bugs[bugTitle]['medSizeFailureSeqDecision'] += [med(sizeFailureSeqDecisions)]
 
-
         sortedExecutions = sorted(executions, key=lambda x: -1 if x['result']['success'] else 1)
-        rendered = render_to_string('bug_template.html', {'title': bugTitle, 'executions': sortedExecutions,
+        rendered = render('bug_template.html', {'title': bugTitle, 'executions': sortedExecutions,
                                                           'data': average_bugs[bugTitle]})
         with open(htmlPath, 'w') as html_file:
             html_file.write(rendered)
     sortedList = sorted(average_bugs.items(), key=lambda x: x[1]['bugTitle'])
-    rendered = render_to_string('index_template.html', {'data': sortedList})
+    rendered = render('index_template.html', {'data': sortedList})
     with open(join(outputDir, "..", "index.html"), 'w') as html_file:
         html_file.write(rendered)

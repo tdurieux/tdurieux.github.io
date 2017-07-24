@@ -6,14 +6,6 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <style>
-      .execution {
-        background: #ff8f81;
-      }
-      .execution.success {
-        background: #b5ffbd;
-      }
-    </style>
   </head>
   <body>
     <h1>{{ title }}</h1>
@@ -27,9 +19,9 @@
     </table>
     <ul class="executions">{% for execution in executions %}
         <li class="execution {% if execution.result.success %}success{% endif %}">
-          <h2>Execution {{ forloop.counter }}</h2>
+          <h2>Execution {{ loop.index }}</h2>
           {% for decision in execution.decisions %}<span class="decision">{{ decision.strategy}} </span>{% endfor %}<br>
-        <pre class="diff"><code>{{ execution.diff }}</code></pre>
+        {{ execution.diff |diff2html }}
         </li>{% endfor %}
     </ul>
   </body>
