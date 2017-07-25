@@ -37,6 +37,9 @@ table {
 table tr {
     border-top: 1px solid #ddd;
 }
+.pure-table tr:hover td {
+    background-color: #e0e0e0!important;
+}
 .strategyTable > tbody > tr {
     border-top: 2px solid #ddd;
 }
@@ -52,6 +55,13 @@ table table tr:last-child {
 table td {
     vertical-align: middle;
 }
+.pure-table tfoot {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
 td.content {
     border-left: 1px solid #ddd;
     padding: 7px;

@@ -1,0 +1,7 @@
+{
+   "name": "Jetty 335500",
+   "benchmark": "Ares",
+   "oracle": "Production",
+   "type": "NPE",
+   "application": "server"
+}

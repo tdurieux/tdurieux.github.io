@@ -13,25 +13,54 @@ import jinja2
 
 from templatetags.poll_extras import diff2html
 
+def sumTable(arr, key):
+    values = set()
+    output = 0
+    keys = key.split(".")
+    for project, obj in arr:
+        currentObject = obj
+        for key in keys:
+            if key in currentObject:
+                currentObject = currentObject[key]
+        if currentObject != obj:
+            if isinstance(currentObject, basestring):
+                values.add(currentObject)
+            elif isinstance(currentObject, int):
+                output+=currentObject
+            elif isinstance(currentObject, list):
+                if len(currentObject) == 1 and isinstance(currentObject[0], int):
+                    output+=currentObject[0]
+                else:
+                    output+=len(currentObject)
+    output += len(values)
+    return output
+
 def render(tpl_path, context):
     path, filename = os.path.split(tpl_path)
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(path or './template')
     )
     env.filters['diff2html'] = diff2html
+    env.filters['sum'] = sumTable
     return env.get_template(filename).render(context)
 
 
 
 currentDir = os.path.dirname(os.path.realpath(__file__))
 resultsPath = join(currentDir, "../data/data.json")
+
 average_bugs = {}
+projects = {}
+oracles = {}
+types = {}
+benchmarks = {}
+
 with open(resultsPath) as data_file:
     resultsData = (json.load(data_file))
 
     collectObjects = {}
     for project in resultsData:
-        if False and project['name'] != "jongo_f46f658":
+        if False and project['name'] == "math_1117":
             continue
         collectObject = {
             "patch": [],
@@ -59,6 +88,8 @@ with open(resultsPath) as data_file:
         projectData = json.load(open(projectPath))
 
         bugTitle = projectData['name']
+        projectName = bugTitle[:bugTitle.index(" ")]
+        
 
         bugTitlePath = project['name'].title().replace("-", "").replace("_", "")
         titleSplit = re.compile("([0-9]+)").split(bugTitlePath)
@@ -85,6 +116,22 @@ with open(resultsPath) as data_file:
             "medSizeFailureSeqDecision": [],
             "projectData": projectData
         }
+
+        if projectName not in projects:
+            projects[projectName] = []
+        projects[projectName] += [average_bugs[bugTitle]]
+
+        if projectData['oracle'] not in oracles:
+            oracles[projectData['oracle']] = []
+        oracles[projectData['oracle']] += [average_bugs[bugTitle]]
+
+        if projectData['benchmark'] not in benchmarks:
+            benchmarks[projectData['benchmark']] = []
+        benchmarks[projectData['benchmark']] += [average_bugs[bugTitle]]
+
+        if projectData['type'] not in types:
+            types[projectData['type']] = []
+        types[projectData['type']] += [average_bugs[bugTitle]]
 
         countPassedLaps = 0
         nbPassedSeqLaps = 0
@@ -153,6 +200,11 @@ with open(resultsPath) as data_file:
         with open(htmlPath, 'w') as html_file:
             html_file.write(rendered)
     sortedList = sorted(average_bugs.items(), key=lambda x: x[1]['bugTitle'])
-    rendered = render('index_template.html', {'data': sortedList})
+    sortedProject = sorted(projects.items(), key=lambda x: len(x[1]), reverse=True)
+    sortedOracle = sorted(oracles.items(), key=lambda x: len(x[1]), reverse=True)
+    sortedBenchmark = sorted(benchmarks.items(), key=lambda x: len(x[1]), reverse=True)
+    sortedType = sorted(types.items(), key=lambda x: len(x[1]), reverse=True)
+
+    rendered = render('index_template.html', {'data': sortedList, 'projects': sortedProject, 'oracles': sortedOracle, 'benchmarks': sortedBenchmark, 'types': sortedType})
     with open(join(outputDir, "..", "index.html"), 'w') as html_file:
         html_file.write(rendered)
