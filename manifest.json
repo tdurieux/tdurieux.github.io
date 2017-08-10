@@ -1,0 +1,9 @@
+{
+    "manifest_version": 1,
+    "name": "Thomas Durieux",
+    "version": "1",
+    "default_locale": "en",
+    "description": "Thomas Durieux website",
+    "short_name": "tDurieux",
+    "homepage_url": "https://durieux.me/"
+}
