@@ -1,0 +1,14 @@
+\begin{table}
+  \centering
+  \caption{Patch Regression Results}
+  \label{tab:regression}
+  \resizebox{0.45\textwidth}{!}{%
+  %\setlength\tabcolsep{2.5 ex}
+  \begin{tabular}{|l|l|r|l|r|}
+    \hline
+    Project & Patch Location  & \rotatebox{90}{Patch ID}  & \rotatebox{90}{\tabincell{c}{Valid/Total \\ Request}}  & \rotatebox{90}{\# Applied} \\
+    \hline {% for project, valueProject in data %}{% for location, value in valueProject %}{% for location, patch_id, agregated in value %}
+    {{ project }} & {{ location }} & {{ patch_id }} & {{ agregated.nbRequest - agregated.nbDiff }}/{{ agregated.nbRequest}} & ? \\{% endfor %}{% endfor %}{% endfor %}
+    \hline
+  \end{tabular}
+\end{table}

@@ -5,26 +5,31 @@ register = template.Library()
 
 def diff_chuck2html(chucks):
     startedLines = chucks[0][4:len(chucks[0]) - 3]
+    if ',' not in startedLines:
+        return "-ERROR: -" + "\n".join(chucks) + " -"
     endStartLine = startedLines.index(',')
     startedLine = int(startedLines[:endStartLine])
+
     endOriginalFileLength = startedLines.index(" ", endStartLine)
     originalFileLength = int(startedLines[endStartLine+1:endOriginalFileLength])
 
-    endEndLine = startedLines.index(',', endOriginalFileLength)
-    endLine = int(startedLines[endOriginalFileLength+2:endEndLine])
-    newFileLength = int(startedLines[endEndLine+1:])
+    if ',' in startedLines[endOriginalFileLength:]:
+        endEndLine = startedLines.index(',', endOriginalFileLength)
+        endLine = int(startedLines[endOriginalFileLength+2:endEndLine])
+    else:
+        endLine = len(startedLines[endOriginalFileLength:])
 
     output = ""
 
     for line in chucks[1:]:
-        if "@@" in line:
+        if "@@" == line[0:2]:
             output += "<tr class=\"chuck\">"
             output += "<td colspan=\"4\">"
             output += "</td>"
             output += "<td>\n"
             output += diff_chuck2html(chucks[chucks.index(line, 1):])
             return output
-        if "---" in line:
+        if "---" == line[0:3] and "--->" != line[0:4]:
             output += "</tbody></table>\n"
             output += diff2html("\n".join(chucks[chucks.index(line, 1):]))
             return output
@@ -50,7 +55,7 @@ def diff_chuck2html(chucks):
             output += str(endLine)
         output += "\"></td>"
         output += "<td class=\"code\"><span>"
-        output += line[1:]
+        output += line[1:].replace("<", "&lt;").replace(">", "&gt;")
         output += "</span></td>"
         output += "</tr>\n"
         if is_add:

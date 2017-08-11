@@ -60,7 +60,7 @@ with open(resultsPath) as data_file:
 
     collectObjects = {}
     for project in resultsData:
-        if False and project['name'] == "math_1117":
+        if True and project['name'] == "math_1117":
             continue
         collectObject = {
             "patch": [],
@@ -87,6 +87,9 @@ with open(resultsPath) as data_file:
         executionData = json.load(open(executionPath))
         projectData = json.load(open(projectPath))
 
+        if projectData["benchmark"] == "Bear":
+            continue
+
         bugTitle = projectData['name']
         projectName = bugTitle[:bugTitle.index(" ")]
         
@@ -95,7 +98,7 @@ with open(resultsPath) as data_file:
         titleSplit = re.compile("([0-9]+)").split(bugTitlePath)
         bugTitlePath = "-".join(titleSplit[0:2]) + "".join(titleSplit[2::])
 
-        outputDir = join(os.path.dirname(os.path.realpath(__file__)), "..", "static", bugTitlePath)
+        outputDir = join(os.path.dirname(os.path.realpath(__file__)), "..", "static", "generation", bugTitlePath)
         if not os.path.exists(outputDir):
             os.makedirs(outputDir)
         htmlPath = join(outputDir, "index.html")
@@ -207,4 +210,8 @@ with open(resultsPath) as data_file:
 
     rendered = render('index_template.html', {'data': sortedList, 'projects': sortedProject, 'oracles': sortedOracle, 'benchmarks': sortedBenchmark, 'types': sortedType})
     with open(join(outputDir, "..", "index.html"), 'w') as html_file:
+        html_file.write(rendered)
+
+    rendered = render('generation_template.tex', {'data': sortedList, 'projects': sortedProject, 'oracles': sortedOracle, 'benchmarks': sortedBenchmark, 'types': sortedType})
+    with open(join(outputDir, "..", "tab_generation.tex"), 'w') as html_file:
         html_file.write(rendered)

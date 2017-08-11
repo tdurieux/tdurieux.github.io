@@ -213,6 +213,7 @@ table.diff .code {
 table.diff .code > span {
     word-wrap: normal;
     white-space: pre;
+    padding-left: 12px;
 }
 table.diff .chuck {
     height: 3px;
