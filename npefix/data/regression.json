@@ -5,237 +5,139 @@
       "CategoryFacadeImpl-55-1": {
         "name": "CategoryFacadeImpl-55-1", 
         "versions": [
-          1502358623160, 
-          1502361863531, 
-          1502363695637, 
-          1502362350037, 
-          1502360727174, 
-          1502365325486
+          1502690161984
         ]
       }, 
       "CategoryFacadeImpl-55-2": {
         "name": "CategoryFacadeImpl-55-2", 
         "versions": [
-          1502362373367, 
-          1502361878391, 
-          1502358637412, 
-          1502363718546, 
-          1502360741209, 
-          1502365339266
+          1502690175899
         ]
       }, 
       "CategoryFacadeImpl-55-3": {
         "name": "CategoryFacadeImpl-55-3", 
         "versions": [
-          1502363741171, 
-          1502361893213, 
-          1502362396752, 
-          1502365353262, 
-          1502360755107, 
-          1502358651258
+          1502690189560
         ]
       }, 
       "CategoryFacadeImpl-55-4": {
         "name": "CategoryFacadeImpl-55-4", 
         "versions": [
-          1502365367743, 
-          1502358665164, 
-          1502360768936, 
-          1502362420058, 
-          1502363763804, 
-          1502361908004
+          1502690203665
         ]
       }, 
       "CategoryFacadeImpl-55-5": {
         "name": "CategoryFacadeImpl-55-5", 
         "versions": [
-          1502361922501, 
-          1502362443185, 
-          1502365383078, 
-          1502360782595, 
-          1502358679036, 
-          1502363786409
+          1502690218206
         ]
       }, 
       "ReadableCategoryPopulator-51-1": {
         "name": "ReadableCategoryPopulator-51-1", 
         "versions": [
-          1502361937304, 
-          1502363809127, 
-          1502360796517, 
-          1502358692931, 
-          1502365398503, 
-          1502362466485
+          1502690231731
         ]
       }, 
       "ReadableCategoryPopulator-51-2": {
         "name": "ReadableCategoryPopulator-51-2", 
         "versions": [
-          1502363831853, 
-          1502358706794, 
-          1502360810241, 
-          1502361951901, 
-          1502362489986, 
-          1502365413131
+          1502690245259
         ]
       }, 
       "ReadableCategoryPopulator-51-3": {
         "name": "ReadableCategoryPopulator-51-3", 
         "versions": [
-          1502360823980, 
-          1502363854518, 
-          1502361966416, 
-          1502362514056, 
-          1502365427795, 
-          1502358720553
+          1502690258806
         ]
       }, 
       "ReadableCategoryPopulator-51-4": {
         "name": "ReadableCategoryPopulator-51-4", 
         "versions": [
-          1502361980756, 
-          1502358734402, 
-          1502360837797, 
-          1502363877127, 
-          1502365442093, 
-          1502362537968
+          1502690272692
         ]
       }, 
       "ReadableCategoryPopulator-51-5": {
         "name": "ReadableCategoryPopulator-51-5", 
         "versions": [
-          1502365456659, 
-          1502363899859, 
-          1502362561870, 
-          1502358748124, 
-          1502361995525, 
-          1502360851736
+          1502690286177
         ]
       }, 
       "ReadableProductPopulator-84-1": {
         "name": "ReadableProductPopulator-84-1", 
         "versions": [
-          1502363922496, 
-          1502365470980, 
-          1502362585362, 
-          1502362010402, 
-          1502361246911
+          1502690299728
         ]
       }, 
       "ReadableProductPopulator-84-2": {
         "name": "ReadableProductPopulator-84-2", 
         "versions": [
-          1502362025174, 
-          1502363945171, 
-          1502365484553, 
-          1502361260736, 
-          1502362609149
+          1502690313222
         ]
       }, 
       "ReadableProductPopulator-84-3": {
         "name": "ReadableProductPopulator-84-3", 
         "versions": [
-          1502362632864, 
-          1502363967738, 
-          1502362039734, 
-          1502365498178, 
-          1502361274868
+          1502690326672
         ]
       }, 
       "ReadableProductPopulator-84-4": {
         "name": "ReadableProductPopulator-84-4", 
         "versions": [
-          1502365511743, 
-          1502363990471, 
-          1502362054282, 
-          1502362656336, 
-          1502361288637
+          1502690340133
         ]
       }, 
       "ShoppingCategoryController-253-1": {
         "name": "ShoppingCategoryController-253-1", 
         "versions": [
-          1502365525342, 
-          1502362068858, 
-          1502362679915, 
-          1502364013132
+          1502690353599
         ]
       }, 
       "ShoppingCategoryController-253-2": {
         "name": "ShoppingCategoryController-253-2", 
         "versions": [
-          1502362704079, 
-          1502364035965, 
-          1502362083736, 
-          1502365539294
+          1502690367121
         ]
       }, 
       "ShoppingCategoryController-253-3": {
         "name": "ShoppingCategoryController-253-3", 
         "versions": [
-          1502365552811, 
-          1502364058583, 
-          1502362727932, 
-          1502362098252
+          1502690380550
         ]
       }, 
       "ShoppingCategoryController-253-4": {
         "name": "ShoppingCategoryController-253-4", 
         "versions": [
-          1502362751530, 
-          1502365566630, 
-          1502362112752, 
-          1502364081160
+          1502690393925
         ]
       }, 
       "ShoppingCategoryController-253-5": {
         "name": "ShoppingCategoryController-253-5", 
         "versions": [
-          1502362127187, 
-          1502364103764, 
-          1502365580191, 
-          1502362775351
+          1502690407342
         ]
       }, 
       "ShoppingCategoryController-253-6": {
         "name": "ShoppingCategoryController-253-6", 
         "versions": [
-          1502364126350, 
-          1502365594060, 
-          1502362141727, 
-          1502362799103
+          1502690420729
         ]
       }, 
       "ShoppingCategoryController-253-7": {
         "name": "ShoppingCategoryController-253-7", 
         "versions": [
-          1502365607597, 
-          1502362156764, 
-          1502364148938, 
-          1502362821694
+          1502690434147
         ]
       }, 
       "ShoppingCategoryController-253-8": {
         "name": "ShoppingCategoryController-253-8", 
         "versions": [
-          1502364171292, 
-          1502362844199, 
-          1502365621137, 
-          1502362170749
+          1502690447571
         ]
       }, 
       "original": {
         "name": "original", 
         "versions": [
-          1502361849300, 
-          1502293470377, 
-          1502365271738, 
-          1502358608933, 
-          1502362326764, 
-          1502360713247, 
-          1502363672831, 
-          1502293535219, 
-          1502365311904
+          1502690148156
         ]
       }
     }
@@ -246,225 +148,191 @@
       "AbstractScopeCookieContainerFilter-202-1": {
         "name": "AbstractScopeCookieContainerFilter-202-1", 
         "versions": [
-          1502288180026, 
-          1502368519144
+          1502523847866, 
+          1502629474766
         ]
       }, 
       "AbstractScopeCookieContainerFilter-202-2": {
         "name": "AbstractScopeCookieContainerFilter-202-2", 
         "versions": [
-          1502288193702, 
-          1502368534003
+          1502523861045, 
+          1502629487667
         ]
       }, 
       "AbstractScopeCookieContainerFilter-202-3": {
         "name": "AbstractScopeCookieContainerFilter-202-3", 
         "versions": [
-          1502288206375, 
-          1502368547254
+          1502629499998
         ]
       }, 
       "AbstractScopeCookieContainerFilter-202-4": {
         "name": "AbstractScopeCookieContainerFilter-202-4", 
         "versions": [
-          1502368560073, 
-          1502288219074
+          1502629512893
         ]
       }, 
       "AbstractScopeCookieContainerFilter-202-5": {
         "name": "AbstractScopeCookieContainerFilter-202-5", 
         "versions": [
-          1502288231542, 
-          1502368572876
+          1502629525238
         ]
       }, 
       "AbstractScopeCookieContainerFilter-256-1": {
         "name": "AbstractScopeCookieContainerFilter-256-1", 
         "versions": [
-          1502368586427, 
-          1502288245412
+          1502629538253
         ]
       }, 
       "AbstractScopeCookieContainerFilter-256-2": {
         "name": "AbstractScopeCookieContainerFilter-256-2", 
         "versions": [
-          1502368599886, 
-          1502288259362
+          1502629551900
         ]
       }, 
       "AbstractScopeCookieContainerFilter-256-3": {
         "name": "AbstractScopeCookieContainerFilter-256-3", 
         "versions": [
-          1502368613271, 
-          1502288272612
+          1502629564883
         ]
       }, 
       "AbstractScopeCookieContainerFilter-256-4": {
         "name": "AbstractScopeCookieContainerFilter-256-4", 
         "versions": [
-          1502368626831, 
-          1502288286390
+          1502629577848
         ]
       }, 
       "DateAsTimestampArgumentFactory-30-1": {
         "name": "DateAsTimestampArgumentFactory-30-1", 
         "versions": [
-          1502288352630, 
-          1502368693979
+          1502629642766
         ]
       }, 
       "DateAsTimestampArgumentFactory-30-2": {
         "name": "DateAsTimestampArgumentFactory-30-2", 
         "versions": [
-          1502368707327, 
-          1502288365722
+          1502629655742
         ]
       }, 
       "DateAsTimestampArgumentFactory-30-3": {
         "name": "DateAsTimestampArgumentFactory-30-3", 
         "versions": [
-          1502288378921, 
-          1502368720680
+          1502629668635
         ]
       }, 
       "DateAsTimestampArgumentFactory-30-4": {
         "name": "DateAsTimestampArgumentFactory-30-4", 
         "versions": [
-          1502368734035, 
-          1502288392183
+          1502629681707
         ]
       }, 
       "DefaultCartLoader-88-1": {
         "name": "DefaultCartLoader-88-1", 
         "versions": [
-          1502288550225, 
-          1502290634558, 
-          1502368329476, 
-          1502368893407
+          1502629838070
         ]
       }, 
       "DefaultCartLoader-88-2": {
         "name": "DefaultCartLoader-88-2", 
         "versions": [
-          1502368344360, 
-          1502288563702, 
-          1502290648211, 
-          1502368906861
+          1502629851128
         ]
       }, 
       "DefaultCartManager-198-1": {
         "name": "DefaultCartManager-198-1", 
         "versions": [
-          1502368867463, 
-          1502288524601
+          1502629812683
         ]
       }, 
       "DefaultCartManager-198-2": {
         "name": "DefaultCartManager-198-2", 
         "versions": [
-          1502368880962, 
-          1502288537684
+          1502629825750
         ]
       }, 
       "MapAsJsonArgumentFactory-30-1": {
         "name": "MapAsJsonArgumentFactory-30-1", 
         "versions": [
-          1502288405352, 
-          1502368747248
+          1502629694598
         ]
       }, 
       "MapAsJsonArgumentFactory-30-2": {
         "name": "MapAsJsonArgumentFactory-30-2", 
         "versions": [
-          1502368760645, 
-          1502288418645
+          1502629707566
         ]
       }, 
       "MapAsJsonArgumentFactory-30-3": {
         "name": "MapAsJsonArgumentFactory-30-3", 
         "versions": [
-          1502368773967, 
-          1502288431996
+          1502629720505
         ]
       }, 
       "MapAsJsonArgumentFactory-30-4": {
         "name": "MapAsJsonArgumentFactory-30-4", 
         "versions": [
-          1502368787413, 
-          1502288445089
+          1502629733753
         ]
       }, 
       "PostgresUUIDArrayArgumentFactory-30-1": {
         "name": "PostgresUUIDArrayArgumentFactory-30-1", 
         "versions": [
-          1502288299924, 
-          1502368640168
+          1502629590787
         ]
       }, 
       "PostgresUUIDArrayArgumentFactory-30-2": {
         "name": "PostgresUUIDArrayArgumentFactory-30-2", 
         "versions": [
-          1502368653669, 
-          1502288313038
+          1502629603826
         ]
       }, 
       "PostgresUUIDArrayArgumentFactory-30-3": {
         "name": "PostgresUUIDArrayArgumentFactory-30-3", 
         "versions": [
-          1502368667050, 
-          1502288326413
+          1502629616821
         ]
       }, 
       "PostgresUUIDArrayArgumentFactory-30-4": {
         "name": "PostgresUUIDArrayArgumentFactory-30-4", 
         "versions": [
-          1502368680608, 
-          1502288339638
+          1502629629881
         ]
       }, 
       "ProductMapper-44-1": {
         "name": "ProductMapper-44-1", 
         "versions": [
-          1502288458222, 
-          1502368800877
+          1502629746688
         ]
       }, 
       "ProductMapper-44-2": {
         "name": "ProductMapper-44-2", 
         "versions": [
-          1502288472016, 
-          1502368814160
+          1502629760021
         ]
       }, 
       "ProductMapper-44-3": {
         "name": "ProductMapper-44-3", 
         "versions": [
-          1502368827439, 
-          1502288485249
+          1502629772905
         ]
       }, 
       "ProductMapper-44-4": {
         "name": "ProductMapper-44-4", 
         "versions": [
-          1502368840751, 
-          1502288498245
+          1502629786285
         ]
       }, 
       "ProductMapper-44-5": {
         "name": "ProductMapper-44-5", 
         "versions": [
-          1502288511433, 
-          1502368854119
+          1502629799603
         ]
       }, 
       "original": {
         "name": "original", 
         "versions": [
-          1502368316232, 
-          1502290601146, 
-          1502290618701, 
-          1502368504093, 
-          1502288166894
+          1502523868931, 
+          1502629461804, 
+          1502523834892
         ]
       }
     }
@@ -475,116 +343,79 @@
       "CategoryImpl-835-1": {
         "name": "CategoryImpl-835-1", 
         "versions": [
-          1502373362738, 
-          1502370349533, 
-          1502374362467
+          1502630105172
         ]
       }, 
       "CategoryImpl-835-2": {
         "name": "CategoryImpl-835-2", 
         "versions": [
-          1502374376469, 
-          1502370364454, 
-          1502373377039
+          1502630120351
         ]
       }, 
       "CategoryImpl-835-3": {
         "name": "CategoryImpl-835-3", 
         "versions": [
-          1502374390394, 
-          1502373391389, 
-          1502370378885
+          1502630134575
         ]
       }, 
       "CategoryImpl-835-4": {
         "name": "CategoryImpl-835-4", 
         "versions": [
-          1502370394837, 
-          1502373406756, 
-          1502374404560
+          1502630148696
         ]
       }, 
       "CategoryImpl-835-5": {
         "name": "CategoryImpl-835-5", 
         "versions": [
-          1502373424664, 
-          1502374419423, 
-          1502370410595
+          1502630162897
         ]
       }, 
       "CategoryImpl-835-6": {
         "name": "CategoryImpl-835-6", 
         "versions": [
-          1502374432289, 
-          1502370426420, 
-          1502373440800
+          1502630176658
         ]
       }, 
       "CategoryImpl-835-7": {
         "name": "CategoryImpl-835-7", 
         "versions": [
-          1502373454558, 
-          1502374444974, 
-          1502370442304
+          1502630189980
         ]
       }, 
       "SolrHelperServiceImpl-531-1": {
         "name": "SolrHelperServiceImpl-531-1", 
         "versions": [
-          1502374196882, 
-          1502370159076, 
-          1502373181367, 
-          1502373679445, 
-          1502373859500
+          1502630041449
         ]
       }, 
       "SolrHelperServiceImpl-531-2": {
         "name": "SolrHelperServiceImpl-531-2", 
         "versions": [
-          1502373870540, 
-          1502373195147, 
-          1502370174910, 
-          1502374209238, 
-          1502373690506
+          1502630053950
         ]
       }, 
       "SolrHelperServiceImpl-531-3": {
         "name": "SolrHelperServiceImpl-531-3", 
         "versions": [
-          1502370191458, 
-          1502374220265, 
-          1502373701881, 
-          1502373208715, 
-          1502373882265
+          1502630065562
         ]
       }, 
       "SolrHelperServiceImpl-531-4": {
         "name": "SolrHelperServiceImpl-531-4", 
         "versions": [
-          1502370207038, 
-          1502373221740, 
-          1502373714453, 
-          1502373895261, 
-          1502374231358
+          1502630077569
         ]
       }, 
       "SolrHelperServiceImpl-531-5": {
         "name": "SolrHelperServiceImpl-531-5", 
         "versions": [
-          1502373908285, 
-          1502373727194, 
-          1502373234796, 
-          1502370222145, 
-          1502374244365
+          1502630089673
         ]
       }, 
       "original": {
         "name": "original", 
         "versions": [
-          1502370060665, 
-          1502373923844, 
-          1502353555637, 
-          1502374109076
+          1502630026302
         ]
       }
     }

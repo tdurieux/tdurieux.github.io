@@ -26,12 +26,9 @@
           <td>Project</td>
           <td>Location</td>
           <td>Patch ID</td>
+          <td># Applied</td>
           <td># Request</td>
-          <td># Diff (original, patch)</td>
-          <td># Location</td>
-          <td># Expression</td>
-          <td># True</td>
-          <td># False</td>
+          <td># Valid/Total Request</td>
         </tr>
       </thead>
       <tbody>
@@ -42,12 +39,9 @@
           <td><a href="{{ project }}/index.html">{{ project }}</a></td>
           <td><a href="{{ project }}/{{ location.replace(':', '-')}}{% if location == 'original'%}{% else %}-{{ patch_id }}{% endif %}/index.html">{{ location }}</a></td> 
           <td><a href="{{ project }}/{{ location.replace(':', '-')}}{% if location == 'original'%}{% else %}-{{ patch_id }}{% endif %}/index.html">{{ patch_id }}</a></td> 
+          <td>{{agregated.appliedPatches|length}}</td>
           <td>{{ agregated.nbRequest }}</td>
-          <td>{{ agregated.nbDiff }}/{{ agregated.nbRequest }}</td>
-          <td>{{ agregated.locations|length }}</td>
-          <td>{{ agregated.locations|sum('expression') }}</td>
-          <td>{{ agregated.locations|sum('true') }}</td>
-          <td>{{ agregated.locations|sum('false') }}</td>
+          <td>{{ agregated.nbRequest - agregated.nbDiff }}/{{ agregated.nbRequest}}</td>
         </tr>{% endfor %}
         {% endfor %}
       {% endfor %}

@@ -14,15 +14,15 @@
         <td class="label">Nb decision seq.</td> <td>{{ data.totalSize.0 }}</td>
       </tr>
       <tr>
-        <td class="label">Nb valid correct patches</td> <td>{{ data.nbPassedSeqLaps.0 }}</td>
+        <td class="label">Nb patches</td> <td>{{ data.nbPassedSeqLaps.0 }}</td>
       </tr>
     </table>
-    <ul class="executions">{% for execution in executions %}
+    <ul class="executions">{% for execution in executions %}{% if execution.result.success %}
         <li class="execution {% if execution.result.success %}success{% endif %}">
           <h2>Execution {{ loop.index }}</h2>
           {% for decision in execution.decisions %}<span class="decision">{{ decision.strategy}} </span>{% endfor %}<br>
         {{ execution.diff |diff2html }}
-        </li>{% endfor %}
+        {% endif %}</li>{% endfor %}
     </ul>
   </body>
 </html>

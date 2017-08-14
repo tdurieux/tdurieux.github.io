@@ -109,7 +109,7 @@ with open(resultsPath) as data_file:
                     continue
                 if version > max_version:
                     max_version = version
-            # no execution found
+            # no execuValid/Total \\ Requesttion found
             if max_version is None:
                 continue
 
@@ -124,7 +124,8 @@ with open(resultsPath) as data_file:
             agregatedRequest = {
                 "nbDiff": 0,
                 "nbRequest": len(executionData),
-                "locations": {}
+                "locations": {},
+                "appliedPatches": {}
             }
             idLocation = patch
             if idLocation != "original":
@@ -135,8 +136,11 @@ with open(resultsPath) as data_file:
             agregatedRequests[idLocation] = sorted(agregatedRequests[idLocation], key=lambda x: 1 if x[1] == "original" else x[1])
             requestId = 0
             for request in executionData:
-                request["responses"] = sorted(request["responses"].items(), key=lambda x: 1 if x[1]['true'] == 0 or x[1]['false'] == 0 else -1)
-                for location, response in request["responses"]:
+                if "appliedPatches" in request:
+                    for patchLocation in request["appliedPatches"]:
+                        agregatedRequest["appliedPatches"] = request["appliedPatches"][patchLocation]
+                request["executedIf"] = sorted(request["executedIf"].items(), key=lambda x: 1 if x[1]['true'] == 0 or x[1]['false'] == 0 else -1)
+                for location, response in request["executedIf"]:
                     if location not in agregatedRequest["locations"]:
                         agregatedRequest["locations"][location] = response
                     else:
@@ -189,7 +193,7 @@ with open(resultsPath) as data_file:
         agregatedProjects[project["name"]] = agregatedRequestsSorted
 
         htmlPath = join(os.path.dirname(os.path.realpath(__file__)), "..", "static", "regression", project["name"], "index.html")
-        rendered = render('regression_project_template.html', {'data': agregatedRequestsSorted})
+        rendered = render('regression_project_template.html', {'data': agregatedRequestsSorted, 'project': project['name'].title()})
         with open(htmlPath, 'w') as html_file:
             html_file.write(rendered)
     agregatedProjectsSorted = sorted(agregatedProjects.items(), key=lambda x: x[0])

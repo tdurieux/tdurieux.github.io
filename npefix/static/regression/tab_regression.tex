@@ -1,77 +1,79 @@
 \begin{table}
+  \centering
   \caption{Patch Regression Results}
   \label{tab:regression}
-  \begin{tabular}{|r|l|l|l|l|l|r|}
+  \resizebox{0.45\textwidth}{!}{
+  \begin{tabular}{|l|l|r|l|r|}
     \hline
-    Project & Patch Location  & Patch ID  & Valid Request/Total Request  & \# Applied \\
+    Project & Patch Location  & \rotatebox{90}{Patch ID}  & \rotatebox{90}{\tabincell{c}{Valid/Total \\ Request}}  & \rotatebox{90}{\# Applied} \\
     \hline 
-    broadleaf & original & original & 12/12 & ? \\
-    broadleaf & CategoryImpl:835 & 1 & 9/12 & ? \\
-    broadleaf & CategoryImpl:835 & 2 & 9/12 & ? \\
-    broadleaf & CategoryImpl:835 & 3 & 8/12 & ? \\
-    broadleaf & CategoryImpl:835 & 4 & 9/12 & ? \\
-    broadleaf & CategoryImpl:835 & 5 & 8/12 & ? \\
-    broadleaf & CategoryImpl:835 & 6 & 8/12 & ? \\
-    broadleaf & CategoryImpl:835 & 7 & 3/12 & ? \\
-    broadleaf & SolrHelperServiceImpl:531 & 1 & 9/12 & ? \\
-    broadleaf & SolrHelperServiceImpl:531 & 2 & 5/12 & ? \\
-    broadleaf & SolrHelperServiceImpl:531 & 3 & 5/12 & ? \\
-    broadleaf & SolrHelperServiceImpl:531 & 4 & 5/12 & ? \\
-    broadleaf & SolrHelperServiceImpl:531 & 5 & 5/12 & ? \\
-    mayocat & original & original & 15/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:202 & 1 & 15/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:202 & 2 & 15/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:202 & 3 & 6/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:202 & 4 & 6/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:202 & 5 & 6/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:256 & 1 & 15/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:256 & 2 & 15/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:256 & 3 & 15/15 & ? \\
-    mayocat & AbstractScopeCookieContainerFilter:256 & 4 & 15/15 & ? \\
-    mayocat & DateAsTimestampArgumentFactory:30 & 1 & 15/15 & ? \\
-    mayocat & DateAsTimestampArgumentFactory:30 & 2 & 15/15 & ? \\
-    mayocat & DateAsTimestampArgumentFactory:30 & 3 & 15/15 & ? \\
-    mayocat & DateAsTimestampArgumentFactory:30 & 4 & 15/15 & ? \\
-    mayocat & DefaultCartLoader:88 & 1 & 2/15 & ? \\
-    mayocat & DefaultCartLoader:88 & 2 & 15/15 & ? \\
-    mayocat & DefaultCartManager:198 & 1 & 15/15 & ? \\
-    mayocat & DefaultCartManager:198 & 2 & 15/15 & ? \\
-    mayocat & MapAsJsonArgumentFactory:30 & 1 & 15/15 & ? \\
-    mayocat & MapAsJsonArgumentFactory:30 & 2 & 15/15 & ? \\
-    mayocat & MapAsJsonArgumentFactory:30 & 3 & 15/15 & ? \\
-    mayocat & MapAsJsonArgumentFactory:30 & 4 & 15/15 & ? \\
-    mayocat & PostgresUUIDArrayArgumentFactory:30 & 1 & 15/15 & ? \\
-    mayocat & PostgresUUIDArrayArgumentFactory:30 & 2 & 15/15 & ? \\
-    mayocat & PostgresUUIDArrayArgumentFactory:30 & 3 & 15/15 & ? \\
-    mayocat & PostgresUUIDArrayArgumentFactory:30 & 4 & 15/15 & ? \\
-    mayocat & ProductMapper:44 & 1 & 15/15 & ? \\
-    mayocat & ProductMapper:44 & 2 & 15/15 & ? \\
-    mayocat & ProductMapper:44 & 3 & 15/15 & ? \\
-    mayocat & ProductMapper:44 & 4 & 15/15 & ? \\
-    mayocat & ProductMapper:44 & 5 & 15/15 & ? \\
-    shopizer & original & original & 9/9 & ? \\
-    shopizer & CategoryFacadeImpl:55 & 1 & 9/9 & ? \\
-    shopizer & CategoryFacadeImpl:55 & 2 & 0/9 & ? \\
-    shopizer & CategoryFacadeImpl:55 & 3 & 0/9 & ? \\
-    shopizer & CategoryFacadeImpl:55 & 4 & 0/9 & ? \\
-    shopizer & CategoryFacadeImpl:55 & 5 & 0/9 & ? \\
-    shopizer & ReadableCategoryPopulator:51 & 1 & 9/9 & ? \\
-    shopizer & ReadableCategoryPopulator:51 & 2 & 0/9 & ? \\
-    shopizer & ReadableCategoryPopulator:51 & 3 & 0/9 & ? \\
-    shopizer & ReadableCategoryPopulator:51 & 4 & 0/9 & ? \\
-    shopizer & ReadableCategoryPopulator:51 & 5 & 0/9 & ? \\
-    shopizer & ReadableProductPopulator:84 & 1 & 9/9 & ? \\
-    shopizer & ReadableProductPopulator:84 & 2 & 9/9 & ? \\
-    shopizer & ReadableProductPopulator:84 & 3 & 9/9 & ? \\
-    shopizer & ReadableProductPopulator:84 & 4 & 9/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 1 & 9/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 2 & 9/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 3 & 7/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 4 & 7/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 5 & 7/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 6 & 7/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 7 & 7/9 & ? \\
-    shopizer & ShoppingCategoryController:253 & 8 & 7/9 & ? \\
+    broadleaf & original & original & 12/12 & 0 \\
+    broadleaf & CategoryImpl:835 & 1 & 9/12 & 10 \\
+    broadleaf & CategoryImpl:835 & 2 & 9/12 & 10 \\
+    broadleaf & CategoryImpl:835 & 3 & 8/12 & 9 \\
+    broadleaf & CategoryImpl:835 & 4 & 9/12 & 10 \\
+    broadleaf & CategoryImpl:835 & 5 & 8/12 & 9 \\
+    broadleaf & CategoryImpl:835 & 6 & 8/12 & 9 \\
+    broadleaf & CategoryImpl:835 & 7 & 3/12 & 9 \\
+    broadleaf & SolrHelperServiceImpl:531 & 1 & 9/12 & 28 \\
+    broadleaf & SolrHelperServiceImpl:531 & 2 & 5/12 & 28 \\
+    broadleaf & SolrHelperServiceImpl:531 & 3 & 5/12 & 28 \\
+    broadleaf & SolrHelperServiceImpl:531 & 4 & 5/12 & 28 \\
+    broadleaf & SolrHelperServiceImpl:531 & 5 & 5/12 & 28 \\
+    mayocat & original & original & 15/15 & 0 \\
+    mayocat & AbstractScopeCookieContainerFilter:202 & 1 & 15/15 & 42 \\
+    mayocat & AbstractScopeCookieContainerFilter:202 & 2 & 15/15 & 42 \\
+    mayocat & AbstractScopeCookieContainerFilter:202 & 3 & 6/15 & 38 \\
+    mayocat & AbstractScopeCookieContainerFilter:202 & 4 & 6/15 & 38 \\
+    mayocat & AbstractScopeCookieContainerFilter:202 & 5 & 6/15 & 38 \\
+    mayocat & AbstractScopeCookieContainerFilter:256 & 1 & 15/15 & 12 \\
+    mayocat & AbstractScopeCookieContainerFilter:256 & 2 & 15/15 & 12 \\
+    mayocat & AbstractScopeCookieContainerFilter:256 & 3 & 15/15 & 12 \\
+    mayocat & AbstractScopeCookieContainerFilter:256 & 4 & 15/15 & 12 \\
+    mayocat & DateAsTimestampArgumentFactory:30 & 1 & 15/15 & 340 \\
+    mayocat & DateAsTimestampArgumentFactory:30 & 2 & 15/15 & 431 \\
+    mayocat & DateAsTimestampArgumentFactory:30 & 3 & 15/15 & 431 \\
+    mayocat & DateAsTimestampArgumentFactory:30 & 4 & 15/15 & 431 \\
+    mayocat & DefaultCartLoader:88 & 1 & 2/15 & 13 \\
+    mayocat & DefaultCartLoader:88 & 2 & 15/15 & 14 \\
+    mayocat & DefaultCartManager:198 & 1 & 15/15 & 3 \\
+    mayocat & DefaultCartManager:198 & 2 & 15/15 & 3 \\
+    mayocat & MapAsJsonArgumentFactory:30 & 1 & 15/15 & 1673 \\
+    mayocat & MapAsJsonArgumentFactory:30 & 2 & 15/15 & 1864 \\
+    mayocat & MapAsJsonArgumentFactory:30 & 3 & 15/15 & 1864 \\
+    mayocat & MapAsJsonArgumentFactory:30 & 4 & 15/15 & 1864 \\
+    mayocat & PostgresUUIDArrayArgumentFactory:30 & 1 & 15/15 & 2284 \\
+    mayocat & PostgresUUIDArrayArgumentFactory:30 & 2 & 15/15 & 2578 \\
+    mayocat & PostgresUUIDArrayArgumentFactory:30 & 3 & 15/15 & 2578 \\
+    mayocat & PostgresUUIDArrayArgumentFactory:30 & 4 & 15/15 & 2578 \\
+    mayocat & ProductMapper:44 & 1 & 15/15 & 29 \\
+    mayocat & ProductMapper:44 & 2 & 15/15 & 29 \\
+    mayocat & ProductMapper:44 & 3 & 15/15 & 29 \\
+    mayocat & ProductMapper:44 & 4 & 15/15 & 29 \\
+    mayocat & ProductMapper:44 & 5 & 15/15 & 29 \\
+    shopizer & original & original & 9/9 & 0 \\
+    shopizer & CategoryFacadeImpl:55 & 1 & 9/9 & 45 \\
+    shopizer & CategoryFacadeImpl:55 & 2 & 0/9 & 45 \\
+    shopizer & CategoryFacadeImpl:55 & 3 & 0/9 & 9 \\
+    shopizer & CategoryFacadeImpl:55 & 4 & 0/9 & 9 \\
+    shopizer & CategoryFacadeImpl:55 & 5 & 0/9 & 9 \\
+    shopizer & ReadableCategoryPopulator:51 & 1 & 9/9 & 49 \\
+    shopizer & ReadableCategoryPopulator:51 & 2 & 0/9 & 49 \\
+    shopizer & ReadableCategoryPopulator:51 & 3 & 0/9 & 47 \\
+    shopizer & ReadableCategoryPopulator:51 & 4 & 0/9 & 49 \\
+    shopizer & ReadableCategoryPopulator:51 & 5 & 0/9 & 49 \\
+    shopizer & ReadableProductPopulator:84 & 1 & 9/9 & 0 \\
+    shopizer & ReadableProductPopulator:84 & 2 & 9/9 & 0 \\
+    shopizer & ReadableProductPopulator:84 & 3 & 9/9 & 0 \\
+    shopizer & ReadableProductPopulator:84 & 4 & 9/9 & 0 \\
+    shopizer & ShoppingCategoryController:253 & 1 & 9/9 & 2 \\
+    shopizer & ShoppingCategoryController:253 & 2 & 9/9 & 2 \\
+    shopizer & ShoppingCategoryController:253 & 3 & 7/9 & 2 \\
+    shopizer & ShoppingCategoryController:253 & 4 & 7/9 & 2 \\
+    shopizer & ShoppingCategoryController:253 & 5 & 7/9 & 2 \\
+    shopizer & ShoppingCategoryController:253 & 6 & 7/9 & 2 \\
+    shopizer & ShoppingCategoryController:253 & 7 & 7/9 & 2 \\
+    shopizer & ShoppingCategoryController:253 & 8 & 7/9 & 2 \\
     \hline
   \end{tabular}
 \end{table}

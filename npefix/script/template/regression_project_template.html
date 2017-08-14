@@ -4,24 +4,21 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Regression results for {{ project }}</title>
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../../css/style.css">
 </head>
 <body>
-  <h1></h1>
+  <h1>Regression results for {{ project }}</h1>
   <table class="summary pure-table">
     <thead>
       <tr>
         <td>#</td>
         <td>Location</td>
         <td>Patch ID</td>
+        <td># Applied</td>
         <td># Request</td>
-        <td># Diff (original, patch)</td>
-        <td># Location</td>
-        <td># Expression</td>
-        <td># True</td>
-        <td># False</td>
+        <td># Valid/Total Request</td>
       </tr>
     </thead>
     <tbody>
@@ -31,12 +28,9 @@
         <td>{{ loop.index }} </td>
         <td><a href="{{ location.replace(':', '-')}}{% if location == 'original'%}{% else %}-{{ patch_id }}{% endif %}/index.html">{{ location }}</a></td> 
         <td><a href="{{ location.replace(':', '-')}}{% if location == 'original'%}{% else %}-{{ patch_id }}{% endif %}/index.html">{{ patch_id }}</a></td> 
+        <td>{{agregated.appliedPatches|length}}</td>
         <td>{{ agregated.nbRequest }}</td>
-        <td>{{ agregated.nbDiff }}/{{ agregated.nbRequest }}</td>
-        <td>{{ agregated.locations|length }}</td>
-        <td>{{ agregated.locations|sum('expression') }}</td>
-        <td>{{ agregated.locations|sum('true') }}</td>
-        <td>{{ agregated.locations|sum('false') }}</td>
+        <td>{{ agregated.nbRequest - agregated.nbDiff }}/{{ agregated.nbRequest}}</td>
       </tr>{% endfor %}
       {% endfor %}
     </tbody>

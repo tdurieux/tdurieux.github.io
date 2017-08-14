@@ -20,7 +20,7 @@
         <td class="label"># Expression</td> <td>{{ agregated.locations|sum('expression') }}</td>
       </tr>
       <tr>
-        <td class="label"># Diff</td> <td>{{ agregated.nbDiff }}/{{ agregated.nbRequest }}</td>
+        <td class="label"># Valid/Total Request</td> <td> {{ agregated.nbRequest - agregated.nbDiff }}/{{ agregated.nbRequest}}</td>
       </tr>
       <tr>
         <td class="label"># True</td> <td>{{ agregated.locations|sum('true') }}</td>
