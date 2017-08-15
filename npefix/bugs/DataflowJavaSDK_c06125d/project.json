@@ -3,5 +3,6 @@
    "benchmark": "Genesis",
    "oracle": "Test based",
    "type": "NPE",
-   "application": "library"
+   "application": "library",
+   "loc": 50655
 }

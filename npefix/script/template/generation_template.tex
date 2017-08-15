@@ -1,13 +1,14 @@
-\begin{table}
+\begin{table*}
+  \centering
   \caption{Patch Generation Results}
   \label{tab:generation}
-  \begin{tabular}{|r|l|l|l|l|l|r|}
+  \begin{tabular}{|r|l|l|l|l|l|r||r|}
     \hline
-    \# & Bug id & Benchmark  & Oracle Type  & Bug Type  & Application Type & \# Patch \\
+    \# & Bug id & Benchmark  & Oracle Type  & Bug Type  & Application Type & LOC & \# Patch \\
     \hline{% for bug_id, values in data %}
-    {{ loop.index }} & {{ bug_id }} & {{ values.projectData.benchmark }} & {{ values.projectData.oracle }} & {{ values.projectData.type }} & {{ values.projectData.application }} & {{ values.nbPassedSeqLaps.0 }} \\{% endfor %}
+    {{ loop.index }} & {{ bug_id }} & {{ values.projectData.benchmark }} & {{ values.projectData.oracle }} & {{ values.projectData.type }} & {{ values.projectData.application }} & {{ values.projectData.loc }} & {{ values.nbPassedSeqLaps.0 }} \\{% endfor %}
     \hline
-    & {{ data|length }} bugs & {{ data|sum('projectData.benchmark') }} benchmarks & {{ data|sum('projectData.oracle') }} oracle types & {{ data|sum('projectData.type') }} bug types & {{ data|sum('projectData.application') }} application types & {{ data|sum('nbPassedSeqLaps') }} patches \\
+    & {{ data|length }} bugs & {{ data|sum('projectData.benchmark') }} benchmarks & {{ data|sum('projectData.oracle') }} oracle types & {{ data|sum('projectData.type') }} bug types & {{ data|sum('projectData.application') }} application types & {{ data|sum('projectData.loc') }} LOC & {{ data|sum('nbPassedSeqLaps') }} patches \\
     \hline
   \end{tabular}
-\end{table}
+\end{table*}

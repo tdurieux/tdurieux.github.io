@@ -3,5 +3,6 @@
    "benchmark": "Defects4j",
    "oracle": "Test based",
    "type": "NPE",
-   "application": "library"
+   "application": "library",
+   "loc": 45444
 }

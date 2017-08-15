@@ -3,5 +3,6 @@
    "benchmark": "Itzal",
    "oracle": "Production",
    "type": "NPE",
-   "application": "website"
+   "application": "website",
+   "loc": 31231
 }

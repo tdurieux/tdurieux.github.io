@@ -3,5 +3,6 @@
    "benchmark": "NPEFix",
    "oracle": "Test based",
    "type": "NPE",
-   "application": "library"
+   "application": "library",
+   "loc": 19047
 }

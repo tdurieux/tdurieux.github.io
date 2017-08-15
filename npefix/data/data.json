@@ -3,9 +3,7 @@
     "name": "math_988b", 
     "versions": [
       {
-        "date": 1476361603853, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361603853
       }
     ]
   }, 
@@ -13,9 +11,7 @@
     "name": "oVirt-ovirt-engine-220090576-20170408-212845", 
     "versions": [
       {
-        "date": 1499779032175, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499779032175
       }
     ]
   }, 
@@ -23,9 +19,7 @@
     "name": "jetty_335500", 
     "versions": [
       {
-        "date": 1500993082924, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1500993082924
       }
     ]
   }, 
@@ -33,9 +27,7 @@
     "name": "tomcat_58232", 
     "versions": [
       {
-        "date": 1499785424723, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499785424723
       }
     ]
   }, 
@@ -43,9 +35,7 @@
     "name": "math_1115", 
     "versions": [
       {
-        "date": 1476358158725, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476358158725
       }
     ]
   }, 
@@ -53,9 +43,7 @@
     "name": "math_988a", 
     "versions": [
       {
-        "date": 1476361498850, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361498850
       }
     ]
   }, 
@@ -63,19 +51,13 @@
     "name": "lang_703", 
     "versions": [
       {
-        "date": 1476361344268, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361344268
       }, 
       {
-        "date": 1476361195190, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361195190
       }, 
       {
-        "date": 1476357746643, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476357746643
       }
     ]
   }, 
@@ -83,9 +65,7 @@
     "name": "tomcat_54703", 
     "versions": [
       {
-        "date": 1499785299277, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499785299277
       }, 
       {
         "date": 1499785251764
@@ -96,9 +76,7 @@
     "name": "math_79", 
     "versions": [
       {
-        "date": 1499761979599, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499761979599
       }
     ]
   }, 
@@ -106,9 +84,7 @@
     "name": "oVirt-ovirt-engine-206553274-20170301-151736", 
     "versions": [
       {
-        "date": 1499782585617, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499782585617
       }
     ]
   }, 
@@ -116,9 +92,7 @@
     "name": "pdfbox_2995", 
     "versions": [
       {
-        "date": 1476362571748, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476362571748
       }
     ]
   }, 
@@ -126,24 +100,16 @@
     "name": "collections_360", 
     "versions": [
       {
-        "date": 1500533952564, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1500533952564
       }, 
       {
-        "date": 1465982015621, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1465982015621
       }, 
       {
-        "date": 1466090099755, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1466090099755
       }, 
       {
-        "date": 1476371233615, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476371233615
       }
     ]
   }, 
@@ -151,9 +117,7 @@
     "name": "lang_33", 
     "versions": [
       {
-        "date": 1499759140878, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499759140878
       }
     ]
   }, 
@@ -161,9 +125,7 @@
     "name": "DataflowJavaSDK_c06125d", 
     "versions": [
       {
-        "date": 1499765834739, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499765834739
       }
     ]
   }, 
@@ -171,9 +133,7 @@
     "name": "tomcat_56010", 
     "versions": [
       {
-        "date": 1500914342993, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1500914342993
       }
     ]
   }, 
@@ -181,9 +141,7 @@
     "name": "FasterXML-jackson-databind-195433804-20170126-065819", 
     "versions": [
       {
-        "date": 1499758900311, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499758900311
       }
     ]
   }, 
@@ -191,9 +149,7 @@
     "name": "math_369", 
     "versions": [
       {
-        "date": 1476361895418, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361895418
       }
     ]
   }, 
@@ -201,9 +157,7 @@
     "name": "oVirt-ovirt-engine-206553152-20170301-152327", 
     "versions": [
       {
-        "date": 1499783231966, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499783231966
       }
     ]
   }, 
@@ -211,9 +165,7 @@
     "name": "lang_20", 
     "versions": [
       {
-        "date": 1499759484625, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499759484625
       }
     ]
   }, 
@@ -221,9 +173,7 @@
     "name": "webmagic_ff2f588", 
     "versions": [
       {
-        "date": 1499765762296, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499765762296
       }
     ]
   }, 
@@ -231,9 +181,7 @@
     "name": "math_1117", 
     "versions": [
       {
-        "date": 1476731470557, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476731470557
       }
     ]
   }, 
@@ -241,9 +189,7 @@
     "name": "javapoet_70b38e5", 
     "versions": [
       {
-        "date": 1499765323032, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499765323032
       }
     ]
   }, 
@@ -251,9 +197,7 @@
     "name": "pdfbox_2965", 
     "versions": [
       {
-        "date": 1476362497398, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476362497398
       }
     ]
   }, 
@@ -261,9 +205,7 @@
     "name": "math_70", 
     "versions": [
       {
-        "date": 1499761868763, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499761868763
       }
     ]
   }, 
@@ -271,9 +213,7 @@
     "name": "tomcat_55454", 
     "versions": [
       {
-        "date": 1500904983662, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1500904983662
       }
     ]
   }, 
@@ -281,9 +221,7 @@
     "name": "tomcat_43758", 
     "versions": [
       {
-        "date": 1499785208024, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499785208024
       }
     ]
   }, 
@@ -291,9 +229,7 @@
     "name": "oVirt-ovirt-engine-206553844-20170301-160826", 
     "versions": [
       {
-        "date": 1499784226958, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499784226958
       }
     ]
   }, 
@@ -301,24 +237,16 @@
     "name": "sling_4982", 
     "versions": [
       {
-        "date": 1476357715620, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476357715620
       }, 
       {
-        "date": 1476361128816, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361128816
       }, 
       {
-        "date": 1476361277590, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361277590
       }, 
       {
-        "date": 1476367691497, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476367691497
       }
     ]
   }, 
@@ -326,9 +254,7 @@
     "name": "math_305", 
     "versions": [
       {
-        "date": 1476361860150, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361860150
       }
     ]
   }, 
@@ -336,9 +262,7 @@
     "name": "math_290", 
     "versions": [
       {
-        "date": 1476361825250, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361825250
       }
     ]
   }, 
@@ -346,9 +270,7 @@
     "name": "math_4", 
     "versions": [
       {
-        "date": 1499759848713, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499759848713
       }
     ]
   }, 
@@ -356,14 +278,10 @@
     "name": "felix_4960", 
     "versions": [
       {
-        "date": 1476361785532, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361785532
       }, 
       {
-        "date": 1500535145392, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1500535145392
       }
     ]
   }, 
@@ -371,9 +289,7 @@
     "name": "jongo_f46f658", 
     "versions": [
       {
-        "date": 1499767679521, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499767679521
       }
     ]
   }, 
@@ -381,29 +297,19 @@
     "name": "lang_304", 
     "versions": [
       {
-        "date": 1476357727962, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476357727962
       }, 
       {
-        "date": 1476369434161, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476369434161
       }, 
       {
-        "date": 1476361152847, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361152847
       }, 
       {
-        "date": 1476361301892, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361301892
       }, 
       {
-        "date": 1476369794068, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476369794068
       }
     ]
   }, 
@@ -411,9 +317,7 @@
     "name": "lang_39", 
     "versions": [
       {
-        "date": 1499759569600, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1499759569600
       }
     ]
   }, 
@@ -421,9 +325,7 @@
     "name": "mayocat_231", 
     "versions": [
       {
-        "date": 1500457370442, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1500457370442
       }
     ]
   }, 
@@ -431,9 +333,15 @@
     "name": "pdfbox_2812", 
     "versions": [
       {
-        "date": 1476362415191, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476362415191
+      }
+    ]
+  }, 
+  {
+    "name": "broadleaf_1282", 
+    "versions": [
+      {
+        "date": 1500457370442
       }
     ]
   }, 
@@ -441,19 +349,13 @@
     "name": "lang_587", 
     "versions": [
       {
-        "date": 1476357736905, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476357736905
       }, 
       {
-        "date": 1476361323343, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361323343
       }, 
       {
-        "date": 1476361175105, 
-        "epsilon": 0, 
-        "seed": 10
+        "date": 1476361175105
       }
     ]
   }

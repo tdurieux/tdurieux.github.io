@@ -20,17 +20,6 @@ for directory in dirs:
 		versionDict = {
 			"date": int(version.replace(".json", ""))
 		}
-		executionPath = join(path, directory, version)
-		with open(executionPath) as data_file:
-			resultsData = (json.load(data_file))
-			if "executions"  in resultsData:
-				if "metadata" in resultsData["executions"][0] and "seed" in resultsData["executions"][0]["metadata"]:
-					versionDict["seed"] = resultsData["executions"][0]["metadata"]["seed"]
-				if "decisions" in resultsData["executions"][0]:
-					for decision in resultsData["executions"][0]["decisions"]:
-						if "epsilon" in decision:
-							versionDict["epsilon"] = decision["epsilon"]
-							break
 		projectOutput['versions'] += [versionDict]
 	output += [projectOutput]
 f = open("../data/data.json", "w")

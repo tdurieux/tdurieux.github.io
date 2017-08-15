@@ -3,5 +3,6 @@
    "benchmark": "Bear",
    "oracle": "Test based",
    "type": "NPE",
-   "application": "library"
+   "application": "library",
+   "loc": 86263
 }

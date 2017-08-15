@@ -19,6 +19,7 @@
         <th rowspan="2">Oracle Type</th>
         <th rowspan="2">Bug Type</th>
         <th rowspan="2">Application Type</th>
+        <th rowspan="2">LOC</th>
         <th rowspan="2"># Patch</th>
       </tr>
       <tr>
@@ -35,6 +36,7 @@
         <td>{{ values.projectData.oracle }}</td>
         <td>{{ values.projectData.type }}</td>
         <td>{{ values.projectData.application }}</td>
+        <td>{{ values.projectData.loc }}</td>
         <td>{{ values.nbPassedSeqLaps.0 }}</td>
       </tr>
       {% endfor %}
@@ -47,6 +49,7 @@
         <th>{{ data|sum('projectData.oracle') }} oracle types</th>
         <th>{{ data|sum('projectData.type') }} bug types</th>
         <th>{{ data|sum('projectData.application') }} application types</th>
+        <th>{{ data|sum('projectData.loc') }} LOC</th>
         <th>{{ data|sum('nbPassedSeqLaps') }}</th>
       </tr>
     </tfoot>

@@ -20,7 +20,9 @@ def sumTable(arr, key):
     for project, obj in arr:
         currentObject = obj
         for key in keys:
-            if key in currentObject:
+            if isinstance(currentObject, list) and key.isdigit():
+                currentObject = currentObject[int(key)]
+            elif key in currentObject:
                 currentObject = currentObject[key]
         if currentObject != obj:
             if isinstance(currentObject, basestring):
@@ -188,7 +190,6 @@ with open(resultsPath) as data_file:
             with open(htmlPath, 'w') as html_file:
                 html_file.write(rendered)
 
-
         agregatedRequestsSorted = sorted(agregatedRequests.items(), key=lambda x: -1 if x[0] == "original" else x[0])
         agregatedProjects[project["name"]] = agregatedRequestsSorted
 
@@ -196,6 +197,7 @@ with open(resultsPath) as data_file:
         rendered = render('regression_project_template.html', {'data': agregatedRequestsSorted, 'project': project['name'].title()})
         with open(htmlPath, 'w') as html_file:
             html_file.write(rendered)
+
     agregatedProjectsSorted = sorted(agregatedProjects.items(), key=lambda x: x[0])
 
     countValid = 0
