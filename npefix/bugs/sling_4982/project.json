@@ -1,8 +1,0 @@
-{
-   "name": "Sling 4982",
-   "benchmark": "NPEFix",
-   "oracle": "Test based",
-   "type": "NPE",
-   "application": "library",
-   "loc": 583
-}
