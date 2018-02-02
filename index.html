@@ -135,20 +135,28 @@
                 <li class="project">
                     <h3>Exhaustive Exploration of the Failure-oblivious Computing Search Space <div class="time">/ 2018</div></h3>
                     <div class="description">
-                        <span class="brand">Thomas Durieux, Youssef Hamadi, Zhongxing Yu and Martin Monperrus.
+                        <span class="brand">Durieux, T., Hamadi, Y., Yu, Z. and Monperrus M.
                         Proceedings of the 11th IEEE Conference on Software Testing, Validation and Verification (ICST'18)</span> <br/>
+
+                        High-availability of software systems requires automated handling of crashes in presence of errors. Failure-oblivious computing is one technique that aims to achieve high availability. We note that failure-obliviousness has not been studied in depth yet, and there is very few study that helps understand why failure-oblivious techniques work. In order to make failure-oblivious computing to have an impact in practice, we need to deeply understand failure-oblivious behaviors in software. In this paper, we study, design and perform an experiment that analyzes the size and the diversity of the failure-oblivious behaviors. Our experiment consists of exhaustively computing the search space of 16 field failures of large-scale open-source Java software. The outcome of this experiment is a much better understanding of what really happens when failure-oblivious computing is used, and this opens new promising research directions.
+
+                        <br/><br/>
+                        <a href="https://arxiv.org/abs/1710.09722"><b>PDF</b></a> • 
+                        <a href="https://github.com/Spirals-Team/runtime-repair-experiments"><b>Source Code</b></a>
                     </div>
                 </li>
                 <li class="project">
                     <h3>Dissection of a Bug Dataset: Anatomy of 395 Patches from Defects4J <div class="time">/ 2018</div></h3>
                     <div class="description">
-                        <span class="brand">Victor Sobreira, Thomas Durieux, Fernanda Madeiral, Martin Monperrus and Marcelo A. Maia.
+                        <span class="brand">Sobreira, V., Durieux, T., Madeiral, F., Monperrus M. and Maia, M. A..
                         Proceedings of the 25th IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER '18)</span> <br/>
 
                         Well-designed and publicly available datasets of bugs are an invaluable asset to advance research fields such as fault localization and program repair as they allow directly and fairly comparison between competing techniques and also the replication of experiments. These datasets need to be deeply understood by researchers: the answer for questions like "which bugs can my technique handle?" and "for which bugs is my technique effective?" depends on the comprehension of properties related to bugs and their patches. However, such properties are usually not included in the datasets, and there is still no widely adopted methodology for characterizing bugs and patches. In this work, we deeply study 395 patches of the Defects4J dataset. Quantitative properties (patch size and spreading) were automatically extracted, whereas qualitative ones (repair actions and patterns) were manually extracted using a thematic analysis-based approach. We found that 1) the median size of Defects4J patches is four lines, and almost 30% of the patches contain only addition of lines; 2) 92% of the patches change only one file, and 38% has no spreading at all; 3) the top-3 most applied repair actions are addition of method calls, conditionals, and assignments, occurring in 77% of the patches; and 4) nine repair patterns were found for 95% of the patches, where the most prevalent, appearing in 43% of the patches, is on conditional blocks. These results are useful for researchers to perform advanced analysis on their techniques' results based on Defects4J. Moreover, our set of properties can be used to characterize and compare different bug datasets.
-                        
+
                         <br/><br/>
-                        <a href="https://arxiv.org/abs/1801.06393"><b>PDF</b></a> •
+                        <a href="https://arxiv.org/abs/1801.06393"><b>PDF</b></a> • 
+                        <a href="https://github.com/Spirals-Team/npefix/"><b>Source Code</b></a> •
+                        <a href="https://github.com/program-repair/defects4j-dissection/"><b>WebSite</b></a>
                     </div>
                 </li>
                 <li class="project">
