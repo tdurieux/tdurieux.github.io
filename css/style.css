@@ -188,12 +188,12 @@ ul.bull {
     width: 100%;
 }
 
-.work > h3, .education > h3, .project > h3 {
+.work > h3, .education > h3, .project > h3, .publications > h3, .pc > h3 {
     display: inline-block;
     margin: 0;
     position: relative;
 }
-.work > h3 .time, .education > h3 .time, .project > h3 .time {
+h3 .time {
     display: inline-block;
     font-size: 12px;
     color: #648FA8;

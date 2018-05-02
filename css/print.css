@@ -22,6 +22,9 @@ html, body {
     background: #FFF;
 }
 
-.teaching {
-    padding-bottom: 150px;
+.pc {
+    padding-bottom: 180px;
+}
+.abstract {
+	display: none;
 }
