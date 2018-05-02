@@ -119,6 +119,38 @@
                 b.setInput(value)
                 b.bibtex()
                 var entries = b.getEntries();
+                var titles = {};
+                var keys = Object.keys(entries).sort();
+                for (var i in keys) {
+                    var key = keys[i];
+                    if (key == "@comments") {
+                        continue
+                    }
+                    var entry = entries[key];
+                    if (titles[entry.title] != null) {
+                        console.log(entry);
+                    }
+                    titles[entry.title] = entry;
+                    titles[entry.title].key = key;
+                }
+
+                var output = "";
+                var titleKeys = Object.keys(titles).sort();
+                for (var i in titleKeys) {
+                    var title = titleKeys[i];
+                    var entry = titles[title];
+                    output += "@" + entry.entryType+"{" + entry.key + ",\n"
+                    var sortedEntry = Object.keys(entry).sort();
+                    for (var j in sortedEntry) {
+                        var elem = sortedEntry[j];
+                        if (elem == "entryType" || elem == "key") {
+                            continue
+                        }
+                        output += "\t" + elem+"={" + entry[elem] + "},\n"
+                    }
+                    output += "}\n"
+                }
+                console.log(output)
                 var wiki = convertBibtex(entries);
                 var content = '';
                 $inline.value = $references.value = content;
@@ -130,7 +162,7 @@
                 }
                 var end = new Date().getTime();
                 var time = end - start;
-                $result.innerText = wiki.references.length + " parsed BibiTex entries in " + time + "ms";
+                $result.innerText = wiki.references.length + " parsed entries in " + time + "ms";
             }
             $convert_button.onclick = convert;
             if($bibtex.value != null) {
