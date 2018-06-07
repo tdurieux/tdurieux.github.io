@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Thomas Durieux | Nopol</title>
+    <meta name="description" content="NoPol is an automatic software repair tool for Java that targets bugs in conditions.">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" color="#648fa8" href="/safari-pinned-tab.svg">
+  <meta name="msapplication-TileColor" content="#648fa8">
+  <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/assets/css/22.styles.42cb50b2.css" as="style"><link rel="preload" href="/assets/js/app.8b4d31e0.js" as="script"><link rel="preload" href="/assets/js/4.d2daa66f.js" as="script"><link rel="prefetch" href="/assets/js/11.2bd32666.js"><link rel="prefetch" href="/assets/js/0.f460244a.js"><link rel="prefetch" href="/assets/js/1.d5a6e73e.js"><link rel="prefetch" href="/assets/js/2.d43d1e78.js"><link rel="prefetch" href="/assets/js/3.c51bf530.js"><link rel="prefetch" href="/assets/js/5.febd4193.js"><link rel="prefetch" href="/assets/js/6.8af41538.js"><link rel="prefetch" href="/assets/js/7.3539e19d.js"><link rel="prefetch" href="/assets/js/8.dc4a0491.js"><link rel="prefetch" href="/assets/js/9.f13a53de.js"><link rel="prefetch" href="/assets/js/10.eaee09f4.js"><link rel="prefetch" href="/assets/js/12.cc29597d.js"><link rel="prefetch" href="/assets/js/13.8e80865a.js"><link rel="prefetch" href="/assets/js/14.ed5ad7d0.js"><link rel="prefetch" href="/assets/js/15.2ecfb56f.js"><link rel="prefetch" href="/assets/js/16.69b11350.js"><link rel="prefetch" href="/assets/js/17.37ea8ebc.js"><link rel="prefetch" href="/assets/js/18.8fe1c608.js"><link rel="prefetch" href="/assets/js/19.fdd3240a.js"><link rel="prefetch" href="/assets/js/20.1e3d8798.js"><link rel="prefetch" href="/assets/js/21.94f977bc.js">
+    <link rel="stylesheet" href="/assets/css/22.styles.42cb50b2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      Thomas Durieux
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Curriculum Vitae</a></div><div class="nav-item"><a href="/research.html" class="nav-link">Research</a></div><div class="nav-item"><a href="/projects/" class="nav-link router-link-active">Projects</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Curriculum Vitae</a></div><div class="nav-item"><a href="/research.html" class="nav-link">Research</a></div><div class="nav-item"><a href="/projects/" class="nav-link router-link-active">Projects</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Projects</span><!----></p><ul class="sidebar-group-items"><li><a href="/projects/anonymous_github.html" class="sidebar-link">Anonymous Github</a></li><li><a href="/projects/bibtex2wiki.html" class="sidebar-link">BibTex2Wiki</a></li><li><a href="/projects/bikiniproxy.html" class="sidebar-link">BikiniProxy</a></li><li><a href="/projects/bluelatex.html" class="sidebar-link">\BlueLatex</a></li><li><a href="/projects/c2spoon.html" class="sidebar-link">c2Spoon</a></li><li><a href="/projects/defects4j_dissection.html" class="sidebar-link">Defects4J Dissection</a></li><li><a href="/projects/introclass_java.html" class="sidebar-link">IntroclassJava</a></li><li><a href="/projects/itzal.html" class="sidebar-link">Itzal</a></li><li><a href="/projects/leboncoin.html" class="sidebar-link">LeBonCoin JS API</a></li><li><a href="/projects/maven-repair.html" class="sidebar-link">Maven-repair</a></li><li><a href="/projects/nopol.html" class="active sidebar-link">Nopol</a></li><li><a href="/projects/npefix.html" class="sidebar-link">NPEFix</a></li><li><a href="/projects/spoon.html" class="sidebar-link">Spoon</a></li><li><a href="/projects/synctexjs.html" class="sidebar-link">SyncTeX-js</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="nopol"><a href="#nopol" aria-hidden="true" class="header-anchor">#</a> Nopol</h1><p>Nopol is an automatic software repair tool for Java. This code is research code, released under the GPL licence.</p><p>If you use this code for academic research, please cite:
+<a href="https://hal.archives-ouvertes.fr/hal-01285008/document" target="_blank" rel="noopener noreferrer">Nopol: Automatic Repair of Conditional Statement Bugs in Java Programs<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (Jifeng Xuan, Matias Martinez, Favio Demarco, Maxime Clément, Sebastian Lamelas, Thomas Durieux, Daniel Le Berre, Daniel Le Berre, Martin Monperrus). IEEE Transactions on Software Engineering, 2016.</p><div class="language-Bibtex extra-class"><pre class="language-text"><code>@article{xuan:hal-01285008,
+ title = {Nopol: Automatic Repair of Conditional Statement Bugs in Java Programs},
+ author = {Xuan, Jifeng and Martinez, Matias and Demarco, Favio and Clément, Maxime and Lamelas, Sebastian and Durieux, Thomas and Le Berre, Daniel and Monperrus, Martin},
+ journal = {IEEE Transactions on Software Engineering},
+ year = {2016},
+}
+</code></pre></div><p>Others papers about Nopol:</p><ul><li><a href="http://hal.inria.fr/hal-00977798/PDF/NOPOL-Automatic-Repair-of-Buggy-If-Conditions-and-Missing-Preconditions-with-SMT.pdf" target="_blank" rel="noopener noreferrer">&quot;Automatic Repair of Buggy If Conditions and Missing Preconditions with SMT&quot;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (Favio DeMarco, Jifeng Xuan, Daniel Le Berre, Martin Monperrus), In Proceedings of the 6th International Workshop on Constraints in Software Testing, Verification, and Analysis (CSTVA 2014) <a href="http://www.monperrus.net/martin/bibtexbrowser.php?key=DeMarco2014&bib=monperrus.bib" target="_blank" rel="noopener noreferrer">(Bibtex)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="https://hal.archives-ouvertes.fr/hal-01279233/document" target="_blank" rel="noopener noreferrer">DynaMoth: Dynamic Code Synthesis for Automatic Program Repair<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (Thomas Durieux, Martin Monperrus), In Proceedings of the 11th International Workshop in Automation of Software Test, 2016, describes the dynamic synthesis part of Nopol <a href="http://www.monperrus.net/martin/bibtexbrowser.php?key=durieux%3Ahal-01279233&bib=monperrus.bib" target="_blank" rel="noopener noreferrer">(Bibtex)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="https://arxiv.org/pdf/1504.05078.pdf" target="_blank" rel="noopener noreferrer">Automatic Repair of Infinite Loops<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (Sebastian Lamelas-Marcote and Martin Monperrus), Technical report hal-01144026, University of Lille, 2015, describes the Infinitel part. <a href="http://www.monperrus.net/martin/bibtexbrowser.php?key=Lamelas2015&bib=monperrus.bib" target="_blank" rel="noopener noreferrer">(Bibtex)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul><h2 id="getting-started"><a href="#getting-started" aria-hidden="true" class="header-anchor">#</a> Getting started</h2><p>Nopol requires Java and an SMT solver installed on the machine (e.g. Z3)</p><ol><li><a href="https://github.com/SpoonLabs/CoCoSpoon" target="_blank" rel="noopener noreferrer">CoCoSpoon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>:</li></ol><div class="language- extra-class"><pre class="language-text"><code>git clone https://github.com/SpoonLabs/CoCoSpoon.git
+cd CoCoSpoon
+mvn clean install
+cd ..
+</code></pre></div><ol start="2"><li>Compile NoPol:</li></ol><div class="language- extra-class"><pre class="language-text"><code>git clone https://github.com/SpoonLabs/nopol.git
+cd nopol/nopol
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+# -DskipTests is required, to run the tests one needs to compile ../test-projects/ (see below)
+mvn package -DskipTests
+</code></pre></div><ol start="3"><li>Locate the Nopol jar file produced at step 2)</li></ol><div class="language- extra-class"><pre class="language-text"><code>$ ls target/*jar
+target/nopol-0.2-SNAPSHOT.jar
+target/nopol-0.2-SNAPSHOT-jar-with-dependencies.jar # we use this one
+</code></pre></div><p>In the following, <code>nopol.jar</code> refers to the jar file with dependencies (<code>target/nopol-&lt;VERSION&gt;-SNAPSHOT-jar-with-dependencies.jar</code>)</p><ol start="4"><li>Compile the test-projects</li></ol><div class="language- extra-class"><pre class="language-text"><code>$ cd ../test-projects/
+# compiling app (in target/classes) and tests (in target/test-classes), but don't run the tests (they obviously fail, because the goal is to repair them)
+$ mvn test -DskipTests 
+</code></pre></div><p>4b) Optional: run the tests of Nopol to check your installation</p><div class="language- extra-class"><pre class="language-text"><code>$ cd ../nopol/
+$ mvn test
+</code></pre></div><ol start="5"><li>Execute Nopol (parameters explained below)</li></ol><p>(Long commands are broken in several lines, separated by a backslash, which means an escaped linebreak in Unix shells.)</p><div class="language- extra-class"><pre class="language-text"><code>cd ../test-projects/
+java -jar nopol.jar \
+-s src/main/java/ \
+-c target/classes:target/test-classes:/home/&lt;user&gt;/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/&lt;user&gt;/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar \
+-t symbolic_examples.symbolic_example_1.NopolExampleTest \
+-p ../nopol/lib/z3/z3_for_linux
+</code></pre></div><p>If you keep <code>nopol.jar</code> instead of the actual jar located at the previous step, you'll get <code>Error: unable to access jarfile nopol.jar</code> (see above). You should replace also <code>&lt;user&gt;</code> by your own username.</p><p>It should output something like:</p><div class="language- extra-class"><pre class="language-text"><code>----INFORMATION----
+Nb classes : 34
+Nb methods : 53
+Nb statements: 5
+Nb statement executed by the passing tests of the patched line: 0
+Nb statement executed by the failing tests of the patched line: 0
+Nb unit tests : 9
+Nb Statements Analyzed : 3
+Nb Statements with Angelic Value Found : 1
+Nb inputs in SMT : 8
+Nb SMT level: 2
+Nb SMT components: [4] [== of arity: 2, != of arity: 2, &lt; of arity: 2, &lt;= of arity: 2]
+                  class java.lang.Boolean: 4
+Nb variables in SMT : 13
+Nb run failing test  : [2, 1]
+Nb run passing test : [4, 18]
+NoPol Execution time : 3262ms
+----PATCH FOUND----
+symbolic_examples.symbolic_example_1.NopolExample:12: CONDITIONAL index &lt; 1
+</code></pre></div><p>NoPol (SMT and Dynamoth) returns also a unix code (integer):</p><ul><li>0 if a patch has been found</li><li>-1 otherwise</li></ul><p>Parameter <code>-c</code> can be found with <code>mvn dependency:build-classpath</code>.</p><h2 id="minimal-usage"><a href="#minimal-usage" aria-hidden="true" class="header-anchor">#</a> Minimal Usage</h2><p>4 parameters are required</p><div class="language- extra-class"><pre class="language-text"><code>Usage: java -jar nopol.jar
+
+  (-s|--source) source1:source2:...:sourceN 
+        Define the path to the source code of the project. For instance `src/main/java`
+
+  (-c|--classpath) &lt;classpath&gt;
+        Define the classpath of the project separated by a path separator (`:` on Linux). 
+        Must contain the application binary classes (`target/classes`)
+        Must contain the application test classes (`target/test-classes`)
+        Must contain the library classes (`lib/junit.jar` for instance)
+        
+  [(-t|--test) test1:test2:...:testN ]
+        Define the tests of the project. For instance `symbolic_examples.symbolic_example_1.NopolExampleTest`
+
+  [(-p|--solver-path) &lt;solverPath&gt;]
+        Define the solver binary path (only used with smt synthesis). For instance `../nopol/lib/z3/z3_for_linux`
+
+</code></pre></div><h2 id="advanced-usage"><a href="#advanced-usage" aria-hidden="true" class="header-anchor">#</a> Advanced Usage</h2><p>See also notes below.</p><div class="language- extra-class"><pre class="language-text"><code>Usage: java -jar nopol.jar
+
+  [(-m|--mode) &lt;repair|ranking&gt;]
+        Define the mode of execution. (default: repair)
+
+  [(-e|--type) &lt;pre_then_cond|condition|precondition&gt;]
+        The type of statement to analyze (only used with repair mode). (default: pre_then_cond)
+
+  [(-o|--oracle) &lt;angelic|symbolic&gt;]
+        Define the oracle (only used with repair mode). (default: angelic)
+
+  [(-y|--synthesis) &lt;smt|dynamoth&gt;]
+        Define the patch synthesis. (default: smt)
+
+  [(-l|--solver) &lt;z3|cvc4&gt;]
+        Define the solver (only used with smt synthesis). (default: z3)
+
+  [--complianceLevel &lt;complianceLevel&gt;]
+        The Java version of the project. (default: 7)
+
+  [--maxTime &lt;maxTime&gt;]
+        The maximum time execution in minute for the whole execution of Nopol.(default: 10)
+
+  [--maxTimeType &lt;maxTimeType&gt;]
+        The maximum time execution in minute for one type of patch per per suspicious statement (eg. 5 minutes max to find a precondition at line x). (default: 5)
+
+  [(-z|--flocal) &lt; cocospoon|dumb|gzoltar&gt;]
+        Define the fault localizer to be used. (default: cocospoon). 
+          &quot;cocospoon&quot; means source code instrumentation plus ochiai metric.
+          &quot;dumb&quot; means random fault localization. 
+          &quot;gzoltar&quot; means binary code instrumentation with external library plus ochiai metric.
+
+</code></pre></div><p>Notes: For using Dynamoth (<code>-y dynamoth</code>), you must add tools.jar in the classpath of Nopol, and use java with <code>-cp</code> (and not <code>-jar</code>):</p><pre><code>java -cp $JAVA_HOME/lib/tools.jar:../nopol/target/nopol-SNAPSHOT-jar-with-dependencies.jar fr.inria.lille.repair.Main &lt;nopol arguments&gt;
+</code></pre></div><div class="content edit-link"><!----><!----></div><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/projects/maven-repair.html" class="prev">
+          Maven-repair
+        </a></span><span class="next"><a href="/projects/npefix.html">
+          NPEFix
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/assets/js/4.d2daa66f.js" defer></script><script src="/assets/js/app.8b4d31e0.js" defer></script>
+  </body>
+</html>
