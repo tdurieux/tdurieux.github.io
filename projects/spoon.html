@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Thomas Durieux | Spoon</title>
+    <title>Spoon | Thomas Durieux</title>
     <meta name="description" content="Spoon is a library to analyze, transform, rewrite, transpile Java source code.">
     <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,8 +14,8 @@
   <meta name="msapplication-TileColor" content="#648fa8">
   <meta name="theme-color" content="#ffffff">
     
-    <link rel="preload" href="/assets/css/22.styles.9c6f4796.css" as="style"><link rel="preload" href="/assets/js/app.46a83e35.js" as="script"><link rel="preload" href="/assets/js/2.d43d1e78.js" as="script"><link rel="prefetch" href="/assets/js/11.2bd32666.js"><link rel="prefetch" href="/assets/js/0.80a04169.js"><link rel="prefetch" href="/assets/js/1.d5a6e73e.js"><link rel="prefetch" href="/assets/js/3.c51bf530.js"><link rel="prefetch" href="/assets/js/4.d2daa66f.js"><link rel="prefetch" href="/assets/js/5.febd4193.js"><link rel="prefetch" href="/assets/js/6.8af41538.js"><link rel="prefetch" href="/assets/js/7.3539e19d.js"><link rel="prefetch" href="/assets/js/8.dc4a0491.js"><link rel="prefetch" href="/assets/js/9.f13a53de.js"><link rel="prefetch" href="/assets/js/10.eaee09f4.js"><link rel="prefetch" href="/assets/js/12.cc29597d.js"><link rel="prefetch" href="/assets/js/13.8e80865a.js"><link rel="prefetch" href="/assets/js/14.ed5ad7d0.js"><link rel="prefetch" href="/assets/js/15.0c422eb2.js"><link rel="prefetch" href="/assets/js/16.80488eb5.js"><link rel="prefetch" href="/assets/js/17.37ea8ebc.js"><link rel="prefetch" href="/assets/js/18.8fe1c608.js"><link rel="prefetch" href="/assets/js/19.fdd3240a.js"><link rel="prefetch" href="/assets/js/20.1e3d8798.js"><link rel="prefetch" href="/assets/js/21.94f977bc.js">
-    <link rel="stylesheet" href="/assets/css/22.styles.9c6f4796.css">
+    <link rel="preload" href="/assets/css/22.styles.d1af09a8.css" as="style"><link rel="preload" href="/assets/js/app.0919cc73.js" as="script"><link rel="preload" href="/assets/js/2.cda89173.js" as="script"><link rel="prefetch" href="/assets/js/11.56bec480.js"><link rel="prefetch" href="/assets/js/0.96e55328.js"><link rel="prefetch" href="/assets/js/1.b71cb8cb.js"><link rel="prefetch" href="/assets/js/3.c8d0b1f9.js"><link rel="prefetch" href="/assets/js/4.79ce2cc2.js"><link rel="prefetch" href="/assets/js/5.72e82392.js"><link rel="prefetch" href="/assets/js/6.4ba6c35c.js"><link rel="prefetch" href="/assets/js/7.20affda6.js"><link rel="prefetch" href="/assets/js/8.cb8008eb.js"><link rel="prefetch" href="/assets/js/9.4a64f963.js"><link rel="prefetch" href="/assets/js/10.ae483505.js"><link rel="prefetch" href="/assets/js/12.9a3eeb3e.js"><link rel="prefetch" href="/assets/js/13.0dcab3ec.js"><link rel="prefetch" href="/assets/js/14.027fcc9d.js"><link rel="prefetch" href="/assets/js/15.a9e159a8.js"><link rel="prefetch" href="/assets/js/16.746d5317.js"><link rel="prefetch" href="/assets/js/17.8a39d846.js"><link rel="prefetch" href="/assets/js/18.3f2dc3ad.js"><link rel="prefetch" href="/assets/js/19.befd0d81.js"><link rel="prefetch" href="/assets/js/20.0231dece.js"><link rel="prefetch" href="/assets/js/21.19968f3e.js">
+    <link rel="stylesheet" href="/assets/css/22.styles.d1af09a8.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
@@ -39,13 +39,13 @@ Spoon is an official Inria open-source project, and member of the <a href="https
 <span class="token function">cd</span> spoon
 mvn compile
 </code></pre></div><p>To run the tests:</p><div class="language-bash extra-class"><pre class="language-bash"><code>mvn <span class="token function">test</span>
-</code></pre></div><h1 id="design-philosophy"><a href="#design-philosophy" aria-hidden="true" class="header-anchor">#</a> Design Philosophy</h1><p>R1) The Spoon metamodel is as close as possible to the language concepts.</p><p>R2) The Spoon model of a program is complete and sound.</p><p>R3) The text version of a Spoon model is well-formed and semantically equivalent to the original program.</p><p>R4) The analysis and transformation API is intuitive and regular.</p><p>R5) Transformation operators are designed to warn as fast as possible about invalid programs. This is done either with static type checking or with dynamic checks when the operators are used.</p><p>R6) When feasible, the text version of a Spoon model is close to the original one.</p></div><div class="content edit-link"><!----><!----></div><div class="content page-nav"><p class="inner"><span class="prev">
+</code></pre></div><h1 id="design-philosophy"><a href="#design-philosophy" aria-hidden="true" class="header-anchor">#</a> Design Philosophy</h1><p>R1) The Spoon metamodel is as close as possible to the language concepts.</p><p>R2) The Spoon model of a program is complete and sound.</p><p>R3) The text version of a Spoon model is well-formed and semantically equivalent to the original program.</p><p>R4) The analysis and transformation API is intuitive and regular.</p><p>R5) Transformation operators are designed to warn as fast as possible about invalid programs. This is done either with static type checking or with dynamic checks when the operators are used.</p><p>R6) When feasible, the text version of a Spoon model is close to the original one.</p></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
         ← <a href="/projects/npefix.html" class="prev">
           NPEFix
         </a></span><span class="next"><a href="/projects/synctexjs.html">
           SyncTeX-js
         </a> →
       </span></p></div></div></div></div>
-    <script src="/assets/js/2.d43d1e78.js" defer></script><script src="/assets/js/app.46a83e35.js" defer></script>
+    <script src="/assets/js/2.cda89173.js" defer></script><script src="/assets/js/app.0919cc73.js" defer></script>
   </body>
 </html>

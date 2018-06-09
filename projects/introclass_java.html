@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Thomas Durieux | IntroclassJava</title>
+    <title>IntroclassJava | Thomas Durieux</title>
     <meta name="description" content="IntroClassJava is a dataset of small buggy Java programs. This dataset is the Java version of the original dataset IntroClass that contains small buggy C programs.">
     <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,8 +14,8 @@
   <meta name="msapplication-TileColor" content="#648fa8">
   <meta name="theme-color" content="#ffffff">
     
-    <link rel="preload" href="/assets/css/22.styles.9c6f4796.css" as="style"><link rel="preload" href="/assets/js/app.46a83e35.js" as="script"><link rel="preload" href="/assets/js/8.dc4a0491.js" as="script"><link rel="prefetch" href="/assets/js/11.2bd32666.js"><link rel="prefetch" href="/assets/js/0.80a04169.js"><link rel="prefetch" href="/assets/js/1.d5a6e73e.js"><link rel="prefetch" href="/assets/js/2.d43d1e78.js"><link rel="prefetch" href="/assets/js/3.c51bf530.js"><link rel="prefetch" href="/assets/js/4.d2daa66f.js"><link rel="prefetch" href="/assets/js/5.febd4193.js"><link rel="prefetch" href="/assets/js/6.8af41538.js"><link rel="prefetch" href="/assets/js/7.3539e19d.js"><link rel="prefetch" href="/assets/js/9.f13a53de.js"><link rel="prefetch" href="/assets/js/10.eaee09f4.js"><link rel="prefetch" href="/assets/js/12.cc29597d.js"><link rel="prefetch" href="/assets/js/13.8e80865a.js"><link rel="prefetch" href="/assets/js/14.ed5ad7d0.js"><link rel="prefetch" href="/assets/js/15.0c422eb2.js"><link rel="prefetch" href="/assets/js/16.80488eb5.js"><link rel="prefetch" href="/assets/js/17.37ea8ebc.js"><link rel="prefetch" href="/assets/js/18.8fe1c608.js"><link rel="prefetch" href="/assets/js/19.fdd3240a.js"><link rel="prefetch" href="/assets/js/20.1e3d8798.js"><link rel="prefetch" href="/assets/js/21.94f977bc.js">
-    <link rel="stylesheet" href="/assets/css/22.styles.9c6f4796.css">
+    <link rel="preload" href="/assets/css/22.styles.d1af09a8.css" as="style"><link rel="preload" href="/assets/js/app.0919cc73.js" as="script"><link rel="preload" href="/assets/js/8.cb8008eb.js" as="script"><link rel="prefetch" href="/assets/js/11.56bec480.js"><link rel="prefetch" href="/assets/js/0.96e55328.js"><link rel="prefetch" href="/assets/js/1.b71cb8cb.js"><link rel="prefetch" href="/assets/js/2.cda89173.js"><link rel="prefetch" href="/assets/js/3.c8d0b1f9.js"><link rel="prefetch" href="/assets/js/4.79ce2cc2.js"><link rel="prefetch" href="/assets/js/5.72e82392.js"><link rel="prefetch" href="/assets/js/6.4ba6c35c.js"><link rel="prefetch" href="/assets/js/7.20affda6.js"><link rel="prefetch" href="/assets/js/9.4a64f963.js"><link rel="prefetch" href="/assets/js/10.ae483505.js"><link rel="prefetch" href="/assets/js/12.9a3eeb3e.js"><link rel="prefetch" href="/assets/js/13.0dcab3ec.js"><link rel="prefetch" href="/assets/js/14.027fcc9d.js"><link rel="prefetch" href="/assets/js/15.a9e159a8.js"><link rel="prefetch" href="/assets/js/16.746d5317.js"><link rel="prefetch" href="/assets/js/17.8a39d846.js"><link rel="prefetch" href="/assets/js/18.3f2dc3ad.js"><link rel="prefetch" href="/assets/js/19.befd0d81.js"><link rel="prefetch" href="/assets/js/20.0231dece.js"><link rel="prefetch" href="/assets/js/21.19968f3e.js">
+    <link rel="stylesheet" href="/assets/css/22.styles.d1af09a8.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
@@ -51,13 +51,13 @@
  │ └─digits/
  └─...
 </code></pre></div><p>The folder <code>lib</code> contains the python scripts use to transform the C dataset to a Java dataset.</p><p>The file <code>lib/data/dataset.xml</code> contains the dataset IntroClass transformed into xml via the following command:</p><div class="language-bash extra-class"><pre class="language-bash"><code>srcml --language<span class="token operator">=</span>C --literal --operator --modifier <span class="token variable"><span class="token variable">`</span><span class="token function">find</span>  IntroClass -name <span class="token string">&quot;*.c&quot;</span><span class="token variable">`</span></span> -o IntroClassJava/lib/data/dataset.xml
-</code></pre></div><p>The folder <code>dataset</code> contains the assignment programs:</p><ul><li>checksum -- compute a simple checksum of a string</li><li>digits -- reverse the digits of an integer &quot;123&quot; -&gt; &quot;321&quot;</li><li>grade -- compute the letter grade corresponding to a percentage</li><li>median -- give the median of three numbers</li><li>smallest -- give the smallest of three numbers</li><li>syllables -- give the number of English syllables in a string</li></ul><p>Each subdirectory below represents a student's submitted repository which contains several revisions. Each revision is a maven project.</p></div><div class="content edit-link"><!----><!----></div><div class="content page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p>The folder <code>dataset</code> contains the assignment programs:</p><ul><li>checksum -- compute a simple checksum of a string</li><li>digits -- reverse the digits of an integer &quot;123&quot; -&gt; &quot;321&quot;</li><li>grade -- compute the letter grade corresponding to a percentage</li><li>median -- give the median of three numbers</li><li>smallest -- give the smallest of three numbers</li><li>syllables -- give the number of English syllables in a string</li></ul><p>Each subdirectory below represents a student's submitted repository which contains several revisions. Each revision is a maven project.</p></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
         ← <a href="/projects/defects4j_dissection.html" class="prev">
           Defects4J Dissection
         </a></span><span class="next"><a href="/projects/itzal.html">
           Itzal
         </a> →
       </span></p></div></div></div></div>
-    <script src="/assets/js/8.dc4a0491.js" defer></script><script src="/assets/js/app.46a83e35.js" defer></script>
+    <script src="/assets/js/8.cb8008eb.js" defer></script><script src="/assets/js/app.0919cc73.js" defer></script>
   </body>
 </html>
