@@ -113,7 +113,9 @@ module.exports = {
       ],
     },
     sidebarDepth: 0,
+    lastUpdated: 'Last Updated'
   },
+  serviceWorker: true,
   markdown: {
     config: md => md.use(require('markdown-it-deflist')),
   }
