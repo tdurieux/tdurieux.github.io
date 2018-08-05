@@ -1,0 +1,202 @@
+// colors
+$accentColor = #648FA8
+$textColor = #424142
+$borderColor = #eaecef
+$bgColor = #E2DEDA
+$bgNavColor = #E2DEDA
+
+
+body
+    background-color $bgColor
+    background-image url("/background.png")
+    background-attachment fixed
+
+.sidebar, .navbar
+    background-color $bgColor !important
+
+.articlePage .header
+    max-width: 740px
+    margin: 0 auto
+
+.articlePage .content.custom
+    max-width: 740px
+    margin: 0 auto
+    padding: 2rem 2.5rem
+
+.articlePage .header img, .articlePage .content.custom img 
+    font-family: 'Helvetica'
+    font-weight: 300
+    line-height: 2
+    text-align: center
+    height: auto
+    display: block
+    position: relative
+    max-width: 100%
+
+.post p
+    margin-bottom: 1.612em
+    line-height: 1.612em
+
+.cvPage .content ul 
+    border-left 1px solid $accentColor
+    margin-left 4px
+    padding-left 20px
+
+.cvPage .content ul > li 
+    position relative
+    list-style none
+    margin-bottom 15px
+
+.cvPage .content ul > li:before 
+    position absolute
+    content "•"
+    top 10px
+    left -36px
+    font-size 40px
+    line-height 20px 
+    color $accentColor
+    background $bgColor
+    width 32px
+    text-align center
+    display block
+    margin-top -10px
+
+.cv > h3
+    margin 0
+    font-size 1rem
+.cv > h3 a
+    color $textColor
+.cv > h3 .time 
+    display inline-block
+    font-size 0.95rem
+    color $accentColor
+.cv .description 
+    text-align justify
+
+.cv .role, .cv .role a
+    color #818285
+    
+
+
+.author + .author:before
+    content ", "
+
+.author:last-child:before {
+    content: ", and "
+}
+
+ul.post-categories
+    padding 0 0px
+    margin -10px 0 0px
+    min-height 27px
+
+.post-categories li 
+    font-size 12px
+    display inline
+    margin 0 10px 0 0
+
+.posts
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+article.post
+    width 45%
+    position relative
+    margin 0 auto
+    min-height 100%
+    padding-bottom 35px
+
+article.post .img-wrap
+    display inline-block
+    vertical-align: middle
+    width 100%
+    height 175px
+    line-height 175px
+    overflow hidden
+    text-align: center;
+
+article.post .img-wrap img 
+    max-height: 100%
+    vertical-align middle
+
+article.post img:after
+    content: attr(article-title);
+    font-size: 1.8rem;
+    font-family: FontAwesome;
+    color: $textColor;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 175px;
+    text-align: center;
+    background-color: #999;
+    font-weight: bold;
+    line-height: 175px;
+
+article.post img::hover
+    text-decoration: underline
+
+
+.post .entry-header 
+    padding 0 0px
+
+.post .entry-header .entry-title 
+    margin 0px
+
+.post .entry-header a 
+    display inline
+    color $textColor
+    text-decoration none
+    outline none
+
+.post .entry-content p
+    margin: 0
+    line-height: 1.5em
+
+.post p.entry-meta
+    position absolute
+    bottom 0px
+    font-size 0.85rem
+    text-transform none
+    margin 12px 0
+    line-height 1.8em
+
+.entry-categories
+    text-decoration: none
+    border-bottom: 0
+    color: $textColor
+    font-weight: 500
+
+
+
+.hero
+    text-align: center
+
+.hero img
+    max-height: 280px
+    display: block
+    margin: 3rem auto 1.5rem
+    border-radius: 50%
+
+.hero h1
+    font-size: 3rem
+
+.hero .action,.hero .description,.hero h1
+    margin: 1.8rem auto
+
+.hero .description
+    max-width: 35rem
+    font-size: 1.6rem
+    line-height: 1.3
+    color: $accentColor
+
+
+@media (max-width: $MQMobile) {
+    article.post {
+        width: 100%;
+    }
+}
