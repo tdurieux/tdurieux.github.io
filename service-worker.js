@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "4d7bd16fae32d4e6675e84d967ba5f5c"
+    "revision": "89dd8716f6bc59f8f7018c786707f8cf"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "revision": "8732357c4eb867834d137d8874925bb9"
   },
   {
-    "url": "assets/css/0.styles.c3b1e521.css",
-    "revision": "49d2b8989362b5e67442abfaf73f0253"
+    "url": "assets/css/0.styles.d7c1c2cd.css",
+    "revision": "56ce56b26e27b687c08456721619f2af"
   },
   {
     "url": "assets/img/profile.bd5060d4.jpg",
@@ -140,12 +140,12 @@ self.__precacheManifest = [
     "revision": "87d55c2c3dab3bef3c8851ed67920a37"
   },
   {
-    "url": "assets/js/9.0de6dedc.js",
-    "revision": "48255cc79eb8915be948ba9947cc6a3b"
+    "url": "assets/js/9.46df1c05.js",
+    "revision": "d7049ec743d6e67734f4cb29318c4806"
   },
   {
-    "url": "assets/js/app.09a4ee11.js",
-    "revision": "2ce9b18dbec211e1b4826edd0356e6bb"
+    "url": "assets/js/app.7529c98a.js",
+    "revision": "d747d3bfcbb4297c3d7d455ffa5850d5"
   },
   {
     "url": "background.png",
@@ -153,11 +153,11 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/2018/04/02.html",
-    "revision": "426bfee3d21b80789ff8019ea3ab5eab"
+    "revision": "7bc42f2655533d2f663537f0dbe48aed"
   },
   {
     "url": "blog/index.html",
-    "revision": "8d3fa693524d0594c2e5d286e873ac17"
+    "revision": "ccaff3be008c44e40d2a66d062e14050"
   },
   {
     "url": "blog/spoon_getting_started.png",
@@ -173,7 +173,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "bf21c33809a2a8a4f9a1948d439bd9e9"
+    "revision": "f13aded985b05bb0fb263a0ff2e661c3"
   },
   {
     "url": "mstile-144x144.png",
@@ -201,11 +201,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/anonymous_github.html",
-    "revision": "0c086355247418527667a08e8151aae7"
+    "revision": "8f50ecb672b3a5f6a3e65e39e2a0a13e"
   },
   {
     "url": "projects/bibtex2wiki.html",
-    "revision": "4a0145c1a73d86a72284c2fe1c782eec"
+    "revision": "351cdfbe9efc3ce92161a80eea046a4e"
   },
   {
     "url": "projects/bibtextowiki.png",
@@ -213,7 +213,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/bikiniproxy.html",
-    "revision": "2e37a62df10516b65a859b18d8701c17"
+    "revision": "42313c3f519d85b0cb6bea28e5816c1c"
   },
   {
     "url": "projects/bikiniproxy.png",
@@ -221,7 +221,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/bluelatex.html",
-    "revision": "ba61e93868f7e412239566dbcec7a5d9"
+    "revision": "0be0be3dfdc6c9fed3b79ed96e47c0c8"
   },
   {
     "url": "projects/bluelatex.jpg",
@@ -229,11 +229,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/c2spoon.html",
-    "revision": "0da7acddeadd8a0b112c4af9922540f4"
+    "revision": "0c764cbce7a64c9d06974ed153907e11"
   },
   {
     "url": "projects/defects4j_dissection.html",
-    "revision": "5d36a991e0ad0f5e95dd6cda6ec5c0de"
+    "revision": "9ea7b2089ec53307b17bf14f262da8f5"
   },
   {
     "url": "projects/defects4j_dissection.png",
@@ -245,19 +245,19 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/index.html",
-    "revision": "e4a89c673ce206db74b52f3ef631fe29"
+    "revision": "1628c801f58fef5e105a457116d2b054"
   },
   {
     "url": "projects/introclass_java.html",
-    "revision": "108cb24a740385febe40893b0f071df2"
+    "revision": "351be204b0f34bdf7bf9b5a815f915ca"
   },
   {
     "url": "projects/itzal.html",
-    "revision": "c7e1d23be74c63f9c05ca186ec75dfe8"
+    "revision": "971d1369c78b21f5832e470797009f53"
   },
   {
     "url": "projects/leboncoin.html",
-    "revision": "d0f6c913e3825067f86f358e5f892be3"
+    "revision": "d85875ce63919c4cf11df7667abf54de"
   },
   {
     "url": "projects/leboncoin.png",
@@ -265,11 +265,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/maven-repair.html",
-    "revision": "ed81c3b3196d097365acc83afdb4c7f4"
+    "revision": "df311bc09d60f2797b574142ad30037c"
   },
   {
     "url": "projects/nopol.html",
-    "revision": "19d967f3192d47dfa4115f5094966fcc"
+    "revision": "2722586a8780a5444137a04f8da7e8a3"
   },
   {
     "url": "projects/nopol.png",
@@ -277,7 +277,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/npefix.html",
-    "revision": "14466bbe1dcbfe19a4a5afe99c47585b"
+    "revision": "e04105ecb78029ef96b1283b78c708a1"
   },
   {
     "url": "projects/npefix.png",
@@ -285,7 +285,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/spoon.html",
-    "revision": "990abb122e691459cf1b7ebb118a20ec"
+    "revision": "87f9039ee6978d58369a30583783e960"
   },
   {
     "url": "projects/spoon.png",
@@ -293,11 +293,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/synctexjs.html",
-    "revision": "e57656e9dab280598a075d218a246f6c"
+    "revision": "4c4eeb22931ba793441205a8d6c3e22a"
   },
   {
     "url": "research.html",
-    "revision": "dd4fbe98d152eb55c14bc87c0f7572ee"
+    "revision": "1fc8e5927ef4db76da5cf584dcbc11d1"
   },
   {
     "url": "safari-pinned-tab.svg",
