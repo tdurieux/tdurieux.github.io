@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "9b154cb9f3cb1a0da06ce7fa02c98584"
+    "revision": "4d7bd16fae32d4e6675e84d967ba5f5c"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -144,8 +144,8 @@ self.__precacheManifest = [
     "revision": "48255cc79eb8915be948ba9947cc6a3b"
   },
   {
-    "url": "assets/js/app.ba52751d.js",
-    "revision": "d47b589f4f7404f01914b56b998b3697"
+    "url": "assets/js/app.09a4ee11.js",
+    "revision": "2ce9b18dbec211e1b4826edd0356e6bb"
   },
   {
     "url": "background.png",
@@ -153,11 +153,11 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/2018/04/02.html",
-    "revision": "3a6cdc2be3687d5d2f2644efe7ad6d62"
+    "revision": "426bfee3d21b80789ff8019ea3ab5eab"
   },
   {
     "url": "blog/index.html",
-    "revision": "0903e4e5cb37ca08fe672f40409ebc05"
+    "revision": "8d3fa693524d0594c2e5d286e873ac17"
   },
   {
     "url": "blog/spoon_getting_started.png",
@@ -173,7 +173,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "ba395b0274f647c4f6fe9701d9604a7f"
+    "revision": "bf21c33809a2a8a4f9a1948d439bd9e9"
   },
   {
     "url": "mstile-144x144.png",
@@ -201,11 +201,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/anonymous_github.html",
-    "revision": "c9f9e6b0e11c561b70c582457856feaa"
+    "revision": "0c086355247418527667a08e8151aae7"
   },
   {
     "url": "projects/bibtex2wiki.html",
-    "revision": "a8b0dcb539843c6dcc1dc65a5a69c4d3"
+    "revision": "4a0145c1a73d86a72284c2fe1c782eec"
   },
   {
     "url": "projects/bibtextowiki.png",
@@ -213,7 +213,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/bikiniproxy.html",
-    "revision": "d49a1074c8354ffb9ba60ad61c2dc26f"
+    "revision": "2e37a62df10516b65a859b18d8701c17"
   },
   {
     "url": "projects/bikiniproxy.png",
@@ -221,7 +221,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/bluelatex.html",
-    "revision": "262db09e3e6f51b22fbc412ba13767d0"
+    "revision": "ba61e93868f7e412239566dbcec7a5d9"
   },
   {
     "url": "projects/bluelatex.jpg",
@@ -229,11 +229,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/c2spoon.html",
-    "revision": "2afd0c50cc486717324f5f8436e566e9"
+    "revision": "0da7acddeadd8a0b112c4af9922540f4"
   },
   {
     "url": "projects/defects4j_dissection.html",
-    "revision": "6722ed7fbc5a16b5acb38d46c2ef6d50"
+    "revision": "5d36a991e0ad0f5e95dd6cda6ec5c0de"
   },
   {
     "url": "projects/defects4j_dissection.png",
@@ -245,19 +245,19 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/index.html",
-    "revision": "302931a73a253846442618a6b0f16c59"
+    "revision": "e4a89c673ce206db74b52f3ef631fe29"
   },
   {
     "url": "projects/introclass_java.html",
-    "revision": "8ec05bee55208f176aa1e7a85de5cd29"
+    "revision": "108cb24a740385febe40893b0f071df2"
   },
   {
     "url": "projects/itzal.html",
-    "revision": "20e10a311f839ccf7a1ca2dead2a4cea"
+    "revision": "c7e1d23be74c63f9c05ca186ec75dfe8"
   },
   {
     "url": "projects/leboncoin.html",
-    "revision": "522e15122a99212c3213c6fd9a29d98b"
+    "revision": "d0f6c913e3825067f86f358e5f892be3"
   },
   {
     "url": "projects/leboncoin.png",
@@ -265,11 +265,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/maven-repair.html",
-    "revision": "95a1bcb840bd92d053e2cebe8e42478f"
+    "revision": "ed81c3b3196d097365acc83afdb4c7f4"
   },
   {
     "url": "projects/nopol.html",
-    "revision": "cafbdc82a44c029e3e756b7860e92084"
+    "revision": "19d967f3192d47dfa4115f5094966fcc"
   },
   {
     "url": "projects/nopol.png",
@@ -277,7 +277,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/npefix.html",
-    "revision": "a6242a6afb0ac5082d829da2652a0d7f"
+    "revision": "14466bbe1dcbfe19a4a5afe99c47585b"
   },
   {
     "url": "projects/npefix.png",
@@ -285,7 +285,7 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/spoon.html",
-    "revision": "996c8074d7162730e5cf6c285a9d554f"
+    "revision": "990abb122e691459cf1b7ebb118a20ec"
   },
   {
     "url": "projects/spoon.png",
@@ -293,11 +293,11 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/synctexjs.html",
-    "revision": "b74b4e5bcf4c6ec34b1db392b20ff39b"
+    "revision": "e57656e9dab280598a075d218a246f6c"
   },
   {
     "url": "research.html",
-    "revision": "bb34ea5d83179680b3e3ee268e440a94"
+    "revision": "dd4fbe98d152eb55c14bc87c0f7572ee"
   },
   {
     "url": "safari-pinned-tab.svg",
