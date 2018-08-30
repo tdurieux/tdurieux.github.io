@@ -1,6 +1,7 @@
 ---
 title: BikiniProxy
 tags:
+  - Academic
   - Automatic Program Repair
 description: BikiniProxy is a novel technique to provide self-healing for the web. BikiniProxy is designed as an HTTP proxy that uses five self-healing strategies to rewrite the buggy HTML and Javascript code.
 image: ./bikiniproxy.png

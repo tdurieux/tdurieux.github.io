@@ -2,6 +2,7 @@
 title: BibTex2Wiki
 date: "2014-01-01T23:46:37.121Z"
 tags:
+  - Academic
   - Latex
   - Wikipedia
 description: "BibTeX2Wiki is a small tool that transforms BibTeX references into a Wikipedia references."

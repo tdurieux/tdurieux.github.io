@@ -2,6 +2,7 @@
 title: IntroclassJava
 description: IntroClassJava is a dataset of small buggy Java programs. This dataset is the Java version of the original dataset IntroClass that contains small buggy C programs.
 tags:
+  - Academic
 	- Benchmark
 github: https://github.com/Spirals-Team/IntroClassJava
 ---

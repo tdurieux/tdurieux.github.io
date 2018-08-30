@@ -3,7 +3,7 @@ title: LeBonCoin JS API
 date: "2016-01-01"
 tags:
   - leboncoin.fr
-  - API
+  - Library
 description: LeBonCoin JS API is an API to obtain the data from leboncoin.fr in a fluent JS API.
 image: ./leboncoin.png
 github: https://github.com/tdurieux/leboncoin-api

@@ -3,7 +3,8 @@ title: Defects4J Dissection
 description: Defects4J Dissection presents data to help researchers and practitioners to better understand the Defects4J bug dataset.
 image: defects4j_dissection.png
 tags:
-	- Benchmark
+  - Academic
+  - Benchmark
 github: https://github.com/Spirals-Team/defects4j-repair/
 ---
 

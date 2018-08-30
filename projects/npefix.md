@@ -1,6 +1,7 @@
 ---
 title: NPEFix
 tags:
+  - Academic
   - Automatic Program Repair
 description: NPEFix is a system that systematically explores and assesses a set of possible runtime patches developed at Inria Lille.
 image: ./npefix.png

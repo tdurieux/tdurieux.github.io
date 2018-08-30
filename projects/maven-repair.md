@@ -1,6 +1,7 @@
 ---
 title: Maven-repair
 tags:
+  - Academic
   - Automatic Program Repair
 description: A maven plugin for executing automated program repair on Maven projects.
 github: https://github.com/Spirals-Team/maven-repair

@@ -1,6 +1,7 @@
 ---
 title: Nopol
 tags:
+  - Academic
   - Automatic Program Repair
 description: NoPol is an automatic software repair tool for Java that targets bugs in conditions.
 image: ./nopol.png

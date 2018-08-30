@@ -3,6 +3,7 @@ title: Anonymous Github
 description: Anonymous Github is a system to anonymize Github repositories before referring to them in a double-blind paper submission.
 image: github_anonymous.png
 tags:
+  - Academic
   - Open-science
   - GitHub
 github: https://github.com/tdurieux/anonymous_github/
