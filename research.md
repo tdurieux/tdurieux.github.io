@@ -1,6 +1,6 @@
 ---
 pageClass: cvPage
-sidebar: auto
+sidebar: false
 sidebarDepth: 3
 ---
 
@@ -302,7 +302,7 @@ I'm particularly interested in the integration of the patch generation technique
 
 **Started in**: September 2015, **Expected Defense**: September 2018
 
-## Open-source Reasearch Tools
+## Open-source Research Tools
 
 * <cv 
 	name="BikiniProxy" 

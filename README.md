@@ -1,17 +1,17 @@
 ---
-sidebar: auto
+sidebar: false
 pageClass: cvPage
 ---
 <div class="hero">
 	<img src="./profile.jpg" alt="hero">
 	<h1>Thomas Durieux</h1>
 	<p class="description">
-      Ph.D. student in software engineering, he focus on automatic patch generation to fix applications directly in production environment.
+      Ph.D. student in software engineering, he focuses on automatic patch generation to fix applications directly in production.
     </p>
 </div>
 
 **About Me**: Ph.D. student in last year at University of Lille, France. I'm currently employed by INRIA Lille in the team Spirals that is specialized on "Self-adaptation for distributed services and large software systems".
-My research interest is in automatic software repair and especially in automatic patch generation for the production environment.
+My research interest is in automatic software repair and especially in automatic patch generation for the production.
 The goal of this thesis is to speed up the deployment of patches by reducing the amount of human intervention.
 
 **Quick Biography**: Ph.D. student since 2015 at University of Lille; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
@@ -20,6 +20,7 @@ I also created and maintain several [open-source projects](/projects/) for resea
 **Location**: Stockholm, Sweden<br>
 **Email**: thomas|@|durieux.me<br>
 **GitHub**: [tdurieux](https://github.com/tdurieux)<br>
+**Scholar**: [tdurieux](https://github.com/tdurieux)<br>
 **LinkedIn**: [thomasdurieux](https://fr.linkedin.com/in/thomasdurieux)<br>
 
 
