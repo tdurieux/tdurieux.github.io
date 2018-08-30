@@ -67,7 +67,7 @@ const generateBlogSideBar = dir => {
 
 module.exports = {
   title: 'Thomas Durieux',
-  description: 'Ph.D. student in software engineering, he focus on automatic techniques to fix software in production environment.',
+  description: 'Ph.D. student in software engineering, he focus on patch generation techniques to fix software in production.',
   ga: 'UA-5954162-17',
   head: [
     ['link', { rel: 'apple-touch-icon', sizes: "180x180", href: `/apple-touch-icon.png` }],
@@ -93,7 +93,7 @@ module.exports = {
         link: '/blog/',
       },*/
       {
-        text: 'Projects',
+        text: 'Open-source Projects',
         link: '/projects/',
       }
     ],
@@ -115,7 +115,7 @@ module.exports = {
     sidebarDepth: 0,
     lastUpdated: 'Last Updated'
   },
-  serviceWorker: true,
+  serviceWorker: false,
   markdown: {
     config: md => md.use(require('markdown-it-deflist')),
   }
