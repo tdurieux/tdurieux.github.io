@@ -5,7 +5,7 @@ title: Projects
 
 # Projects
 
-A list of my active projects that are also available on [GitHug](https://github.com/tdurieux).
+A list of my active projects that are also available on [GitHub](https://github.com/tdurieux).
 
 <div class="posts">
   <article class="post" v-for="project in projects()">

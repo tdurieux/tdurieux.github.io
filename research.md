@@ -7,14 +7,39 @@ sidebarDepth: 3
 # Research 
 
 I'm currently working in the research field of Software Engineering. 
-During my Ph.D., I'm working on new patch generation techniques.
+I'm working on new patch generation and fault localisation techniques.
 I'm particularly interested in the integration of the patch generation technique in the production environment.
 
 
 ## Publications
 
-### 2018
+### 2019
+ * <cv 
+	name="A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark" 
+	url="https://arxiv.org/abs/1807.11286" 
+	date="2019"
+	description="Automatic program repair papers tend to repeatedly use the same benchmarks. This poses a threat to the external validity of the findings of the program repair research community. In this paper, we perform an automatic repair experiment on a benchmark called QuixBugs that has never been studied in the context of program repair. In this study, we report on the characteristics of QuixBugs, and study five repair systems, Arja, Astor, Nopol, NPEfix and RSRepair, which are representatives of generate-and-validate repair techniques and synthesis repair techniques. We propose three patch correctness assessment techniques to comprehensively study overfitting and incorrect patches. Our key results are: 1) 15 / 40 buggy programs in the QuixBugs can be repaired with a test-suite adequate patch; 2) a total of 64 plausible patches for those 15 buggy programs in the QuixBugs are present in the search space of the considered tools; 3) the three patch assessment techniques discard in total 33 / 64 patches that are overfitting. This sets a baseline for future research of automatic repair on QuixBugs. Our experiment also highlights the major properties and challenges of how to perform automated correctness assessment of program repair patches. All experimental results are publicly available on Github in order to facilitate future research on automatic program repair."
+	:authors="[{
+		lastname: 'Ye',
+		firstname: 'He',
+	},{
+		lastname: 'Martinez',
+		firstname: 'Matias',
+		url: 'http://www.martinezmatias.com'
+	},{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Monperrus',
+		firstname: 'Martin',
+		url: 'https://www.monperrus.net/martin/'
+	}]"
+	acceptance=""
+	role="Proceedings in International Workshop on Intelligent Bug Fixing (IBF 2019), co-located with SANER2019"></cv>
+	[PDF](https://arxiv.org/abs/1805.03454) • [Source code](https://github.com/KTH/quixbugs-experiment)
 
+### 2018
  * <cv 
 	name="Towards an automated approach for bug fix pattern detection" 
 	url="https://arxiv.org/abs/1807.11286" 
@@ -36,7 +61,8 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Marcelo de Almeida',
 		url: 'http://lascam.facom.ufu.br/'
 	}]"
-	role="Proceedings of the VI Workshop on Software Visualization, Evolution and Maintenance (VEM '18)"></cv>
+	acceptance="61%, 24/39"
+	role="Proceedings of the VI Workshop on Software Visualization, Evolution and Maintenance (VEM 2018)"></cv>
 	[PDF](https://arxiv.org/abs/1807.11286) • [Source code](https://github.com/lascam-UFU/automatic-diff-dissection)
 
  * <cv 
@@ -57,6 +83,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
+	acceptance="24%, 23/96"
 	role="Proceedings of the 29th IEEE International Symposium on Software Reliability Engineering (ISSRE 2018)"></cv>
 	[PDF](https://arxiv.org/abs/1803.08725) • [Source code](https://github.com/Spirals-Team/bikiniproxy/)
  * <cv 
@@ -85,7 +112,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
-	role="Proceedings at Empirical Software Engineering."></cv>
+	role="Proceedings at Empirical Software Engineering (EMSE)"></cv>
 	[PDF](https://hal.inria.fr/hal-01774223/) • [Source code](https://github.com/Spirals-Team/test4repair-experiments)
  * <cv 
 	name="Exhaustive Exploration of the Failure-oblivious Computing Search Space" 
@@ -113,6 +140,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
+	acceptance="25%, 30/119"
 	role="Proceedings of the 11th IEEE Conference on Software Testing, Validation and Verification (ICST'18)"></cv>
 	[PDF](https://arxiv.org/abs/1710.09722) • [Source code](https://github.com/Spirals-Team/runtime-repair-experiments)
 
@@ -141,6 +169,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Marcelo de Almeida',
 		url: 'http://lascam.facom.ufu.br/'
 	}]"
+	acceptance="27%, 39/146"
 	role="Proceedings of the 25th IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER'18)"></cv>
 	[PDF](https://arxiv.org/abs/1801.06393) • [Source code](https://github.com/program-repair/defects4j-dissection/) • [WebSite](http://program-repair.org/defects4j-dissection/) 
 
@@ -166,6 +195,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
+	acceptance="16%, 14/85"
 	role="Proceeding of ICSE NIER"></cv>
 	[PDF](https://hal.archives-ouvertes.fr/hal-01463689/document) • [Slide](/slide_itzal.pdf) 
 
@@ -190,7 +220,8 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
-	role="IEEE International Conference on Software Analysis, Evolution and Reengineering"></cv>
+	acceptance="24%, 34/135"
+	role="Proceedings of the 25th IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER'17)"></cv>
 	[PDF](https://hal.archives-ouvertes.fr/hal-01419861/document) • [Slide](/slide_npefix.pdf) • [Source code](https://github.com/Spirals-Team/npefix/) • [Experiment Results](https://github.com/Spirals-Team/npefix-experiments) 
 
 
@@ -221,7 +252,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
-	role="Proceedings at Empirical Software Engineering."></cv>
+	role="Proceedings at Empirical Software Engineering (EMSE)"></cv>
 	[PDF](http://link.springer.com/article/10.1007/s10664-016-9470-4) • [Slide](/slide_defects4j_repair.pdf) • [Experiment Results](https://github.com/Spirals-Team/defects4j-repair/) 
 
 * <cv 
@@ -258,7 +289,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
-	role="IEEE Transactions on Software Engineering, Institute of Electrical and Electronics Engineers."></cv>
+	role="IEEE Transactions on Software Engineering, Institute of Electrical and Electronics Engineers (TSE)"></cv>
 	[PDF](https://hal.archives-ouvertes.fr/hal-01285008/document) • [Source code](https://github.com/SpoonLabs/nopol) • [Experiment Results](https://github.com/SpoonLabs/nopol-experiments) 
 
 * <cv 
@@ -275,7 +306,7 @@ I'm particularly interested in the integration of the patch generation technique
 		firstname: 'Martin',
 		url: 'https://www.monperrus.net/martin/'
 	}]"
-	role="11th International Workshop in Automation of Software Test (AST 2016), May 2016, Austin, United States."></cv>
+	role="11th International Workshop in Automation of Software Test (AST 2016)"></cv>
 	[PDF](https://hal.archives-ouvertes.fr/hal-01279233/document) • [Slide](/slide_dynamoth.pdf)  • [Source code](https://github.com/SpoonLabs/nopol) 
 
 * <cv 
@@ -294,13 +325,21 @@ I'm particularly interested in the integration of the patch generation technique
 	}]"></cv>
 	[PDF](https://hal.archives-ouvertes.fr/hal-01272126/document) • [Benchmark](https://github.com/Spirals-Team/IntroClassJava) 
 
+
+## Awards
+
+* **Best Paper**: A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark, IBF 2019
+* **Distinguished Paper**:  Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy, ISSRE 2018
+* **Best Paper**: Towards an automated approach for bug fix pattern detection, VEM 2018
+
+
 ## Ph.D. Thesis
 
 **Title**: *From Runtime Failures to Patches: Study of Patch Generation in Production*
 
 **Directors**: Martin Monperrus and Lionel Seinturier
 
-**Started in**: September 2015, **Expected Defense**: September 2018
+**Started in**: September 2015, **Defended**: 25th September 2018
 
 ## Open-source Research Tools
 
