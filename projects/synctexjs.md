@@ -14,6 +14,7 @@ SyncTeX is a new method in TeXLive 2008 for enabling synchronization between sou
 
 This repository contains a JavaScript implementation of for SyncTeX.
 It has been originally developed for [\BlueLaTex](https://www.bluelatex.org), an open-source LaTeX editor for the Web.
+SyncTeX-js is now used in LaTeX Workshop as the main SyncTex parser for **330,905** installs.
 
 ## Output
 

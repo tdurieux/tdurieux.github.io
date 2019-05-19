@@ -18,10 +18,11 @@ I'm particularly interested in the integration of the patch generation technique
 	name="A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark" 
 	url="https://arxiv.org/abs/1807.11286" 
 	date="2019"
-	description="Automatic program repair papers tend to repeatedly use the same benchmarks. This poses a threat to the external validity of the findings of the program repair research community. In this paper, we perform an automatic repair experiment on a benchmark called QuixBugs that has never been studied in the context of program repair. In this study, we report on the characteristics of QuixBugs, and study five repair systems, Arja, Astor, Nopol, NPEfix and RSRepair, which are representatives of generate-and-validate repair techniques and synthesis repair techniques. We propose three patch correctness assessment techniques to comprehensively study overfitting and incorrect patches. Our key results are: 1) 15 / 40 buggy programs in the QuixBugs can be repaired with a test-suite adequate patch; 2) a total of 64 plausible patches for those 15 buggy programs in the QuixBugs are present in the search space of the considered tools; 3) the three patch assessment techniques discard in total 33 / 64 patches that are overfitting. This sets a baseline for future research of automatic repair on QuixBugs. Our experiment also highlights the major properties and challenges of how to perform automated correctness assessment of program repair patches. All experimental results are publicly available on Github in order to facilitate future research on automatic program repair."
+	description="Automatic program repair papers tend to repeatedly use the same benchmarks. This poses a threat to the external validity of the findings of the program repair research community. In this paper, we perform an automatic repair experiment on a benchmark called QuixBugs that has never been studied in the context of program repair. In this study, we report on the characteristics of QuixBugs, and study five repair systems, Arja, Astor, Nopol, NPEFix and RSRepair, which are representatives of generate-and-validate repair techniques and synthesis repair techniques. We propose three patch correctness assessment techniques to comprehensively study overfitting and incorrect patches. Our key results are: 1) 15 / 40 buggy programs in the QuixBugs can be repaired with a test-suite adequate patch; 2) a total of 64 plausible patches for those 15 buggy programs in the QuixBugs are present in the search space of the considered tools; 3) the three patch assessment techniques discard in total 33 / 64 patches that are overfitting. This sets a baseline for future research of automatic repair on QuixBugs. Our experiment also highlights the major properties and challenges of how to perform automated correctness assessment of program repair patches. All experimental results are publicly available on Github in order to facilitate future research on automatic program repair."
 	:authors="[{
 		lastname: 'Ye',
 		firstname: 'He',
+		url: 'https://www.kth.se/profile/heye'
 	},{
 		lastname: 'Martinez',
 		firstname: 'Matias',
@@ -328,6 +329,7 @@ I'm particularly interested in the integration of the patch generation technique
 
 ## Awards
 
+* **Best Thesis**: Accessit price for the Best Thesis GDR GPL 2018 (French Software Engenerring Group)
 * **Best Paper**: A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark, IBF 2019
 * **Distinguished Paper**:  Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy, ISSRE 2018
 * **Best Paper**: Towards an automated approach for bug fix pattern detection, VEM 2018

@@ -68,7 +68,6 @@ const generateBlogSideBar = dir => {
 module.exports = {
   title: 'Thomas Durieux',
   description: 'Ph.D. student in software engineering, he focus on patch generation techniques to fix software in production.',
-  ga: 'UA-5954162-17',
   head: [
     ['link', { rel: 'apple-touch-icon', sizes: "180x180", href: `/apple-touch-icon.png` }],
     ['link', { rel: 'icon', type:"image/png", sizes: "32x32", href: `/favicon-32x32.png` }],
@@ -115,7 +114,23 @@ module.exports = {
     sidebarDepth: 0,
     lastUpdated: 'Last Updated'
   },
-  serviceWorker: false,
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          const moment = require('moment')
+          moment.locale(lang)
+          // return moment(timestamp).fromNow()
+          return moment(timestamp).format('DD/MM/YYYY')
+        }
+      }
+    ],
+    ['@vuepress/back-to-top'],
+    ['@vuepress/google-analytics', {
+      ga: 'UA-5954162-17'
+    }]
+  ],
   markdown: {
     config: md => md.use(require('markdown-it-deflist')),
   }

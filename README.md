@@ -6,19 +6,19 @@ pageClass: cvPage
 	<img src="./profile.jpg" alt="hero">
 	<h1>Thomas Durieux</h1>
 	<p class="description">
-      Ph.D. student in software engineering, he focuses on automatic patch generation to fix applications directly in production.
+      Ph.D. in software engineering, he focuses on automatic patch generation to fix applications directly in production.
     </p>
 </div>
 
-**About Me**: Ph.D. student in last year at University of Lille, France. I'm currently employed by INRIA Lille in the team Spirals that is specialized on "Self-adaptation for distributed services and large software systems".
+**About Me**: I am currently doing a Post-Doc at INESC-ID, University of Lisbon in Portugal. I am working on automatic patch generation technique and fault loclization. I did my Ph.D. at University of Lille, France. 
 My research interest is in automatic software repair and especially in automatic patch generation for the production.
-The goal of this thesis is to speed up the deployment of patches by reducing the amount of human intervention.
 
-**Quick Biography**: Ph.D. student since 2015 at University of Lille; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
+**Quick Biography**: Post-Doc at INESC-ID, University of Lisbon in Portugal; Ph.D. from University of Lille, France; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
 I also created and maintain several [open-source projects](/projects/) for research purposes and more.
 
-**Location**: Stockholm, Sweden<br>
+**Location**: Lisbon, Portugal<br>
 **Email**: thomas|@|durieux.me<br>
+**Twitter**: [thodurieux](https://github.com/thodurieux)<br>
 **GitHub**: [tdurieux](https://github.com/tdurieux)<br>
 **Scholar**: [tdurieux](https://github.com/tdurieux)<br>
 **LinkedIn**: [thomasdurieux](https://fr.linkedin.com/in/thomasdurieux)<br>
@@ -26,6 +26,13 @@ I also created and maintain several [open-source projects](/projects/) for resea
 
 
 ## EXPERIENCE
+
+* <cv 
+	name="INESC-ID, University of Lisbon in Portugal" 
+	url="https://www.inesc-id.pt/" 
+	date="Feb. 2019 - curent"
+	description="Post-doc on fault localization and patch generation."
+	role="Post-doc"></cv>
 
 * <cv 
 	name="KTH" 
@@ -92,6 +99,32 @@ I also created and maintain several [open-source projects](/projects/) for resea
 
 ## REVIEWER SERVICES
  * <cv 
+	name="ICST" 
+	url="http://saner.unimol.it/" 
+	role="Chair"
+	description="Student Volunteers Chair"
+	date="2020"></cv>
+
+
+ * <cv 
+	name="TSE" 
+	url="https://www.computer.org/csdl/journal/ts" 
+	role="Reviewer"
+	date="2019"></cv>
+ 
+ * <cv 
+	name="Journal of Computer Languages" 
+	url="https://www.journals.elsevier.com/journal-of-computer-languages" 
+	role="Reviewer"
+	date="2019"></cv>
+
+ * <cv 
+	name="Journal of Visual Languages and Computing" 
+	url="https://www.journals.elsevier.com/journal-of-visual-languages-and-computing" 
+	role="Reviewer"
+	date="2019"></cv>
+
+ * <cv 
 	name="SANER" 
 	url="http://saner.unimol.it/" 
 	role="Committee Member"
@@ -108,7 +141,7 @@ I also created and maintain several [open-source projects](/projects/) for resea
  * <cv 
 	name="Ph.D. degree in Computer Science" 
 	url="http://www.univ-lille1.fr/home/" 
-	date="2015 - current"
+	date="2015 - 2018"
 	description="Title: From Runtime Failures to Patches: Study of Patch Generation in Production.
   Advisors: Martin Monperrus, Lionel Seinturier and Youssef Hamadi"
 	role="INRIA - Microsoft Research - University of Lille"></cv>
