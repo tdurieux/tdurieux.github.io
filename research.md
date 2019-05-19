@@ -1,19 +1,19 @@
 ---
 pageClass: cvPage
-sidebar: false
+sidebar: auto
 sidebarDepth: 3
 ---
 
-# Research 
+# RESEARCH 
 
 I'm currently working in the research field of Software Engineering. 
 I'm working on new patch generation and fault localisation techniques.
 I'm particularly interested in the integration of the patch generation technique in the production environment.
 
 
-## Publications
+## PUBLICATIONS
 
-### 2019
+### 2019 (1)
  * <cv 
 	name="A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark" 
 	url="https://arxiv.org/abs/1807.11286" 
@@ -40,7 +40,7 @@ I'm particularly interested in the integration of the patch generation technique
 	role="Proceedings in International Workshop on Intelligent Bug Fixing (IBF 2019), co-located with SANER2019"></cv>
 	[PDF](https://arxiv.org/abs/1805.03454) • [Source code](https://github.com/KTH/quixbugs-experiment)
 
-### 2018
+### 2018 (5)
  * <cv 
 	name="Towards an automated approach for bug fix pattern detection" 
 	url="https://arxiv.org/abs/1807.11286" 
@@ -64,7 +64,7 @@ I'm particularly interested in the integration of the patch generation technique
 	}]"
 	acceptance="61%, 24/39"
 	role="Proceedings of the VI Workshop on Software Visualization, Evolution and Maintenance (VEM 2018)"></cv>
-	[PDF](https://arxiv.org/abs/1807.11286) • [Source code](https://github.com/lascam-UFU/automatic-diff-dissection)
+	[PDF](https://arxiv.org/abs/1807.11286) • [Slide](/slide_ppd.pdf) • [Source code](https://github.com/lascam-UFU/automatic-diff-dissection) 
 
  * <cv 
 	name="Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy" 
@@ -86,7 +86,7 @@ I'm particularly interested in the integration of the patch generation technique
 	}]"
 	acceptance="24%, 23/96"
 	role="Proceedings of the 29th IEEE International Symposium on Software Reliability Engineering (ISSRE 2018)"></cv>
-	[PDF](https://arxiv.org/abs/1803.08725) • [Source code](https://github.com/Spirals-Team/bikiniproxy/)
+	[PDF](https://arxiv.org/abs/1803.08725) • [Slide](/slide_bikiniproxy.pdf) • [Source code](https://github.com/Spirals-Team/bikiniproxy/)
  * <cv 
 	name="Alleviating Patch Overfitting with Automatic Test Generation: A Study of Feasibility and Effectiveness for the Nopol Repair System" 
 	url="https://hal.inria.fr/hal-01774223/" 
@@ -143,7 +143,7 @@ I'm particularly interested in the integration of the patch generation technique
 	}]"
 	acceptance="25%, 30/119"
 	role="Proceedings of the 11th IEEE Conference on Software Testing, Validation and Verification (ICST'18)"></cv>
-	[PDF](https://arxiv.org/abs/1710.09722) • [Source code](https://github.com/Spirals-Team/runtime-repair-experiments)
+	[PDF](https://arxiv.org/abs/1710.09722) • [Slide](/slide_failure_oblivious_search_space.pdf) • [Source code](https://github.com/Spirals-Team/runtime-repair-experiments)
 
 * <cv 
 	name="Dissection of a Bug Dataset: Anatomy of 395 Patches from Defects4J" 
@@ -175,7 +175,7 @@ I'm particularly interested in the integration of the patch generation technique
 	[PDF](https://arxiv.org/abs/1801.06393) • [Source code](https://github.com/program-repair/defects4j-dissection/) • [WebSite](http://program-repair.org/defects4j-dissection/) 
 
 
-### 2017
+### 2017 (3)
 
 
 * <cv 
@@ -225,9 +225,6 @@ I'm particularly interested in the integration of the patch generation technique
 	role="Proceedings of the 25th IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER'17)"></cv>
 	[PDF](https://hal.archives-ouvertes.fr/hal-01419861/document) • [Slide](/slide_npefix.pdf) • [Source code](https://github.com/Spirals-Team/npefix/) • [Experiment Results](https://github.com/Spirals-Team/npefix-experiments) 
 
-
-### 2016
-
 * <cv 
 	name="Automatic repair of real bugs in java: a large-scale experiment on the defects4j dataset" 
 	url="http://link.springer.com/article/10.1007/s10664-016-9470-4" 
@@ -255,6 +252,8 @@ I'm particularly interested in the integration of the patch generation technique
 	}]"
 	role="Proceedings at Empirical Software Engineering (EMSE)"></cv>
 	[PDF](http://link.springer.com/article/10.1007/s10664-016-9470-4) • [Slide](/slide_defects4j_repair.pdf) • [Experiment Results](https://github.com/Spirals-Team/defects4j-repair/) 
+
+### 2016 (3)
 
 * <cv 
 	name="Nopol: Automatic Repair of Conditional Statement Bugs in Java Programs" 
@@ -327,7 +326,7 @@ I'm particularly interested in the integration of the patch generation technique
 	[PDF](https://hal.archives-ouvertes.fr/hal-01272126/document) • [Benchmark](https://github.com/Spirals-Team/IntroClassJava) 
 
 
-## Awards
+## AWARDS
 
 * **Best Thesis**: Accessit price for the Best Thesis GDR GPL 2018 (French Software Engenerring Group)
 * **Best Paper**: A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark, IBF 2019
@@ -335,7 +334,7 @@ I'm particularly interested in the integration of the patch generation technique
 * **Best Paper**: Towards an automated approach for bug fix pattern detection, VEM 2018
 
 
-## Ph.D. Thesis
+## Ph.D. THESIS
 
 **Title**: *From Runtime Failures to Patches: Study of Patch Generation in Production*
 
@@ -343,7 +342,9 @@ I'm particularly interested in the integration of the patch generation technique
 
 **Started in**: September 2015, **Defended**: 25th September 2018
 
-## Open-source Research Tools
+**Slide**: [Defense slide](/slide_phd_defense_thomas_durieux.pdf)
+
+## OPEN-SOURCE RESEARCH TOOLS
 
 * <cv 
 	name="BikiniProxy" 
@@ -367,7 +368,7 @@ I'm particularly interested in the integration of the patch generation technique
 	[Github](https://github.com/Spirals-Team/maven-repair)
 
 * <cv 
-	name="NoPol" 
+	name="Nopol" 
 	url="https://github.com/SpoonLabs/nopol/" 
 	description=""
 	role="Automatic Patch Generation for Java"></cv>

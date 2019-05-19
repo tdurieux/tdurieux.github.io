@@ -1,5 +1,5 @@
 ---
-sidebar: false
+sidebar: auto
 pageClass: cvPage
 ---
 <div class="hero">

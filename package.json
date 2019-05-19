@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/tduriuex/tduriuex.github.io#readme",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.0",
     "@vuepress/plugin-google-analytics": "^1.0.0-alpha.44",
     "firebase-tools": "^3.19.3",
     "glob": "^7.1.2",

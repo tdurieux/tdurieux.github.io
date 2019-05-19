@@ -15,12 +15,13 @@
 			</span>
 			<span class="role" v-if="role">{{ role }} <span v-if="description">- </span></span>
 			{{ description }}
+			<span class="role" v-if="acceptance"><br>Acceptance rate: {{ acceptance }}.</span>
 	  	</div>
 	</div>
 </template>
 
 <script>
 export default {
-  props: ['url', 'name', 'date', 'description', 'authors', 'role'],
+  props: ['url', 'name', 'date', 'description', 'authors', 'role', 'acceptance'],
 }
 </script>
