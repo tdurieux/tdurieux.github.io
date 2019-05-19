@@ -18,7 +18,7 @@ I also created and maintain several [open-source projects](/projects/) for resea
 
 **Location**: Lisbon, Portugal<br>
 **Email**: thomas|@|durieux.me<br>
-**Twitter**: [thodurieux](https://github.com/thodurieux)<br>
+**Twitter**: [thodurieux](https://twitter.com/thodurieux)<br>
 **GitHub**: [tdurieux](https://github.com/tdurieux)<br>
 **Scholar**: [tdurieux](https://github.com/tdurieux)<br>
 **LinkedIn**: [thomasdurieux](https://fr.linkedin.com/in/thomasdurieux)<br>
