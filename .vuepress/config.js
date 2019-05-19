@@ -111,8 +111,7 @@ module.exports = {
         }
       ],
     },
-    sidebarDepth: 0,
-    lastUpdated: 'Last Updated'
+    sidebarDepth: 0
   },
   plugins: [
     [
