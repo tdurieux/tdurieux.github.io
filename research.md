@@ -13,7 +13,34 @@ I'm particularly interested in the integration of the patch generation technique
 
 ## PUBLICATIONS
 
-### 2019 (1)
+### 2019 (2)
+
+ * <cv 
+	name="Empirical Review of Java Program Repair Tools: A Large-Scale Experiment on 2,141 Bugs and 23,551 Repair Attempts" 
+	url="https://arxiv.org/abs/1905.11973" 
+	date="2019"
+	description="In the past decade, research on test-suite-based automatic program repair has grown significantly. Each year, new approaches and implementations are featured in major software engineering venues. However, most of those approaches are evaluated on a single benchmark of bugs, which are also rarely reproduced by other researchers. In this paper, we present a large-scale experiment using 11 Java test-suite-based repair tools and 5 benchmarks of bugs. Our goal is to have a better understanding of the current state of automatic program repair tools on a large diversity of benchmarks. Our investigation is guided by the hypothesis that the repairability of repair tools might not be generalized across different benchmarks of bugs. We found that the 11 tools 1) are able to generate patches for 21% of the bugs from the 5 benchmarks, and 2) have better performance on Defects4J compared to other benchmarks, by generating patches for 47% of the bugs from Defects4J compared to 10-30% of bugs from the other benchmarks. Our experiment comprises 23,551 repair attempts in total, which we used to find the causes of non-patch generation. These causes are reported in this paper, which can help repair tool designers to improve their techniques and tools."
+	:authors="[{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Madeiral',
+		firstname: 'Fernanda',
+		url: 'https://fermadeiral.github.io/'
+	},{
+		lastname: 'Martinez',
+		firstname: 'Matias',
+		url: 'http://www.martinezmatias.com'
+	},{
+		lastname: 'Rui',
+		firstname: 'Abreu',
+		url: 'https://ruimaranhao.github.io'
+	}]"
+	acceptance="24%, 73/303"
+	role="Proceedings of the 27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE '19)"></cv>
+	[PDF](https://arxiv.org/abs/1905.11973) • [Source code](https://github.com/program-repair/RepairThemAll) • [Experiment Results](https://github.com/program-repair/RepairThemAll_experiment/)  • [WebSite](http://program-repair.org/RepairThemAll_experiment/) 
+
  * <cv 
 	name="A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark" 
 	url="https://arxiv.org/abs/1807.11286" 
