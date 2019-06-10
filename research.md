@@ -355,9 +355,10 @@ I'm particularly interested in the integration of the patch generation technique
 
 ## AWARDS
 
+* **Distinguished Paper**: Empirical Review of Java Program Repair Tools: A Large-Scale Experiment on 2,141 Bugs and 23,551 Repair Attempts, ESEC/FSE'19
 * **Best Thesis**: Accessit price for the Best Thesis GDR GPL 2018 (French Software Engenerring Group)
 * **Best Paper**: A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark, IBF 2019
-* **Distinguished Paper**:  Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy, ISSRE 2018
+* Nominated **Best Paper**:  Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy, ISSRE 2018
 * **Best Paper**: Towards an automated approach for bug fix pattern detection, VEM 2018
 
 
