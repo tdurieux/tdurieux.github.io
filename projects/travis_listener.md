@@ -15,12 +15,12 @@ github: https://github.com/tdurieux/travis-listener
 Travis Listener is a small library that listen on real time  TravisCI API for new builds. It allows to interact as soon as possible with the author of the builds for fixing it for example.
 
 ## Example 
-Using the API, I created a dashboard: https://travis.durieux.me that lists all the builds that are currently running on TravisCI.
+Using the API, I created a dashboard: [https://travis.durieux.me]() that lists all the builds that are currently running on TravisCI.
 [This page](https://travis.durieux.me/stat.html) contains some statistic on the builds such as the number of builds per language per hour, the number of failing/passing, ...  
 
 ![Travis Listener](../.vuepress/public/projects/travis_listener.png)
 
-I also play with a more artistic representation of Travis activity. [This page](https://travis.durieux.me/rain.html) represents each build by is commit message that falls down like rain. The code of this example is available at: https://github.com/tdurieux/travis-listener/blob/master/script/static/js/rain.js#L357
+I also play with a more artistic representation of Travis activity. [This page](https://travis.durieux.me/rain.html) represents each build by is commit message that falls down like rain. The code of this example is available at: [https://github.com/tdurieux/travis-listener/blob/master/script/static/js/rain.js#L357]()
 
 ## Usage
 
@@ -38,7 +38,7 @@ npm run-script build
 
 User interface that monitors the jobs that are currently running at Travis-CI
 
-```js
+```bash
 npm run-script server
 ```
 
@@ -52,7 +52,7 @@ The data is not stored, it is only rendered in your browser.
 When the server is running, basic statistics are collected such as the number of build for each language per hour or the number of builds for each status.
 The statistics is visible at `http://localhost:9080/stat.html` and are based on the data available at `https://travis.durieux.me/api/stat`.
 
-### Your own build visualization
+### Your own visualization
 
 Travis Listener sent the information through websocket which is now supported by a huge amount of libraries in different languages: [Java](https://www.baeldung.com/websockets-api-java-spring-client), [Python](https://pypi.org/project/websocket_client/), [Go](https://github.com/gorilla/websocket), [node.js](https://www.npmjs.com/package/ws) and also natively by all modern browsers.
 
