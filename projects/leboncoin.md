@@ -198,7 +198,7 @@ search.setDepartment("aisne");
 Define where the item is located using the zip code of the city.
 
 ```javascript
-search.setDepartment([{"zipcode": "78100"},{"zipcode": "78000"}]);
+search.setLocation([{"zipcode": "78100"},{"zipcode": "78000"}]);
 ```
 
 ### setArea()
