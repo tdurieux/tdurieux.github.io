@@ -10,10 +10,10 @@ pageClass: cvPage
     </p>
 </div>
 
-**About Me**: I am currently doing a Post-Doc at INESC-ID, University of Lisbon in Portugal. I am working on automatic patch generation technique and fault loclization. I did my Ph.D. at University of Lille, France. 
+**About Me**: I am currently doing a Post-Doc at INESC-ID, University of Lisbon in Portugal. I am working on automatic patch generation technique and fault localization. I did my Ph.D. at University of Lille, France. 
 My research interest is in automatic software repair and especially in automatic patch generation for the production.
 
-**Quick Biography**: Post-Doc at INESC-ID, University of Lisbon in Portugal; Ph.D. from University of Lille, France; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
+**Quick Biography**: Post-doc at INESC-ID, University of Lisbon in Portugal; Ph.D. from University of Lille, France; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
 I also created and maintain several [open-source projects](/projects/) for research purposes and more.
 
 **Location**: Lisbon, Portugal<br>
@@ -30,9 +30,16 @@ I also created and maintain several [open-source projects](/projects/) for resea
 * <cv 
 	name="INESC-ID, University of Lisbon in Portugal" 
 	url="https://www.inesc-id.pt/" 
-	date="Feb. 2019 - curent"
+	date="Feb. 2019 - current"
 	description="Post-doc on fault localization and patch generation."
 	role="Post-doc"></cv>
+
+* <cv 
+	name="Carnegie Mellon University" 
+	url="https://www.cmu.edu" 
+	date="Feb. 2019 - Dec 2019"
+	description="I worked with Claire Le Goes on a study that analyze the reasons that motivate the developers to restart builds on TravisCI."
+	role="Visiting researcher"></cv>
 
 * <cv 
 	name="KTH" 
@@ -101,10 +108,15 @@ I also created and maintain several [open-source projects](/projects/) for resea
  * <cv 
 	name="ICST" 
 	url="http://saner.unimol.it/" 
-	role="Chair"
-	description="Student Volunteers Chair"
+	role="Chair and Reviewer"
+	description="Student Volunteers Chair & Reviewer"
 	date="2020"></cv>
 
+ * <cv 
+	name="EmSE" 
+	url="https://www.springer.com/journal/10664" 
+	role="Reviewer"
+	date="2019"></cv>
 
  * <cv 
 	name="TSE" 

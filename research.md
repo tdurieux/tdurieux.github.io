@@ -7,13 +7,101 @@ sidebarDepth: 3
 # RESEARCH 
 
 I'm currently working in the research field of Software Engineering. 
-I'm working on new patch generation and fault localisation techniques.
+I'm working on new patch generation and fault localization techniques.
 I'm particularly interested in the integration of the patch generation technique in the production environment.
 
 
 ## PUBLICATIONS
 
-### 2019 (2)
+### 2020 (1)
+
+ * <cv 
+	name="Empirical Review of Automated Analysis Tools on 47,587 Ethereum Smart Contracts" 
+	url="https://arxiv.org/abs/1910.10601" 
+	date="2020"
+	description="Over the last few years, there has been substantial research on automated analysis, testing, and debugging of Ethereum smart contracts. However, it is not trivial to compare and reproduce that research. To address this, we present an empirical evaluation of 9 state-of-the-art automated analysis tools using two new datasets: i) a dataset of 69 annotated vulnerable smart contracts that can be used to evaluate the precision of analysis tools; and ii) a dataset with all the smart contracts in the Ethereum Blockchain that have Solidity source code available on Etherscan (a total of 47,518 contracts). The datasets are part of SmartBugs, a new extendable execution framework that we created to facilitate the integration and comparison between multiple analysis tools and the analysis of Ethereum smart contracts. We used SmartBugs to execute the 9 automated analysis tools on the two datasets. In total, we ran 428,337 analyses that took approximately 564 days and 3 hours, being the largest experimental setup to date both in the number of tools and in execution time. We found that only 42% of the vulnerabilities from our annotated dataset are detected by all the tools, with the tool Mythril having the higher accuracy (27%). When considering the largest dataset, we observed that 97% of contracts are tagged as vulnerable, thus suggesting a considerable number of false positives. Indeed, only a small number of vulnerabilities (and of only two categories) were detected simultaneously by four or more tools."
+	:authors="[{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Ferreira',
+		firstname: 'João F.'
+	},{
+		lastname: 'Rui',
+		firstname: 'Abreu',
+		url: 'https://ruimaranhao.github.io'
+	},{
+		lastname: 'Cruz',
+		firstname: 'Pedro'
+	}]"
+	acceptance="20%, 129/617"
+	role="Proceedings of the 42nd International Conference on Software Engineering (ICSE '20)"></cv>
+	[PDF](https://arxiv.org/abs/1910.10601) • [Source code](https://github.com/smartbugs/smartbugs) • [Experiment Results](https://github.com/smartbugs/smartbugs-results)  • [WebSite](smartbugs.github.io)
+	
+
+### 2019 (4)
+ * <cv 
+	name="An Analysis of 35+ Million Jobs of Travis CI" 
+	url="https://arxiv.org/abs/1904.09416" 
+	date="2019"
+	description="Travis CI handles automatically thousands of builds every day to, amongst other things, provide valuable feedback to thousands of open-source developers. In this paper, we investigate Travis CI to firstly understand who is using it, and when they start to use it. Secondly, we investigate how the developers use Travis CI and finally, how frequently the developers change the Travis CI configurations. We observed during our analysis that the main users of Travis CI are corporate users such as Microsoft. And the programming languages used in Travis CI by those users do not follow the same popularity trend than on GitHub, for example, Python is the most popular language on Travis CI, but it is only the third one on GitHub. We also observe that Travis CI is set up on average seven days after the creation of the repository and the jobs are still mainly used (60%) to run tests. And finally, we observe that 7.34% of the commits modify the Travis CI configuration. We share the biggest benchmark of Travis CI jobs (to our knowledge): it contains 35,793,144 jobs from 272,917 different GitHub projects."
+	:authors="[{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Rui',
+		firstname: 'Abreu',
+		url: 'https://ruimaranhao.github.io'
+	},{
+		lastname: 'Monperrus',
+		firstname: 'Martin',
+		url: 'https://www.monperrus.net/martin/'
+	},{
+		lastname: 'Bissyandé, ',
+		firstname: 'Tegawendé F.'
+	},{
+		lastname: 'Cruz',
+		firstname: 'Luís'
+	}]"
+	acceptance="56%, 26/46"
+	role="Proceedings of the 35th IEEE International Conference on Software Maintenance and Evolution (ICSME'19)"></cv>
+	[PDF](https://arxiv.org/abs/1905.11973) • [Slide](/slide_35m_travis_jobs.pdf) • [Source code](https://github.com/tdurieux/travis-listener) • [Benchmark](https://zenodo.org/record/2560966)
+
+* <cv 
+	name="Repairnator patches programs automatically" 
+	url="https://dl.acm.org/citation.cfm?doid=3345321.3349589" 
+	date="2019"
+	description="Repairnator is a bot. It constantly monitors software bugs discovered during continuous integration of open-source software and tries to fix them automatically. If it succeeds in synthesizing a valid patch, Repairnator proposes the patch to the human developers, disguised under a fake human identity. To date, Repairnator has been able to produce patches that were accepted by the human developers and permanently merged into the code base. This is a milestone for human-competitiveness in software engineering research on automatic program repair."
+	:authors="[{
+		lastname: 'Monperrus',
+		firstname: 'Martin',
+		url: 'https://www.monperrus.net/martin/'
+	},{
+		lastname: 'Urli',
+		firstname: 'Simon'
+	},{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Martinez',
+		firstname: 'Matias',
+		url: 'http://www.martinezmatias.com'
+	},{
+		lastname: 'Baudry',
+		firstname: 'Benoit',
+		url: 'https://softwarediversity.eu/'
+	},{
+		lastname: 'Seinturier',
+		firstname: 'Lionel',
+		url: 'http://chercheurs.lille.inria.fr/~seinturi/'
+	}]"
+	acceptance=""
+	role="ACM Ubiquity"></cv>
+	[Source code](https://github.com/Spirals-Team/repairnator/)
+
 
  * <cv 
 	name="Empirical Review of Java Program Repair Tools: A Large-Scale Experiment on 2,141 Bugs and 23,551 Repair Attempts" 
@@ -39,7 +127,7 @@ I'm particularly interested in the integration of the patch generation technique
 	}]"
 	acceptance="24%, 73/303"
 	role="Proceedings of the 27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE '19)"></cv>
-	[PDF](https://arxiv.org/abs/1905.11973) • [Source code](https://github.com/program-repair/RepairThemAll) • [Experiment Results](https://github.com/program-repair/RepairThemAll_experiment/)  • [WebSite](http://program-repair.org/RepairThemAll_experiment/) 
+	[PDF](https://arxiv.org/abs/1905.11973) • [Slide](/slide_repairthemall.pdf) • [Source code](https://github.com/program-repair/RepairThemAll) • [Experiment Results](https://github.com/program-repair/RepairThemAll_experiment/)  • [WebSite](http://program-repair.org/RepairThemAll_experiment/) 
 
  * <cv 
 	name="A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark" 
