@@ -13,8 +13,29 @@ I'm particularly interested in the integration of the patch generation technique
 
 ## PUBLICATIONS
 
-### 2020 (1)
+### 2020 (2)
 
+* <cv 
+	name="Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy" 
+	url="https://arxiv.org/abs/1910.10601" 
+	date="2020"
+	description="Over the last few years, the complexity of web applications has increased to provide more dynamic web applications to users. The drawback of this complexity is the growing number of errors in the front-end applications. In this paper, we present an approach to provide self-healing for the web. We implemented this approach in two different tools: 1) BikiniProxy, an HTTP repair proxy, and 2) BugBlock, a browser extension. They use five self-healing strategies to rewrite the buggy HTML and Javascript code to handle errors in web pages. We evaluate BikiniProxy and BugBlock with a new benchmark of 555 reproducible Javascript errors of which 31.76% can be automatically self-healed by BikiniProxy and 15.67% by BugBlock."
+	:authors="[{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Hamadi',
+		firstname: 'Youssef',
+		url: 'https://www.msr-inria.fr/researchers/youssef-hamadi/'
+	},{
+		lastname: 'Monperrus',
+		firstname: 'Martin',
+		url: 'https://www.monperrus.net/martin/'
+	}]"
+	role="Proceedings at Software Testing, Verification & Reliability (STVR)"></cv>
+	[Source code](https://github.com/Spirals-Team/bikiniproxy/)
+	
  * <cv 
 	name="Empirical Review of Automated Analysis Tools on 47,587 Ethereum Smart Contracts" 
 	url="https://arxiv.org/abs/1910.10601" 
@@ -37,7 +58,7 @@ I'm particularly interested in the integration of the patch generation technique
 	}]"
 	acceptance="20%, 129/617"
 	role="Proceedings of the 42nd International Conference on Software Engineering (ICSE '20)"></cv>
-	[PDF](https://arxiv.org/abs/1910.10601) • [Source code](https://github.com/smartbugs/smartbugs) • [Experiment Results](https://github.com/smartbugs/smartbugs-results)  • [WebSite](smartbugs.github.io)
+	[PDF](https://arxiv.org/abs/1910.10601) • [Source code](https://github.com/smartbugs/smartbugs) • [Experiment Results](https://github.com/smartbugs/smartbugs-results)  • [WebSite](https://smartbugs.github.io)
 	
 
 ### 2019 (4)
