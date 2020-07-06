@@ -11,11 +11,11 @@
 					:firstname="author.firstname"
 					:url="author.url"
 					v-for="author in authors"
-					:key="author.lastname"></Author>&nbsp;<span v-if="description">-  </span></span>
+					:key="author.lastname"></Author>&nbsp;</span>
 			</span>
-			<span class="role" v-if="role">{{ role }}</span>
+			<span class="role" v-if="role">- {{ role }}</span>
 			<span class="abstract" v-if="description">
-			<span v-if="description"> - </span>{{ description }}</span>
+			- {{ description }}</span>
 			<span class="role" v-if="acceptance"><br>Acceptance rate: {{ acceptance }}.</span>
 	  	</div>
 	</div>

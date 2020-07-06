@@ -10,10 +10,9 @@ pageClass: cvPage
     </p>
 </div>
 
-**About Me**: I am currently doing a Post-Doc at INESC-ID, University of Lisbon in Portugal. I am working on automatic patch generation technique and fault localization. I did my Ph.D. at University of Lille, France. 
-My research interest is in automatic software repair and especially in automatic patch generation for the production.
+**About Me**: I am currently doing a Post-Doc at KTH Royal Institute of Technology. My research intersts are software debloating and automatic patch generation, bugs indentification, developer interaction with bots. I did my Ph.D. at University of Lille, France on automatic patch generation in production. 
 
-**Quick Biography**: Post-doc at INESC-ID, University of Lisbon in Portugal; Ph.D. from University of Lille, France; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
+**Quick Biography**: Post-doc at KTH Royal Institute of Technology, Sweden; previous post-doc at INESC in Portugal; Ph.D. from University of Lille, France; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
 I also created and maintain several [open-source projects](/projects/) for research purposes and more.
 
 **Location**: Lisbon, Portugal<br>
@@ -28,9 +27,16 @@ I also created and maintain several [open-source projects](/projects/) for resea
 ## EXPERIENCE
 
 * <cv 
+	name="KTH Royal Institute of Technology" 
+	url="https://www.kth.se/" 
+	date="Feb. 2020 - current"
+	description="Post-doc on software debloating and software art."
+	role="Post-doc"></cv>
+
+* <cv 
 	name="INESC-ID, University of Lisbon in Portugal" 
 	url="https://www.inesc-id.pt/" 
-	date="Feb. 2019 - current"
+	date="Feb. 2019 - Jan 2020"
 	description="Post-doc on fault localization and patch generation."
 	role="Post-doc"></cv>
 

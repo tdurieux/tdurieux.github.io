@@ -67,7 +67,7 @@ const generateBlogSideBar = dir => {
 
 module.exports = {
   title: 'Thomas Durieux',
-  description: 'Ph.D. student in software engineering, he focus on patch generation techniques to fix software in production.',
+  description: 'Thomas Duireux, Post-doc in software engineering.',
   head: [
     ['link', { rel: 'apple-touch-icon', sizes: "180x180", href: `/apple-touch-icon.png` }],
     ['link', { rel: 'icon', type:"image/png", sizes: "32x32", href: `/favicon-32x32.png` }],
