@@ -111,12 +111,48 @@ I also created and maintain several [open-source projects](/projects/) for resea
 	role="Tutor"></cv>
 
 ## REVIEWER SERVICES
+
+ * <cv 
+	name="MSR" 
+	url="https://2021.msrconf.org/committee/msr-2021-technical-papers-program-committee" 
+	role="Committee Member"
+	description="Committee Member in Program Committee within the Research Papers-track"
+	date="2021"></cv>
+
  * <cv 
 	name="ICST" 
-	url="http://saner.unimol.it/" 
-	role="Chair and Reviewer"
-	description="Student Volunteers Chair & Reviewer"
+	url="https://icst2021.icmc.usp.br/committee/icst-2021-papers-program-committee" 
+	role="Committee Member"
+	description="Committee Member in Program Committee within the Research Papers-track"
+	date="2021"></cv>
+
+ * <cv 
+	name="ASE" 
+	url="https://2020.ase-conferences.org/" 
+	role="Committee Member"
+	description="Committee Member in Program Committee within the Research Papers-track"
 	date="2020"></cv>
+
+ * <cv 
+	name="ICST" 
+	url="https://icst2020.info/" 
+	role="SV Chair, Session Chair and Reviewer"
+	description="Student Volunteers Chair & MISC 3 Session Chair & Reviewer"
+	date="2020"></cv>
+
+* <cv 
+	name="ENIAC" 
+	url="https://2020.programming-conference.org/committee/eniac-2020-papers-program-committee" 
+	role="Committee Member"
+	description="Committee Member in Program Committee within the ENIAC20-track"
+	date="2020"></cv>
+
+ * <cv 
+	name="ASE" 
+	url="https://2019.ase-conferences.org/" 
+	role="Committee Member"
+	description="Committee Member at ASE'19 Demonstrations"
+	date="2019"></cv>
 
  * <cv 
 	name="EmSE" 
