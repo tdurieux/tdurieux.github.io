@@ -6,16 +6,16 @@ pageClass: cvPage
 	<img src="./profile.jpg" alt="hero">
 	<h1>Thomas Durieux</h1>
 	<p class="description">
-      Ph.D. in software engineering, he focuses on automatic patch generation to fix applications directly in production.
+      Ph.D. in software engineering, he focuses on static and dynamic analysis to improve the maintainability of software. He is particularly evolve in software debloat and automatic patch generation.
     </p>
 </div>
 
-**About Me**: I am currently doing a Post-Doc at KTH Royal Institute of Technology. My research intersts are software debloating and automatic patch generation, bugs indentification, developer interaction with bots. I did my Ph.D. at University of Lille, France on automatic patch generation in production. 
+**About Me**: I am currently doing a Post-Doc at KTH Royal Institute of Technology. My research interests are software debloating and automatic patch generation, bugs indentification, developer interaction with bots. I did my Ph.D. at University of Lille, France on automatic patch generation in production. 
 
 **Quick Biography**: Post-doc at KTH Royal Institute of Technology, Sweden; previous post-doc at INESC in Portugal; Ph.D. from University of Lille, France; M.S. degrees, Computer Science, from the University of Lille; B.A., Computer Science, from Institut Paul Lambin in Belgium. During my studies, I did several internships as well in the industry (Microsoft Innovation Center, Emakina) as in the academic (KTH, CERN).
 I also created and maintain several [open-source projects](/projects/) for research purposes and more.
 
-**Location**: Lisbon, Portugal<br>
+**Location**: Stockholm, Sweden<br>
 **Email**: thomas|@|durieux.me<br>
 **Twitter**: [thodurieux](https://twitter.com/thodurieux)<br>
 **GitHub**: [tdurieux](https://github.com/tdurieux)<br>
@@ -113,10 +113,31 @@ I also created and maintain several [open-source projects](/projects/) for resea
 ## REVIEWER SERVICES
 
  * <cv 
+	name="ASE" 
+	url="https://2021.ase-conferences.org/" 
+	role="Committee Member"
+	description="Committee Member in Program Committee within the Research Papers-track"
+	date="2021"></cv>
+
+ * <cv 
 	name="MSR" 
 	url="https://2021.msrconf.org/committee/msr-2021-technical-papers-program-committee" 
 	role="Committee Member"
 	description="Committee Member in Program Committee within the Research Papers-track"
+	date="2021"></cv>
+
+ * <cv 
+	name="ASE" 
+	url="https://2021.ase-conferences.org/" 
+	role="Committee Member"
+	description="Committee Member in Program Committee within the Research Papers-track"
+	date="2021"></cv>
+
+ * <cv 
+	name="APR" 
+	url="http://program-repair.org/workshop-2021/" 
+	role="Committee Member"
+	description="Committee Member in Program Committee"
 	date="2021"></cv>
 
  * <cv 
@@ -131,6 +152,13 @@ I also created and maintain several [open-source projects](/projects/) for resea
 	url="https://2020.ase-conferences.org/" 
 	role="Committee Member"
 	description="Committee Member in Program Committee within the Research Papers-track"
+	date="2020"></cv>
+
+* <cv 
+	name="APR" 
+	url="http://program-repair.org/workshop-2020/" 
+	role="Committee Member"
+	description="Committee Member in Program Committee"
 	date="2020"></cv>
 
  * <cv 

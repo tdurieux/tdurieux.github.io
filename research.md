@@ -13,7 +13,127 @@ I'm particularly interested in the integration of the patch generation technique
 
 ## PUBLICATIONS
 
-### 2020 (3)
+### 2021 (4)
+
+ * <cv 
+	name="A large-scale study on human-cloned changes for automated program repair" 
+	url="https://arxiv.org/abs/2104.02386" 
+	date="2021"
+	description="Research in automatic program repair has shown that real bugs can be automatically fixed. However, there are several challenges involved in such a task that are not yet fully addressed. As an example, consider that a test-suite-based repair tool performs a change in a program to fix a bug spotted by a failing test case, but then the same or another test case fails. This could mean that the change is a partial fix for the bug or that another bug was manifested. However, the repair tool discards the change and possibly performs other repair attempts. One might wonder if the applied change should be also applied in other locations in the program so that the bug is fully fixed. In this paper, we are interested in investigating the extent of bug fix changes being cloned by developers within patches. Our goal is to investigate the need of multi-location repair by using identical or similar changes in identical or similar contexts. To do so, we analyzed 3,049 multi-hunk patches from the ManySStuBs4J dataset, which is a large dataset of single statement bug fix changes. We found out that 68% of the multi-hunk patches contain at least one change clone group. Moreover, most of these patches (70%) are strictly-cloned ones, which are patches fully composed of changes belonging to one single change clone group. Finally, most of the strictly-cloned patches (89%) contain change clones with identical changes, independently of their contexts. We conclude that automated solutions for creating patches composed of identical or similar changes can be useful for fixing bugs."
+	:authors="[{
+		lastname: 'Madeiral',
+		firstname: 'Fernanda',
+		url: 'https://fermadeiral.github.io/'
+	},{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	}]"
+	acceptance="66%, 8/12"
+	role="Proceedings of the 18th International Conference on Mining Software Repositories (MSR '21)"></cv>
+	[PDF](https://arxiv.org/abs/2104.02386) • [Experiment Results](https://github.com/software-bugs/change-clone)
+
+ * <cv 
+	name="DUETS: A Dataset of Reproducible Pairs of Java Library-Clients"
+	url="http://arxiv.org/abs/2103.09672" 
+	date="2021"
+	description="Software engineering researchers look for software artifacts to study their characteristics or to evaluate new techniques. In this paper, we introduce DUETS, a new dataset of software libraries and their clients. This dataset can be exploited to gain many different insights, such as API usage, usage inputs, or novel observations about the test suites of clients and libraries. DUETS is meant to support both static and dynamic analysis. This means that the libraries and the clients compile correctly, they are executable and their test suites pass. The dataset is composed of open-source projects that have more than five stars on GitHub. The final dataset contains 395 libraries and 2,874 clients. Additionally, we provide the raw data that we use to create this dataset, such as 34,560 pom.xml files or the complete file list from 34,560 projects. This dataset can be used to study how libraries are used by their clients or as a list of software projects that succesfully build. The client’s test suite can be used as an additional verification step for code transformation techniques that modify the libraries."
+	:authors="[{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'César',
+		firstname: 'Soto Valero',
+		url: 'https://www.cesarsotovalero.net/'
+	},{
+		lastname: 'Baudry',
+		firstname: 'Benoit',
+		url: 'https://softwarediversity.eu/'
+	}]"
+	role="Proceedings of the 18th International Conference on Mining Software Repositories (MSR '21)"></cv>
+	[PDF](http://arxiv.org/abs/2103.09672) • [Dataset](https://github.com/castor-software/Duets)
+
+ * <cv 
+	name="Automated Classification of Overfitting Patches with Statically Extracted Code Features"
+	url="https://arxiv.org/abs/1910.12057" 
+	date="2021"
+	description="Automatic program repair (APR) aims to reduce the cost of manually fixing software defects. However, APR suffers from generating a multitude of overfitting patches, those patches that fail to correctly repair the defect beyond making the tests pass. This paper presents a novel overfitting patch detection system called ODS to assess the correctness of APR patches. ODS first statically compares a patched program and a buggy program in order to extract code features at the abstract syntax tree (AST) level. Then, ODS uses supervised learning with the captured code features and patch correctness labels to automatically learn a probabilistic model. The learned ODS model can then finally be applied to classify new and unseen program repair patches. We conduct a large-scale experiment to evaluate the effectiveness of ODS on patch correctness classification based on 10,302 patches from Defects4J, Bugs.jar and Bears benchmarks. The empirical evaluation shows that ODS is able to correctly classify 71.9% of program repair patches from 26 projects, which improves the state-of-the-art. ODS is applicable in practice and can be employed as a post-processing procedure to classify the patches generated by different APR systems."
+	:authors="[{
+		lastname: 'Ye',
+		firstname: 'He',
+		url: 'https://www.kth.se/profile/heye'
+	},{
+		lastname: 'Gu',
+		firstname: 'Jian',
+	},{
+		lastname: 'Martinez',
+		firstname: 'Matias',
+		url: 'http://www.martinezmatias.com'
+	},{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Monperrus',
+		firstname: 'Martin',
+		url: 'https://www.monperrus.net/martin/'
+	}]"
+	role="IEEE Transactions on Software Engineering"></cv>
+	[PDF](https://arxiv.org/abs/1910.12057) • [Source code](https://github.com/kth-tcs/overfitting-analysis)
+
+ * <cv 
+	name="A comprehensive study of automatic program repair on the QuixBugs benchmark"
+	url="https://arxiv.org/abs/1805.03454" 
+	date="2021"
+	description="Automatic program repair papers tend to repeatedly use the same benchmarks. This poses a threat to the external validity of the findings of the program repair research community. In this paper, we perform an empirical study of automatic repair on a benchmark of bugs called QuixBugs, which has been little studied. In this paper, (1) We report on the characteristics of QuixBugs; (2) We study the effectiveness of 10 program repair tools on it; (3) We apply three patch correctness assessment techniques to comprehensively study the presence of overfitting patches in QuixBugs. Our key results are: (1) 16/40 buggy programs in QuixBugs can be repaired with at least a test suite adequate patch; (2) A total of 338 plausible patches are generated on the QuixBugs by the considered tools, and 53.3% of them are overfitting patches according to our manual assessment; (3) The three automated patch correctness assessment techniques, RGTEvosuite, RGTInputSampling and GTInvariants, achieve an accuracy of 98.2%, 80.8% and 58.3% in overfitting detection, respectively. To our knowledge, this is the largest empirical study of automatic repair on QuixBugs, combining both quantitative and qualitative insights. All our empirical results are publicly available on GitHub in order to facilitate future research on automatic program repair."
+	:authors="[{
+		lastname: 'Ye',
+		firstname: 'He',
+		url: 'https://www.kth.se/profile/heye'
+	},{
+		lastname: 'Martinez',
+		firstname: 'Matias',
+		url: 'http://www.martinezmatias.com'
+	},{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Monperrus',
+		firstname: 'Martin',
+		url: 'https://www.monperrus.net/martin/'
+	}]"
+	role="Journal of Systems and Software"></cv>
+	[PDF](https://arxiv.org/abs/1805.03454) • [Experiment Results](https://github.com/KTH/quixbugs-experiment)
+
+
+### 2020 (4)
+
+* <cv 
+	name="SmartBugs: a framework to analyze solidity smart contracts" 
+	url="https://dl.acm.org/doi/10.1145/3324884.3415298" 
+	date="2020"
+	description="Over the last few years, there has been substantial research on automated analysis, testing, and debugging of Ethereum smart contracts. However, it is not trivial to compare and reproduce that research. To address this, we present an empirical evaluation of 9 state-of-the-art automated analysis tools using two new datasets: i) a dataset of 69 annotated vulnerable smart contracts that can be used to evaluate the precision of analysis tools; and ii) a dataset with all the smart contracts in the Ethereum Blockchain that have Solidity source code available on Etherscan (a total of 47,518 contracts). The datasets are part of SmartBugs, a new extendable execution framework that we created to facilitate the integration and comparison between multiple analysis tools and the analysis of Ethereum smart contracts. We used SmartBugs to execute the 9 automated analysis tools on the two datasets. In total, we ran 428,337 analyses that took approximately 564 days and 3 hours, being the largest experimental setup to date both in the number of tools and in execution time. We found that only 42% of the vulnerabilities from our annotated dataset are detected by all the tools, with the tool Mythril having the higher accuracy (27%). When considering the largest dataset, we observed that 97% of contracts are tagged as vulnerable, thus suggesting a considerable number of false positives. Indeed, only a small number of vulnerabilities (and of only two categories) were detected simultaneously by four or more tools."
+	:authors="[{
+		lastname: 'Ferreira',
+		firstname: 'João F.'
+	},{
+		lastname: 'Cruz',
+		firstname: 'Pedro'
+	},{
+		lastname: 'Durieux',
+		firstname: 'Thomas',
+		url: 'https://durieux.me'
+	},{
+		lastname: 'Rui',
+		firstname: 'Abreu',
+		url: 'https://ruimaranhao.github.io'
+	}]"
+	acceptance="62%, 18/29"
+	role="Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering (ASE)"></cv>
+	[Source code](https://github.com/smartbugs/smartbugs) • [WebSite](https://smartbugs.github.io)
+	
 
 * <cv 
 	name="Empirical Study of Restarted and Flaky Builds on Travis CI" 
